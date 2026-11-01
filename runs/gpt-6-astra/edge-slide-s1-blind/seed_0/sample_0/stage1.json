@@ -1,0 +1,180 @@
+{
+  "artifact": {
+    "episodic": [
+      {
+        "camera": "exo_right_cam",
+        "frame_idx": 0,
+        "observation": "The robot pedestal is left of the white tabletop in this view. A blue-green, low-profile square plate lies in the tabletop interior, with bare tabletop surrounding it. Narrow dark side faces are visible. The downward-oriented hand is suspended above the table without visible contact. The table perimeter and legs are visible."
+      },
+      {
+        "camera": "exo_left_cam",
+        "frame_idx": 0,
+        "observation": "The opposite view places the robot pedestal on the right. The hand hangs above the tabletop. The plate appears flat against the table, entirely inside its perimeter; no overhanging edge or usable underside gap is visible. No other tabletop objects or tools are visible."
+      },
+      {
+        "camera": "ego_cam",
+        "frame_idx": 0,
+        "observation": "The plate has a broad, approximately square top and shallow dark sidewalls. Clear tabletop margins surround all its edges. Its top has no visible handle or other projecting grasp feature. Robot hand/structure enters the upper part of the image, separated from the plate."
+      },
+      {
+        "camera": "gripper_cam",
+        "frame_idx": 0,
+        "observation": "The tabletop fills most of the view, with flooring beyond its far edge. The plate occupies the lower central region. Separated finger assemblies and gripper housing occupy the foreground and obscure part of the plate. This view does not expose the underside or provide an unobstructed, calibrated comparison between the entire plate and jaw opening."
+      }
+    ],
+    "semantic": {
+      "objects": [
+        "One blue-green, broad, low-profile square plate is the apparent task object.",
+        "A finite white tabletop provides support; exposed perimeter edges and legs are visible.",
+        "The manipulator is one fixed-base, seven-DoF Panda arm with a two-finger parallel-jaw hand and no suction."
+      ],
+      "contacts": [
+        "The plate appears supported flat on the tabletop, wholly inside its perimeter, with no visible underside clearance.",
+        "No hand\u2013plate contact is visible. At frame 0 the gripper is fully open and both fingertip tactile maxima are zero."
+      ],
+      "reachability": [
+        "The hand currently has a downward-oriented hover above the tabletop. Its reported world position is [0.064, 0.025, 1.02] m; tabletop world height is not supplied.",
+        "Overhead access appears available, but reachable perimeter or under-edge grasp orientations are not established. The fixed base, tabletop and legs constrain those configurations.",
+        "The controller exposes translation and rotation deltas plus one scalar gripper-opening command."
+      ],
+      "infeasibility": [
+        "Top-face contact alone cannot provide an upward holding force with this non-suction hand.",
+        "The most direct full-width top-down pinch appears aperture-limited because the plate is broad relative to the open hand; exact fit is unverified, so all direct side grasps cannot be categorically ruled out.",
+        "An across-thickness pinch needs underside access. The present flat, interior placement provides no visible clearance for its lower finger."
+      ],
+      "hidden_state": [
+        "Metric plate dimensions, maximum jaw aperture, fingertip clearance and lower-edge geometry are not established by these images.",
+        "Plate\u2013table friction, finger\u2013plate traction, plate mass, center of mass and grasp holding margin are unknown.",
+        "The wrist reports a nonzero wrench despite no visible fingertip contact; its bias, reference frame and gravity compensation are unspecified.",
+        "Only one stationary sample is supplied, so no sliding, tipping, compliance or loaded-grasp response has been observed."
+      ],
+      "causal_preconditions": [
+        "An aperture-compatible pair of load-bearing plate contacts must be accessible before jaw closure can establish a useful grasp.",
+        "If full-width grasping is excluded, a thickness/edge grasp requires genuine lower-finger clearance, such as an exposed overhanging or raised edge; that clearance is not currently visible.",
+        "Table support must be replaced by a stable grasp capable of carrying the plate's weight and any grasp moment.",
+        "Success requires separation of the plate itself from table support, not merely upward motion of the hand or elevation of one corner."
+      ]
+    },
+    "constraints": [
+      {
+        "id": "C1",
+        "statement": "The simplest full-width top-down pinch appears aperture-limited: the plate is broad relative to the already fully open hand. Exact fit must be verified. If the plate exceeds that span, further opening is unavailable and a narrower accessible opposing-contact geometry is required. The hand cannot substitute a suction-like pickup from the exposed top.",
+        "rank": 1,
+        "criticality": "critical",
+        "evidence_refs": [
+          "cam:ego_cam:f0",
+          "cam:gripper_cam:f0",
+          "meta:controller_interface.end_effector",
+          "meta:controller_interface.action_space.gripper",
+          "meta:sensor_snapshot.0.gripper_state"
+        ]
+      },
+      {
+        "id": "C2",
+        "statement": "The tabletop obstructs underside access in the plate's current flat, interior placement. An across-thickness pinch requires a lower finger beneath the plate, but no suitable gap is visible. An exposed underside region and collision-free finger/wrist clearance must exist before such a grasp can be relied upon; the visible table edge is not yet an overhanging plate edge.",
+        "rank": 2,
+        "criticality": "critical",
+        "evidence_refs": [
+          "cam:exo_right_cam:f0",
+          "cam:exo_left_cam:f0",
+          "cam:ego_cam:f0",
+          "meta:controller_interface.end_effector"
+        ]
+      },
+      {
+        "id": "C3",
+        "statement": "A successful lift requires the plate to leave table support with positive clearance. The grasp must carry its weight and resist any off-center moment without slipping or rotating out; an edge grasp may impose substantial moment even when its thickness fits the jaws. Neither top contact nor gripper ascent alone establishes success, and holding margin is not known from the current data.",
+        "rank": 3,
+        "criticality": "critical",
+        "evidence_refs": [
+          "meta:task_description",
+          "meta:controller_interface.end_effector",
+          "cam:ego_cam:f0",
+          "cam:exo_left_cam:f0",
+          "meta:sensor_snapshot.0.tactile_max_right",
+          "meta:sensor_snapshot.0.tactile_max_left"
+        ]
+      },
+      {
+        "id": "C4",
+        "statement": "Any support-changing interaction is governed by unknown table friction and center-of-mass support. Contact may cause sliding or tipping rather than the intended configuration change, and excessive overhang can remove stable support before capture. Only one arm is available, so an independently controlled second hand cannot retain the plate.",
+        "rank": 4,
+        "criticality": "important",
+        "evidence_refs": [
+          "cam:ego_cam:f0",
+          "cam:exo_right_cam:f0",
+          "meta:controller_interface.robot",
+          "meta:capture"
+        ]
+      },
+      {
+        "id": "C5",
+        "statement": "A useful grasp configuration must be reachable by the fixed-base arm with the complete hand clear of the tabletop, table legs and nearby robot structure. The current overhead hover does not establish that every table edge or lower-finger approach orientation is reachable or collision-free.",
+        "rank": 5,
+        "criticality": "important",
+        "evidence_refs": [
+          "cam:exo_right_cam:f0",
+          "cam:exo_left_cam:f0",
+          "meta:controller_interface.robot",
+          "meta:sensor_snapshot.0.eef_pos_m",
+          "meta:sensor_snapshot.0.eef_quat_xyzw"
+        ]
+      },
+      {
+        "id": "C6",
+        "statement": "There is no established grasp at frame 0: the hand is visibly separated, fully open and reports zero fingertip tactile maxima. The nonzero wrist force and torque cannot by themselves be interpreted as plate contact or payload. Plate\u2013hand motion, plate\u2013table separation and contact/load feedback are needed to distinguish touching, grasping and actually lifting.",
+        "rank": 6,
+        "criticality": "important",
+        "evidence_refs": [
+          "cam:exo_left_cam:f0",
+          "cam:ego_cam:f0",
+          "meta:sensor_snapshot.0.gripper_state",
+          "meta:sensor_snapshot.0.tactile_max_right",
+          "meta:sensor_snapshot.0.tactile_max_left",
+          "meta:sensor_snapshot.0.wrist_force_N",
+          "meta:sensor_snapshot.0.wrist_torque_Nm",
+          "meta:task_description"
+        ]
+      },
+      {
+        "id": "C7",
+        "statement": "Commands are normalized robot-base-frame pose deltas at 100 Hz, not absolute world poses: a unit input changes the target by 0.05 m or 0.5 rad per step. World-frame EEF observations must be interpreted consistently with that command frame, and increments must respect the small plate/table clearances. The gripper channel is -1 open and +1 closed, with intermediate openings.",
+        "rank": 7,
+        "criticality": "important",
+        "evidence_refs": [
+          "meta:controller_interface.controller",
+          "meta:controller_interface.action_space.scaling",
+          "meta:controller_interface.action_space.gripper",
+          "meta:controller_interface.control_frequency_hz",
+          "meta:controller_interface.observables.0",
+          "cam:exo_left_cam:f0"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "what": "Whether the plate's opposing-side span fits the maximum jaw aperture, and whether its sidewall height or underside geometry permits adequate fingertip purchase.",
+        "how_to_resolve_with_sensors": "Combine finger joint positions at full opening with RGB views registered through known robot poses. Additional side/profile views can estimate plate thickness, lower-edge shape and finger-to-table clearance without assuming dimensions from perspective alone."
+      },
+      {
+        "what": "The tabletop plane, plate pose and relevant edge locations in robot command coordinates, including the world-to-base frame relationship.",
+        "how_to_resolve_with_sensors": "Correlate multi-view RGB geometry with EEF and joint proprioception. Wrist/tactile contact onset during cautious contact can further constrain tabletop height; camera-observed hand motion can check coordinate-axis consistency."
+      },
+      {
+        "what": "Plate\u2013table and finger\u2013plate traction, and the thresholds separating sticking, sliding and tipping during support-changing contact.",
+        "how_to_resolve_with_sensors": "Correlate wrist-wrench and tactile changes with camera-observed plate translation or rotation under small contact loads. These observations can bound behavior that the stationary images cannot reveal."
+      },
+      {
+        "what": "Plate weight, center-of-mass offset, grasp holding margin and the non-contact contribution to the wrist wrench.",
+        "how_to_resolve_with_sensors": "Compare pose-dependent no-contact wrench readings with load-transfer readings. Combine wrench changes, fingertip contact distributions and camera-observed plate motion to estimate load/moment and detect slip or rotation relative to the hand."
+      },
+      {
+        "what": "Which aperture-compatible edge or side grasp poses are reachable with sufficient joint and collision margins.",
+        "how_to_resolve_with_sensors": "Use joint positions/velocities and EEF pose to assess the arm configuration, together with external and wrist RGB views to establish clearance of the fingers, wrist and arm from the tabletop, legs and pedestal."
+      }
+    ]
+  },
+  "gate_passed": true,
+  "gate_errors": [],
+  "attempts": 1
+}

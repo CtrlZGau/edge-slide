@@ -1,0 +1,112 @@
+{
+  "task": "ib-m-mirror-pick-place-v1",
+  "policy": "pi05",
+  "prompt": "pick up the cube and lift it",
+  "args": {
+    "task": "ib-m-mirror-pick-place-v1",
+    "policy": "pi05",
+    "prompt": "pick up the cube and lift it",
+    "n_episodes": 5,
+    "seed_offset": 0,
+    "max_steps": 120,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 8000,
+    "video_every": 0,
+    "out": "outputs/pi05_eval/ib-m-mirror-pick-place-v1/table_probe/h0.9",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "state_dx": 0.0,
+    "cam_dx": 0.0,
+    "wrist_cam": "gripper_cam",
+    "wrist_res": 256,
+    "table_height": 0.9,
+    "kp": null,
+    "libero_init_pose": true,
+    "undo_task_flip": true
+  },
+  "n_episodes_done": 5,
+  "success_rate": 0.0,
+  "mean_length": 120.0,
+  "mean_min_eef_obj_dist": 0.025439999999999997,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0312,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        0.1390988281503088,
+        -0.03496754435226669,
+        0.9197844891595659
+      ],
+      "wall_time_s": 8.8
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0199,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.08865888892821876,
+        0.11340195332001166,
+        0.9197844891595659
+      ],
+      "wall_time_s": 8.4
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.022,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.05856848068189705,
+        -0.08190112499410404,
+        0.919784489164656
+      ],
+      "wall_time_s": 7.6
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0246,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.1403639774456559,
+        -0.02484724351987098,
+        0.919784401645908
+      ],
+      "wall_time_s": 7.7
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0295,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        0.10891516074580154,
+        0.14498599980593507,
+        0.9197792510028561
+      ],
+      "wall_time_s": 7.6
+    }
+  ]
+}

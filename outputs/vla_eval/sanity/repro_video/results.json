@@ -1,0 +1,64 @@
+{
+  "task": "ib-p1-cube-pick-v1",
+  "policy": "groot",
+  "prompt": "pick up the cube from the table",
+  "args": {
+    "task": "ib-p1-cube-pick-v1",
+    "policy": "groot",
+    "prompt": null,
+    "n_episodes": 2,
+    "seed_offset": 0,
+    "max_steps": 60,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5555,
+    "video_every": 1,
+    "out": "outputs/vla_eval/sanity/repro_video",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "no_resume": true
+  },
+  "n_episodes_done": 2,
+  "success_rate": 0.0,
+  "mean_length": 60.0,
+  "mean_min_eef_obj_dist": 0.05785,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0479,
+      "length": 60,
+      "terminated": false,
+      "object_pos_final": [
+        0.012369596198834805,
+        -0.01950946874215137,
+        0.8214189604668488
+      ],
+      "wall_time_s": 3.5,
+      "infer_ms_mean": 168.5,
+      "n_queries": 12
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0678,
+      "length": 60,
+      "terminated": false,
+      "object_pos_final": [
+        -0.048083240509319385,
+        -0.07688000477715792,
+        0.8184307817419397
+      ],
+      "wall_time_s": 3.5,
+      "infer_ms_mean": 171.8,
+      "n_queries": 12
+    }
+  ]
+}

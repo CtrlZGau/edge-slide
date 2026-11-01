@@ -1,0 +1,31 @@
+{
+ "seed": 2,
+ "success": true,
+ "exit_reason": "success",
+ "steps": 18,
+ "ticks": 2470,
+ "cost_usd": 2.0911,
+ "plate_final_pos_m": [
+  -0.012,
+  -0.021,
+  0.951
+ ],
+ "wall_s": 202.2,
+ "obj": false,
+ "plan_source": "stage2",
+ "stage2_path": "runs/gpt-6-astra/edge-slide/seed_0/sample_0/stage2.json",
+ "plan_seed": 0,
+ "episode_seed": 2,
+ "stage2_sample": 0,
+ "subgoal_ids": [
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "S7",
+  "S8",
+  "S9"
+ ]
+}

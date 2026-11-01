@@ -1,0 +1,264 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "pi05",
+  "prompt": "pick up the flat plate from the table",
+  "note": "50-episode run stopped after 20 episodes; rebuilt from run log + traj files",
+  "args": {
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "mirror": true,
+    "replan_steps": 5,
+    "state_pos_offset": [
+      -0.25,
+      0,
+      0
+    ]
+  },
+  "n_episodes_done": 20,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.04260000000000001,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.03,
+      "wall_time_s": 35.4,
+      "object_pos_final": [
+        0.0168,
+        -0.0102,
+        0.815
+      ]
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.043,
+      "wall_time_s": 35.9,
+      "object_pos_final": [
+        -0.0137,
+        -0.0588,
+        0.815
+      ]
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.044,
+      "wall_time_s": 35.8,
+      "object_pos_final": [
+        -0.0155,
+        -0.0191,
+        0.815
+      ]
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.056,
+      "wall_time_s": 35.4,
+      "object_pos_final": [
+        0.0026,
+        0.0943,
+        0.815
+      ]
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.06,
+      "wall_time_s": 35.7,
+      "object_pos_final": [
+        0.0516,
+        0.0475,
+        0.815
+      ]
+    },
+    {
+      "seed": 5,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.039,
+      "wall_time_s": 35.6,
+      "object_pos_final": [
+        0.1074,
+        0.0117,
+        0.815
+      ]
+    },
+    {
+      "seed": 6,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.047,
+      "wall_time_s": 35.8,
+      "object_pos_final": [
+        -0.1055,
+        -0.0974,
+        0.815
+      ]
+    },
+    {
+      "seed": 7,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.033,
+      "wall_time_s": 35.9,
+      "object_pos_final": [
+        0.0557,
+        0.1193,
+        0.815
+      ]
+    },
+    {
+      "seed": 8,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.052,
+      "wall_time_s": 36.0,
+      "object_pos_final": [
+        0.009,
+        -0.0625,
+        0.815
+      ]
+    },
+    {
+      "seed": 9,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.033,
+      "wall_time_s": 35.6,
+      "object_pos_final": [
+        -0.0847,
+        -0.0732,
+        0.815
+      ]
+    },
+    {
+      "seed": 10,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.042,
+      "wall_time_s": 35.6,
+      "object_pos_final": [
+        0.0848,
+        0.0071,
+        0.815
+      ]
+    },
+    {
+      "seed": 11,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.032,
+      "wall_time_s": 35.5,
+      "object_pos_final": [
+        0.0622,
+        -0.011,
+        0.8152
+      ]
+    },
+    {
+      "seed": 12,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.047,
+      "wall_time_s": 35.5,
+      "object_pos_final": [
+        0.0058,
+        -0.099,
+        0.815
+      ]
+    },
+    {
+      "seed": 13,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.069,
+      "wall_time_s": 35.3,
+      "object_pos_final": [
+        0.1118,
+        0.1134,
+        0.815
+      ]
+    },
+    {
+      "seed": 14,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.024,
+      "wall_time_s": 35.4,
+      "object_pos_final": [
+        -0.099,
+        0.0089,
+        0.815
+      ]
+    },
+    {
+      "seed": 15,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.034,
+      "wall_time_s": 35.9,
+      "object_pos_final": [
+        -0.0335,
+        -0.0538,
+        0.815
+      ]
+    },
+    {
+      "seed": 16,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.031,
+      "wall_time_s": 35.5,
+      "object_pos_final": [
+        -0.1011,
+        -0.0053,
+        0.815
+      ]
+    },
+    {
+      "seed": 17,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.05,
+      "wall_time_s": 35.5,
+      "object_pos_final": [
+        -0.0891,
+        0.1221,
+        0.815
+      ]
+    },
+    {
+      "seed": 18,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.055,
+      "wall_time_s": 35.4,
+      "object_pos_final": [
+        -0.0763,
+        0.0846,
+        0.815
+      ]
+    },
+    {
+      "seed": 19,
+      "success": false,
+      "length": 600,
+      "min_eef_obj_dist": 0.031,
+      "wall_time_s": 35.5,
+      "object_pos_final": [
+        -0.0542,
+        -0.0048,
+        0.815
+      ]
+    }
+  ]
+}

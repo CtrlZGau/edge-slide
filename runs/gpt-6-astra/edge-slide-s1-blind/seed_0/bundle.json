@@ -1,0 +1,105 @@
+{
+  "task_id": "ib-p1-edge-slide-v1",
+  "seed": 0,
+  "frames": [
+    {
+      "camera": "exo_right_cam",
+      "frame_idx": 0,
+      "t_s": 0.5,
+      "file": "frames/exo_right_cam_f0.jpg"
+    },
+    {
+      "camera": "exo_left_cam",
+      "frame_idx": 0,
+      "t_s": 0.5,
+      "file": "frames/exo_left_cam_f0.jpg"
+    },
+    {
+      "camera": "ego_cam",
+      "frame_idx": 0,
+      "t_s": 0.5,
+      "file": "frames/ego_cam_f0.jpg"
+    },
+    {
+      "camera": "gripper_cam",
+      "frame_idx": 0,
+      "t_s": 0.5,
+      "file": "frames/gripper_cam_f0.jpg"
+    }
+  ],
+  "metadata": {
+    "task_description": "Lift the plate above the table.",
+    "controller_interface": {
+      "robot": "single Franka Emika Panda 7-DoF arm, fixed base",
+      "end_effector": "parallel-jaw gripper (Panda hand), two fingers; no suction",
+      "controller": "OSC_POSE operational-space controller, delta commands in the robot base frame",
+      "action_space": {
+        "dim": 7,
+        "layout": [
+          "dx",
+          "dy",
+          "dz",
+          "droll",
+          "dpitch",
+          "dyaw",
+          "gripper"
+        ],
+        "range": [
+          -1.0,
+          1.0
+        ],
+        "scaling": "per step, +-1 maps to +-0.05 m translation and +-0.5 rad rotation targets",
+        "gripper": "continuous: -1 fully open, +1 fully closed; intermediate values give partial openings"
+      },
+      "control_frequency_hz": 100,
+      "observables": [
+        "eef_pos (m, world frame)",
+        "eef_quat (xyzw)",
+        "gripper finger joint positions",
+        "gripper openness (0 closed .. 1 fully open)",
+        "wrist force/torque sensor (N, N*m)",
+        "joint positions/velocities",
+        "fingertip tactile arrays (8x8 per finger)",
+        "RGB cameras: exo_right_cam, exo_left_cam, ego_cam, gripper_cam"
+      ]
+    },
+    "cameras": {
+      "exo_right_cam": "external camera, right side of the table, elevated, looking at the table centre",
+      "exo_left_cam": "external camera, left side of the table, elevated, looking at the table centre",
+      "ego_cam": "front camera on the far side of the table, facing back toward the robot, looking down at the table",
+      "gripper_cam": "wrist camera on the gripper, looking down along the gripper's approach axis"
+    },
+    "sensor_snapshot": [
+      {
+        "frame_idx": 0,
+        "t_s": 0.5,
+        "eef_pos_m": [
+          0.064,
+          0.025,
+          1.02
+        ],
+        "eef_quat_xyzw": [
+          0.997,
+          -0.0,
+          0.072,
+          -0.01
+        ],
+        "wrist_force_N": [
+          0.104,
+          0.745,
+          -5.144
+        ],
+        "wrist_torque_Nm": [
+          -0.105,
+          0.015,
+          -0.0
+        ],
+        "tactile_max_right": 0.0,
+        "tactile_max_left": 0.0,
+        "gripper_state": "fully open"
+      }
+    ],
+    "capture": "arm held still (zero delta, gripper open); frames at t = [0.5] s"
+  },
+  "variant": "s1-blind: no gripper aperture numbers (max opening, finger qpos, opening, openness)"
+}

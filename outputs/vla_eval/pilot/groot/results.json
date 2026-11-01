@@ -1,0 +1,47 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "groot",
+  "prompt": "pick up the flat plate from the table",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "groot",
+    "prompt": null,
+    "n_episodes": 1,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5555,
+    "video_every": 1,
+    "out": "/root/IMBench/outputs/vla_eval/pilot/groot",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 1,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.1757,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.1757,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.01077196391925525,
+        -0.018322848158662863,
+        0.8149514559625446
+      ],
+      "wall_time_s": 34.9,
+      "infer_ms_mean": 167.4,
+      "n_queries": 120
+    }
+  ]
+}

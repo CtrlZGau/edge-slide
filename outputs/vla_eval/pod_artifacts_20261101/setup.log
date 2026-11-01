@@ -1,0 +1,162 @@
+
+[1;34m### GPU[0m
+name, memory.total [MiB], driver_version
+NVIDIA GeForce RTX 4090, 24564 MiB, 595.91.07
+
+[1;34m### System packages[0m
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+
+[1;34m### uv[0m
+
+[1;34m### IMBench venv[0m
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /root/IMBench/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite INFO] Loading controller configuration from: /root/IMBench/.venv/lib/python3.12/site-packages/robosuite/controllers/config/robots/default_panda.json (composite_controller_factory.py:121)
+IMBench EGL render OK (480, 640, 3)
+
+[1;34m### Isaac-GR00T[0m
+Updated Git hooks.
+Git LFS initialized.
+GR00T commit c56f541 Wed Oct 28 14:46:01 2026 -0700
+Resolved 184 packages in 7.30s
+Downloading flash-attn (242.0MiB)
+ Downloaded flash-attn
+Prepared 1 package in 3.54s
+Uninstalled 1 package in 4ms
+Installed 1 package in 369ms
+ - flash-attn==2.8.3 (from https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl)
+ + flash-attn==2.8.3+cu12torch2.9cxx11abitrue (from https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl)
+Clearing cache at: /root/.cache/uv
+Removed 587 files (968.3MiB)
+Downloading flash-attn (242.0MiB)
+ Downloaded flash-attn
+Uninstalled 1 package in 9ms
+Installed 1 package in 369ms
+gr00t import OK
+Uninstalled 1 package in 12ms
+Installed 1 package in 30ms
+Fetching 33 files:   0%|          | 0/33 [00:00<?, ?it/s]Downloading 'libero_10/model-00001-of-00002.safetensors' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/aoe4E07IMh7reFyUkVoVk040mQk=.39b7beaadd9a06c87502f2b741a36f939b84941f37fef757c6177e54e34a5eff.incomplete'
+Downloading 'libero_10/model-00002-of-00002.safetensors' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/Dr_lZJDwE1cnGAQMwA77jJEQIk8=.8c4fa56f1b4f25a1a842c811e8a12d2bf6d77d73942f9a04f5b876a11bd6d703.incomplete'
+Downloading 'libero_10/rng_state_12.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/rb-iLZHKbu0_liYTTI_AJ4wyBrY=.ece19196cda59dad17667e3f2c9359932898e2777f65c0c378855d2c5c2be456.incomplete'
+Downloading 'libero_10/rng_state_1.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/LXxmdm1qnGqKHFEb_xPji98R6aU=.58054c3dad85cc8519d55fef4f6f15ea839145f6ae1e9b500d257ad3818844c6.incomplete'
+Downloading 'libero_10/rng_state_11.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/R8_W0ddJ1KZx5wKOHdFY0rHeS8w=.9ded6276714cd1e3d316632a370a24752c04e20c54902bf7d901e16cf5924d1e.incomplete'
+Downloading 'libero_10/rng_state_0.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/m2U9BNWbnBRep1Ao4UMD9wx6S1U=.bafc48166c718c9e508c8d28829a5a9f3aab6940fc53d268d3834ab56c68ad70.incomplete'
+Downloading 'libero_10/rng_state_10.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/Bek9vfh1rfHQuV5b6u4EWCQnYQ8=.95f4feaa8725ee93dfba71373ac6a3352a8d806c7505497a03c0a16ee785c786.incomplete'
+Downloading 'libero_10/processor_config.json' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/8BeVhMN1eB33CiLECQDJwUnv7xg=.bcbf138a69c57e445e79fe8e76e84b39f11d25ab.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/processor_config.json
+Downloading 'libero_10/rng_state_13.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/PqHXhpxxRWjc34hDAe1ZSZUF38c=.7302f9ecba897af6d41efae80297a73fa1dc1dc56027f9c5db4aadd450a68492.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_13.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_0.pth
+Downloading 'libero_10/rng_state_14.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/skw59McYFHhol2FoZB9j33hCRR8=.ee3c616766042ec281e6261a0438aced709860e25be1b8b0fbc96d84ddf7f933.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_12.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_1.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_11.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_10.pth
+Downloading 'libero_10/rng_state_15.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/eBNBH6tWfKU6rW5kAL3O8ipkGBw=.3e512d2c7de7850a4f053bd2e47f881d6881dff3a5df149f5959846362d1ffb2.incomplete'
+Downloading 'libero_10/rng_state_2.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/d2KbNFdo6c8T6Vr96ek4zsP0fhE=.96801c9c2ab43adc3f9c2cf145589243bba8bf3a337c8e9b22feabafcce261e4.incomplete'
+Downloading 'libero_10/rng_state_3.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/5Xyy3hnHB4XgdUCtQ65n9fk-qRQ=.5a1b6d510b1d791d70836131b5fe19317a154099497b22a8f1535d5cd07db6d0.incomplete'
+Downloading 'libero_10/rng_state_4.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/QQQDVjfG95qqOeKZ6RC_GYIkcmI=.65e71d99ccb04f84920c031867a73d6905f27da58b19e2826bfa190045afe2b8.incomplete'
+Downloading 'libero_10/rng_state_5.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/uiXazv8nk6Jsn5MuM-cpAEZ7PWc=.997f16e9b9f10bdf60639f23e58356946892b847fc5930f294059334c543120a.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_14.pth
+Downloading 'libero_10/rng_state_6.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/_0A-ebDPzktdia8xcv8Uz8spEXs=.eff2d418e9bd8f12a25c92fefeb14d400643d0e7f66eacc332322352222b0c00.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_15.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_2.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_3.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_5.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_4.pth
+Downloading 'libero_10/rng_state_7.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/WyO-NqUDozyeJYi--2Wgja00TXU=.ea9e8150d30594fed63c1f95e0d19e037f2096490100e43b5507ccc87825b7da.incomplete'
+Downloading 'libero_10/rng_state_8.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/3qdk_3EqzkxCnFViagvPz1MnD58=.1c1caf5c0caf0a672490b2a49e900398de7b06c689ed93eaff9f89ddcb08a6ec.incomplete'
+Downloading 'libero_10/rng_state_9.pth' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/yjtftha53o1sArC0Ily68z2owTI=.c44ed5ea98cf0fc79bad599cd4c02c90eca4f5ae4afc7aecb99683e331ac371d.incomplete'
+Downloading 'libero_10/scheduler.pt' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/-TKHT9st1Ll35ofujHvZcGIOiAc=.9461736610388b65e6dbfab5ca3dc2043efdde6e9fd57c7a30bf158b8cb22468.incomplete'
+Downloading 'libero_10/statistics.json' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/fdiBcmYgp6yoQ13rbGJnvOlryf0=.cd2c2165a310c4d97484cf63b68e3c7f55d328f3.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_7.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_6.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/statistics.json
+Downloading 'libero_10/trainer_state.json' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/1uiJ87Eu3vvlOlZKj0NZvGlSO3I=.69773027b5ad1878a3350ca9cdda20fcf94c9ac7.incomplete'
+Downloading 'libero_10/training_args.bin' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/wDrERwdtvdWRGcZ53Ku-FoERHzQ=.8a6ff4c4377bd1abf6db7292151613e3298b51fa898e9af381bca5328b94965e.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_8.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/rng_state_9.pth
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/scheduler.pt
+Downloading 'libero_10/wandb_config.json' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/yJjcin6k2mqmbc4Z3TknBv3Fqj0=.186e1799a9835221fc0609a201e46ef3a91cfb05.incomplete'
+Downloading 'libero_10/zero_to_fp32.py' to 'checkpoints/GR00T-N1.7-LIBERO/.cache/huggingface/download/libero_10/ePbCs_PRHW1G2t5kQ3SE3uFWKpE=.5995d6e6f04e43b989587aa9022a3aef0c66d694.incomplete'
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/zero_to_fp32.py
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/wandb_config.json
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/training_args.bin
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/trainer_state.json
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/model-00002-of-00002.safetensors
+Download complete. Moving file to checkpoints/GR00T-N1.7-LIBERO/libero_10/model-00001-of-00002.safetensors
+Fetching 33 files:  24%|██▍       | 8/33 [00:10<00:34,  1.37s/it]Fetching 33 files: 100%|██████████| 33/33 [00:10<00:00,  3.00it/s]
+/root/Isaac-GR00T/checkpoints/GR00T-N1.7-LIBERO
+Uninstalled 1 package in 9ms
+Installed 1 package in 26ms
+Fetching 15 files:   0%|          | 0/15 [00:00<?, ?it/s]Downloading 'config.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/0cd8c646eb55794594b14fefcd1d3acea5cc000f.incomplete'
+Downloading '.gitattributes' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/140a13b3da6ed38dcd849c3e26a0583743f76fae.incomplete'
+Downloading 'PAI_Bench_Leaderboard.png' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/f9ac0320a57d6ee76a4f582388564dcb379ab170f2d99550e891fcd26a0b31c9.incomplete'
+Downloading 'README.md' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/c67ef7eb71b31dde6a102f9a51a0bb0cc01733b9.incomplete'
+Downloading 'chat_template.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/e49e75bdda104c8de941eb20e0b3765184fb27bc.incomplete'
+Downloading 'CR2 Performance by Category.png' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/95ca01dddab7a1717588c53404c23898de197353.incomplete'
+Downloading 'cosmos_cr2_2b_paiBench.png' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/4b79d34191efa63420e64f4ded2a113b43cd3a2dadbb65e226e9d99a3442d795.incomplete'
+Downloading 'generation_config.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/7bb37933d2d86e4ceaabcc6540be989658f238e9.incomplete'
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/0cd8c646eb55794594b14fefcd1d3acea5cc000f
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/140a13b3da6ed38dcd849c3e26a0583743f76fae
+Fetching 15 files:   7%|▋         | 1/15 [00:00<00:05,  2.63it/s]Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/95ca01dddab7a1717588c53404c23898de197353
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/c67ef7eb71b31dde6a102f9a51a0bb0cc01733b9
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/e49e75bdda104c8de941eb20e0b3765184fb27bc
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/7bb37933d2d86e4ceaabcc6540be989658f238e9
+Downloading 'merges.txt' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0.incomplete'
+Downloading 'model.safetensors' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede.incomplete'
+Downloading 'preprocessor_config.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/2ea84a437d448ff71b08df68fdd949d5cc4ebb64.incomplete'
+Downloading 'tokenizer_config.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/d3d3763207692c78780f4bf42d4dadf49a5c8012.incomplete'
+Downloading 'tokenizer.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/c6cc1014128b19d1fc46b1d30a23e3b1d35db421.incomplete'
+Downloading 'video_preprocessor_config.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe.incomplete'
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/2ea84a437d448ff71b08df68fdd949d5cc4ebb64
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/d3d3763207692c78780f4bf42d4dadf49a5c8012
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe
+Downloading 'vocab.json' to '/root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569.incomplete'
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/c6cc1014128b19d1fc46b1d30a23e3b1d35db421
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/4783fe10ac3adce15ac8f358ef5462739852c569
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/4b79d34191efa63420e64f4ded2a113b43cd3a2dadbb65e226e9d99a3442d795
+Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/f9ac0320a57d6ee76a4f582388564dcb379ab170f2d99550e891fcd26a0b31c9
+Fetching 15 files:  20%|██        | 3/15 [00:01<00:04,  2.41it/s]Download complete. Moving file to /root/.cache/huggingface/hub/models--nvidia--Cosmos-Reason2-2B/blobs/fa5a6e6ef4fce40216b185cc48a3b24d31637ac3e2ba69c107ed1f389c1e6ede
+Fetching 15 files:  67%|██████▋   | 10/15 [00:09<00:04,  1.02it/s]Fetching 15 files: 100%|██████████| 15/15 [00:09<00:00,  1.64it/s]
+Cosmos-Reason2-2B access OK
+SUCCESS
+config.json
+embodiment_id.json
+experiment_cfg
+latest
+model-00001-of-00002.safetensors
+model-00002-of-00002.safetensors
+model.safetensors.index.json
+processor_config.json
+rng_state_0.pth
+rng_state_1.pth
+rng_state_10.pth
+rng_state_11.pth
+rng_state_12.pth
+rng_state_13.pth
+rng_state_14.pth
+rng_state_15.pth
+rng_state_2.pth
+rng_state_3.pth
+rng_state_4.pth
+rng_state_5.pth
+rng_state_6.pth
+rng_state_7.pth
+rng_state_8.pth
+rng_state_9.pth
+scheduler.pt
+statistics.json
+trainer_state.json
+training_args.bin
+wandb_config.json
+zero_to_fp32.py
+
+[1;34m### Skipping MolmoAct2 (SKIP_MOLMO=1)[0m
+
+[1;34m### Setup complete[0m

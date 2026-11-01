@@ -1,0 +1,14 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/gb/IMBench/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite INFO] Loading controller configuration from: /home/gb/IMBench/.venv/lib/python3.12/site-packages/robosuite/controllers/config/robots/default_panda.json (composite_controller_factory.py:121)
+{"seed": 2, "mode": "pick", "scripted_steps": 156, "edge": "-y", "overhang_at_handoff": 0.035, "scripted_reached_handoff": true, "success": true, "b_steps": 256, "object_pos_final": [-0.0215, -0.2414, 0.9526], "infer_s_mean": 8.048, "wall_s": 286.0}
+{"seed": 3, "mode": "pick", "scripted_steps": 135, "edge": "+y", "overhang_at_handoff": 0.0398, "scripted_reached_handoff": true, "success": true, "b_steps": 246, "object_pos_final": [0.0017, 0.2254, 0.9518], "infer_s_mean": 7.796, "wall_s": 276.7}
+{"seed": 4, "mode": "pick", "scripted_steps": 161, "edge": "+y", "overhang_at_handoff": 0.0355, "scripted_reached_handoff": true, "success": true, "b_steps": 245, "object_pos_final": [0.0591, 0.2209, 0.9529], "infer_s_mean": 7.789, "wall_s": 278.8}
+{"seed": 5, "mode": "pick", "scripted_steps": 172, "edge": "-y", "overhang_at_handoff": 0.042, "scripted_reached_handoff": true, "success": true, "b_steps": 213, "object_pos_final": [0.0686, -0.2477, 0.9532], "infer_s_mean": 7.879, "wall_s": 241.6}
+{"seed": 6, "mode": "pick", "scripted_steps": 165, "edge": "-y", "overhang_at_handoff": 0.0333, "scripted_reached_handoff": true, "success": true, "b_steps": 186, "object_pos_final": [-0.002, -0.2229, 0.9529], "infer_s_mean": 7.978, "wall_s": 218.9}
+{"seed": 7, "mode": "pick", "scripted_steps": 153, "edge": "+y", "overhang_at_handoff": 0.0427, "scripted_reached_handoff": true, "success": true, "b_steps": 233, "object_pos_final": [0.0649, 0.2578, 0.953], "infer_s_mean": 7.951, "wall_s": 268.4}
+{"seed": 8, "mode": "pick", "scripted_steps": 153, "edge": "-y", "overhang_at_handoff": 0.0471, "scripted_reached_handoff": true, "success": true, "b_steps": 244, "object_pos_final": [-0.0029, -0.2477, 0.9532], "infer_s_mean": 7.764, "wall_s": 276.9}
+{"seed": 9, "mode": "pick", "scripted_steps": 195, "edge": "-y", "overhang_at_handoff": 0.0345, "scripted_reached_handoff": true, "success": true, "b_steps": 238, "object_pos_final": [-0.0271, -0.263, 0.9541], "infer_s_mean": 7.872, "wall_s": 269.3}

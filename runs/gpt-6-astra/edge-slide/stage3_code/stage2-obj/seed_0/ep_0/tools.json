@@ -1,0 +1,90 @@
+[
+ {
+  "type": "function",
+  "name": "RUN_CODE",
+  "strict": true,
+  "description": "Run a Python program that controls the robot through the robot API (see the system prompt). It runs to completion before you get the next observation.",
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "code"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "what you see, what the last result tells you, and what this program will do"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this program should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "code": {
+     "type": "string",
+     "description": "Python source"
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "DONE",
+  "description": "Declare the task complete. Ends the episode.",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [],
+     "properties": {}
+    }
+   }
+  }
+ }
+]

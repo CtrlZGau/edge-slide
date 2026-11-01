@@ -1,0 +1,3 @@
+pruned outputs/dp/multitask_v1/checkpoints/step0040000: 4.45 GB -> 1.11 GB
+pruned outputs/dp/multitask_v1/checkpoints/step0060000: 4.45 GB -> 1.11 GB
+pruned outputs/dp/multitask_v1/checkpoints/step0080000: 4.45 GB -> 1.11 GB

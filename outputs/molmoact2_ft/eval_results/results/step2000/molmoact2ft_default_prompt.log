@@ -1,0 +1,2 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step2000/molmoact2ft_default_prompt
+[1/20] seed=0 success=False len=600 min_dist=0.029 (776.8s, infer 6056.7 ms)

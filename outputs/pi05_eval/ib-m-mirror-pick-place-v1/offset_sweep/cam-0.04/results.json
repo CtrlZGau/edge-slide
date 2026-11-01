@@ -1,0 +1,109 @@
+{
+  "task": "ib-m-mirror-pick-place-v1",
+  "policy": "pi05",
+  "prompt": "pick up the cube and lift it",
+  "args": {
+    "task": "ib-m-mirror-pick-place-v1",
+    "policy": "pi05",
+    "prompt": "pick up the cube and lift it",
+    "n_episodes": 5,
+    "seed_offset": 0,
+    "max_steps": 120,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 8000,
+    "video_every": 0,
+    "out": "outputs/pi05_eval/ib-m-mirror-pick-place-v1/offset_sweep/cam-0.04",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "state_dx": 0.0,
+    "cam_dx": -0.04,
+    "wrist_cam": "gripper_cam",
+    "wrist_res": 256,
+    "undo_task_flip": true
+  },
+  "n_episodes_done": 5,
+  "success_rate": 0.0,
+  "mean_length": 120.0,
+  "mean_min_eef_obj_dist": 0.030180000000000002,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0321,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        0.13925200333467122,
+        -0.035109431382923044,
+        0.8197844891595695
+      ],
+      "wall_time_s": 6.7
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0298,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.0860740763112798,
+        0.10620812242373948,
+        0.8197844891596191
+      ],
+      "wall_time_s": 6.8
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0302,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.05862040793869885,
+        -0.07258881632785394,
+        0.8199560609559422
+      ],
+      "wall_time_s": 6.7
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0328,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        -0.1410371367364299,
+        -0.012950032681586676,
+        0.8197844891595659
+      ],
+      "wall_time_s": 6.7
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.026,
+      "length": 120,
+      "terminated": false,
+      "object_pos_final": [
+        0.11316342302018888,
+        0.14813750514769522,
+        0.8197844891595695
+      ],
+      "wall_time_s": 6.7
+    }
+  ]
+}

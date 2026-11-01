@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.pytest_cache/
+# large artifacts (see ARTIFACTS.md)
+*.pt
+*.safetensors
+demos_synthetic/**/raw*/
+demos_synthetic/**/data/
+demos_synthetic/**/videos/
+demos_synthetic/**/images/
+demos_synthetic/dp/cache128/
+# never commit secrets
+*.key
+*_key.txt
+.env
+CLAUDE.local.md

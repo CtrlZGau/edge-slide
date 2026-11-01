@@ -1,0 +1,47 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "molmoact2",
+  "prompt": "slide the flat plate to the edge of the table, then grasp it and lift it up",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "molmoact2",
+    "prompt": "slide the flat plate to the edge of the table, then grasp it and lift it up",
+    "n_episodes": 20,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5562,
+    "video_every": 1,
+    "out": "/workspace/eval/results/step2000/molmoact2ft_strategy_prompt",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 1,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.0983,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0983,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.0005231341013881998,
+        0.18476684639250288,
+        0.8149606889872832
+      ],
+      "wall_time_s": 781.9,
+      "infer_ms_mean": 6054.1,
+      "n_queries": 120
+    }
+  ]
+}

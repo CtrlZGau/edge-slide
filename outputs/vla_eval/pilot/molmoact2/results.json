@@ -1,0 +1,47 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "molmoact2",
+  "prompt": "pick up the flat plate from the table",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "molmoact2",
+    "prompt": null,
+    "n_episodes": 1,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5556,
+    "video_every": 1,
+    "out": "/root/IMBench/outputs/vla_eval/pilot/molmoact2",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 1,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.0375,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0375,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.012968301680535838,
+        -0.015980078118279162,
+        0.8129714168572467
+      ],
+      "wall_time_s": 38.2,
+      "infer_ms_mean": 185.3,
+      "n_queries": 120
+    }
+  ]
+}

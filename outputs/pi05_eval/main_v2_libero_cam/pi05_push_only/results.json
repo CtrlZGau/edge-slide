@@ -1,0 +1,152 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "pi05",
+  "prompt": "push the flat plate to the edge of the table with the gripper",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "pi05",
+    "prompt": "push the flat plate to the edge of the table with the gripper",
+    "n_episodes": 20,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 8000,
+    "video_every": 1,
+    "out": "outputs/pi05_eval/main_v2_libero_cam/pi05_push_only",
+    "push_metric": true,
+    "push_threshold": 0.03
+  },
+  "n_episodes_done": 6,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.06708333333333333,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": -0.13065229365663314,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0793,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.01077196391925525,
+        -0.018322848158662863,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.0,
+      "initial_overhang": -0.1307,
+      "final_overhang": -0.1307,
+      "max_overhang": -0.1307,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": -0.06803313702392993,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0923,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        -0.04516287749974813,
+        -0.08872250325749682,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.2,
+      "initial_overhang": -0.0718,
+      "final_overhang": -0.068,
+      "max_overhang": -0.0677,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0046
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": -0.160662808750761,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0452,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.0219442223808189,
+        -0.008773906584848508,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.5,
+      "initial_overhang": -0.1483,
+      "final_overhang": -0.1607,
+      "max_overhang": -0.1482,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0389
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": -0.05711242727517543,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0575,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.002603857842223934,
+        0.09434801544987698,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.6,
+      "initial_overhang": -0.0572,
+      "final_overhang": -0.0571,
+      "max_overhang": -0.0571,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": -0.09201262584603453,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0672,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.0515752450360915,
+        0.049313204787482294,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.4,
+      "initial_overhang": -0.0939,
+      "final_overhang": -0.092,
+      "max_overhang": -0.0918,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0019
+    },
+    {
+      "seed": 5,
+      "success": false,
+      "final_score": -0.05232838747899221,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.061,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.10600889571693742,
+        0.009951023878281229,
+        0.8149514559625446
+      ],
+      "wall_time_s": 35.3,
+      "initial_overhang": -0.0574,
+      "final_overhang": -0.0523,
+      "max_overhang": -0.0523,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0139
+    }
+  ],
+  "push_success_def": "final plate overhang >= 0.03 m past the table edge and plate not fallen off",
+  "mean_final_overhang": -0.09346666666666668,
+  "fell_off_rate": 0.0
+}

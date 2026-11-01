@@ -1,0 +1,71 @@
+{
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "molmoact2",
+    "prompt": "push the flat plate to the edge of the table with the gripper",
+    "n_episodes": 6,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5562,
+    "video_every": 1,
+    "out": "/workspace/eval/results/step2000/molmoact2ft_push_only",
+    "push_metric": true,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "prompt": "push the flat plate to the edge of the table with the gripper",
+  "libero_cam": {
+    "enabled": true,
+    "robosuite_name": "frontview",
+    "pos": [
+      0.9086,
+      0.0,
+      1.6103
+    ],
+    "quat": [
+      0.638,
+      0.3048,
+      0.3048,
+      0.638
+    ],
+    "fovy": 45,
+    "width": 256,
+    "height": 256,
+    "depth": false,
+    "save": false
+  },
+  "started": "2026-11-01 01:01:04",
+  "git": {
+    "sha": "fb807d545d49c02b29af6b16891d996382c0284e",
+    "dirty_files": [
+      " M .gitignore",
+      " M configs/tasks/prehensile/ib-p1-edge-slide-v1.yaml",
+      " M configs/tasks/prehensile/ib-p4-tool-retrieve-v1.yaml",
+      " M configs/tasks/prehensile/ib-p5-occluder-push-v1.yaml",
+      " M configs/tasks/puzzle/ib-p3-indirect-push-v1.yaml",
+      " M data_synthetic/singlearm_collect_demos.py",
+      " M imbench/tasks/prehensile/edge_slide_v1.py",
+      " M imbench/tasks/prehensile/occluder_push_v1.py",
+      " M imbench/tasks/prehensile/tool_retrieve_v1.py",
+      " M imbench/tasks/puzzle/indirect_push_v1.py",
+      "?? data_synthetic/package_molmoact2_lerobot.py",
+      "?? data_synthetic/record_molmoact2_edge_slide.py",
+      "?? data_synthetic/single_arm_pipeline/edge_slide_teleop_policy.py",
+      "?? imbench/policy/pi05_policy.py",
+      "?? imbench/policy/vla_clients.py",
+      "?? imbench/vlm_eval/",
+      "?? notes/vla_zero_shot_eval_plan.md",
+      "?? scripts/run_pi05_eval.py",
+      "?? scripts/run_vla_eval.py",
+      "?? scripts/vla_eval/",
+      "?? tests/test_primitives.py",
+      "?? tests/test_vlm_eval.py"
+    ],
+    "task_diff": "diff --git a/configs/tasks/prehensile/ib-p1-edge-slide-v1.yaml b/configs/tasks/prehensile/ib-p1-edge-slide-v1.yaml\nindex 4880ac3..c8b9b1a 100644\n--- a/configs/tasks/prehensile/ib-p1-edge-slide-v1.yaml\n+++ b/configs/tasks/prehensile/ib-p1-edge-slide-v1.yaml\n@@ -1,7 +1,6 @@\n task_id: ib-p1-edge-slide-v1\n description: >-\n-  Single arm: slide a flat plate to the table edge to create a graspable\n-  overhang, then grasp and lift it.\n+  Single arm: Pick up the flat plate from the table\n max_episode_steps: 5000\n reward_type: dense\n action_mode: cartesian_delta\ndiff --git a/configs/tasks/prehensile/ib-p4-tool-retrieve-v1.yaml b/configs/tasks/prehensile/ib-p4-tool-retrieve-v1.yaml\nindex 43c0ea4..905f570 100644\n--- a/configs/tasks/prehensile/ib-p4-tool-retrieve-v1.yaml\n+++ b/configs/tasks/prehensile/ib-p4-tool-retrieve-v1.yaml\n@@ -1,7 +1,6 @@\n task_id: ib-p4-tool-retrieve-v1\n description: >-\n-  Single arm: use a hook tool to retrieve a cube that is out of direct\n-  reach, then lift it to a target height.\n+  Single arm: Pick up the cube placed on the table\n max_episode_steps: 6000\n reward_type: dense\n action_mode: cartesian_delta\ndiff --git a/configs/tasks/prehensile/ib-p5-occluder-push-v1.yaml b/configs/tasks/prehensile/ib-p5-occluder-push-v1.yaml\nindex 4acd4fb..3500e5d 100644\n--- a/configs/tasks/prehensile/ib-p5-occluder-push-v1.yaml\n+++ b/configs/tasks/prehensile/ib-p5-occluder-push-v1.yaml\n@@ -1,8 +1,6 @@\n task_id: ib-p5-occluder-push-v1\n description: >-\n-  Single arm: several plates each hide a coloured cube. Find the red\n-  cube by pushing plates aside, then place it on the green patch.\n-  Other cubes are distractors.\n+  Single arm: Find the red cube and place it on the green patch.\n max_episode_steps: 5000\n reward_type: dense\n action_mode: cartesian_delta\ndiff --git a/configs/tasks/puzzle/ib-p3-indirect-push-v1.yaml b/configs/tasks/puzzle/ib-p3-indirect-push-v1.yaml\nindex ad80ecf..7b9bd99 100644\n--- a/configs/tasks/puzzle/ib-p3-indirect-push-v1.yaml\n+++ b/configs/tasks/puzzle/ib-p3-indirect-push-v1.yaml\n@@ -1,8 +1,6 @@\n task_id: ib-p3-indirect-push-v1\n description: >-\n-  Puzzle: blocks and a red target are scattered randomly on the table.\n-  Arrange them into a chain, then push one end so force propagates\n-  through and drives the target into the goal zone.\n+  Puzzle: Push the red cube towards the green patch.\n max_episode_steps: 10000\n reward_type: dense\n action_mode: cartesian_delta\ndiff --git a/imbench/tasks/prehensile/edge_slide_v1.py b/imbench/tasks/prehensile/edge_slide_v1.py\nindex af4ae42..3ecfe2a 100644\n--- a/imbench/tasks/prehensile/edge_slide_v1.py\n+++ b/imbench/tasks/prehensile/edge_slide_v1.py\n@@ -35,10 +35,7 @@ import imbench.envs.edge_slide_env  # noqa: F401  (registers EdgeSlideEnv with r\n \n class EdgeSlideV1(BaseTask):\n     TASK_ID = \"ib-p1-edge-slide-v1\"\n-    DESCRIPTION = (\n-        \"Single arm: slide a flat object to the table edge to create a \"\n-        \"graspable overhang, then grasp and lift it.\"\n-    )\n+    DESCRIPTION = \"Single arm: Pick up the flat plate from the table\"\n     def __init__(self, reward_fn=None, **kwargs):\n         self._reward_fn = reward_fn\n         # Per-episode state \u2014 reset in reset().\ndiff --git a/imbench/tasks/prehensile/occluder_push_v1.py b/imbench/tasks/prehensile/occluder_push_v1.py\nindex 4fd58ad..374e332 100644\n--- a/imbench/tasks/prehensile/occluder_push_v1.py\n+++ b/imbench/tasks/prehensile/occluder_push_v1.py\n@@ -9,12 +9,7 @@ from imbench.tasks.prehensile.single_arm_base import SingleArmBase\n \n class OccluderPushV1(SingleArmBase):\n     TASK_ID = \"ib-p5-occluder-push-v1\"\n-    DESCRIPTION = (\n-        \"Single arm: several lightweight plates each hide a coloured \"\n-        \"cube. Push or knock the plates aside to find the red cube, \"\n-        \"then pick it up and place it on the green patch. The other \"\n-        \"cubes are distractors and must be left alone.\"\n-    )\n+    DESCRIPTION = \"Single arm: Find the red cube and place it on the green patch.\"\n \n     def _parse_task_config(self):\n         task_cfg = self.cfg.get(\"task\", {})\ndiff --git a/imbench/tasks/prehensile/tool_retrieve_v1.py b/imbench/tasks/prehensile/tool_retrieve_v1.py\nindex 8a2a235..1851192 100644\n--- a/imbench/tasks/prehensile/tool_retrieve_v1.py\n+++ b/imbench/tasks/prehensile/tool_retrieve_v1.py\n@@ -10,10 +10,7 @@ from imbench.tasks.prehensile.single_arm_base import SingleArmBase\n \n class ToolRetrieveV1(SingleArmBase):\n     TASK_ID = \"ib-p4-tool-retrieve-v1\"\n-    DESCRIPTION = (\n-        \"Single arm: grasp a hook tool, use it to drag an out-of-reach \"\n-        \"cube into the workspace, then grasp and lift the cube.\"\n-    )\n+    DESCRIPTION = \"Single arm: Pick up the cube placed on the table\"\n \n     def _parse_task_config(self):\n         task_cfg = self.cfg.get(\"task\", {})\ndiff --git a/imbench/tasks/puzzle/indirect_push_v1.py b/imbench/tasks/puzzle/indirect_push_v1.py\nindex 290c169..ecabfb2 100644\n--- a/imbench/tasks/puzzle/indirect_push_v1.py\n+++ b/imbench/tasks/puzzle/indirect_push_v1.py\n@@ -21,13 +21,7 @@ CHAIN_COLORS = [\n \n class IndirectPushV1(SingleArmBase):\n     TASK_ID = \"ib-p3-indirect-push-v1\"\n-    DESCRIPTION = (\n-        \"Puzzle: blocks and a red target are scattered randomly on the \"\n-        \"table. The robot must arrange the blocks into a contiguous \"\n-        \"chain leading from one side to the target, then push the \"\n-        \"chain so that force propagates and drives the target into \"\n-        \"the goal zone.\"\n-    )\n+    DESCRIPTION = \"Puzzle: Push the red cube towards the green patch.\"\n \n     # \u2500\u2500 Config \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n \n"
+  }
+}

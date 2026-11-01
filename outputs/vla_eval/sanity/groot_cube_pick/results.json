@@ -1,0 +1,81 @@
+{
+  "task": "ib-p1-cube-pick-v1",
+  "policy": "groot",
+  "prompt": "pick up the cube from the table",
+  "args": {
+    "task": "ib-p1-cube-pick-v1",
+    "policy": "groot",
+    "prompt": null,
+    "n_episodes": 3,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5555,
+    "video_every": 1,
+    "out": "outputs/vla_eval/sanity/groot_cube_pick",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 3,
+  "success_rate": 0.3333333333333333,
+  "mean_length": 501.6666666666667,
+  "mean_min_eef_obj_dist": 0.04003333333333333,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0412,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.021547812356220334,
+        0.027420654077559798,
+        0.8255595401237731
+      ],
+      "wall_time_s": 39.4,
+      "infer_ms_mean": 161.2,
+      "n_queries": 120
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0678,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        -0.05222599198264337,
+        -0.08672932939963979,
+        0.821923617010149
+      ],
+      "wall_time_s": 33.6,
+      "infer_ms_mean": 149.5,
+      "n_queries": 120
+    },
+    {
+      "seed": 2,
+      "success": true,
+      "final_score": 1.0,
+      "max_score": 1.0,
+      "min_eef_obj_dist": 0.0111,
+      "length": 305,
+      "terminated": true,
+      "object_pos_final": [
+        0.07751876712532121,
+        -0.026466227999119123,
+        0.9512898820814112
+      ],
+      "wall_time_s": 17.0,
+      "infer_ms_mean": 148.3,
+      "n_queries": 61
+    }
+  ]
+}

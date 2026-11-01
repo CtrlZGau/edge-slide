@@ -1,0 +1,8 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='push the flat plate to the edge of the table with the gripper' -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam/molmoact2_push_only
+[1/6] seed=0 success=False len=600 min_dist=0.066 (37.6s, infer 188.1 ms)
+[2/6] seed=1 success=False len=600 min_dist=0.027 (36.0s, infer 174.7 ms)
+[3/6] seed=2 success=False len=600 min_dist=0.043 (36.4s, infer 178.5 ms)
+[4/6] seed=3 success=False len=600 min_dist=0.067 (35.6s, infer 175.9 ms)
+[5/6] seed=4 success=False len=600 min_dist=0.063 (35.8s, infer 174.6 ms)
+[6/6] seed=5 success=False len=600 min_dist=0.047 (36.0s, infer 178.1 ms)
+success_rate=0.00% over 6 episodes -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam/molmoact2_push_only/results.json

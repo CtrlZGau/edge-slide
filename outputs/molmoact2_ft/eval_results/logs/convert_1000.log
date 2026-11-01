@@ -1,0 +1,34 @@
+/root/venvs/molmoact2/lib/python3.12/site-packages/google/auth/transport/grpc.py:43: FutureWarning: grpcio < 1.83.0 does not support Post-Quantum Cryptography (PQC). Support for non-PQC environments is deprecated. In April 2027, google-auth will raise its minimum requirements to enforce grpcio >= 1.83.0. For more details on Google Cloud's post-quantum security migration, visit: https://cloud.google.com/security/resources/post-quantum-cryptography
+  warnings.warn(
+/root/venvs/molmoact2/lib/python3.12/site-packages/google/protobuf/runtime_version.py:98: UserWarning: Protobuf gencode version 5.29.0 is exactly one major version older than the runtime version 6.31.1 at beaker.proto. Please update the gencode to avoid compatibility violations in the next runtime release.
+  warnings.warn(
+2026-10-31 20:55:58.092	4ebf5021d54a:0	__main__:623	INFO	Loading model config from /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step1000-merged
+2026-10-31 20:56:00.253	4ebf5021d54a:0	py.warnings:110	WARNING	/root/venvs/molmoact2/lib/python3.12/site-packages/transformers/configuration_utils.py:723: FutureWarning: `rope_scaling` is deprecated and will be removed in a future version. Set `rope_parameters` instead, with `rope_type` and `rope_theta` included.
+  warnings.warn(
+
+2026-10-31 20:56:00.257	4ebf5021d54a:0	py.warnings:110	WARNING	/root/venvs/molmoact2/lib/python3.12/site-packages/transformers/modeling_rope_utils.py:1164: FutureWarning: `rope_config_validation` is deprecated and has been removed. Its functionality has been moved to RotaryEmbeddingConfigMixin.validate_rope method. PreTrainedConfig inherits this class, so please call self.validate_rope() instead. Also, make sure to use the new rope_parameters syntax. You can call self.standardize_rope_params() in the meantime.
+  warnings.warn(
+
+2026-10-31 20:56:01.327	4ebf5021d54a:0	root:250	INFO	Padding tokenizer with 1535 tokens
+2026-10-31 20:56:01.331	4ebf5021d54a:0	root:255	INFO	original vocab size: 151669
+2026-10-31 20:56:01.335	4ebf5021d54a:0	root:259	INFO	number of added tokens: 2444
+2026-10-31 20:56:01.338	4ebf5021d54a:0	root:260	INFO	new vocab size: 154113
+2026-10-31 20:56:01.344	4ebf5021d54a:0	root:265	INFO	padded vocab size: 155648
+2026-10-31 20:56:01.348	4ebf5021d54a:0	root:270	INFO	final vocab size: 155662
+2026-10-31 20:56:01.391	4ebf5021d54a:0	__main__:634	INFO	Save HF-compatible model config and checkpoint to /workspace/eval/hf/step1000.tmp
+2026-10-31 20:56:01.808	4ebf5021d54a:0	olmo.train.checkpointer:175	INFO	Loading model state from unsharded checkpoint /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step1000-merged...
+2026-10-31 20:56:52.944	4ebf5021d54a:0	olmo.train.checkpointer:185	INFO	Done in 51.2 seconds
+2026-10-31 20:56:52.994	4ebf5021d54a:0	__main__:539	INFO	Dropping 2 unused continuous-state action expert weights; HF MolmoAct2 supports only discrete state tokens.
+2026-10-31 20:56:52.999	4ebf5021d54a:0	__main__:553	INFO	Dropping 72 unused action expert cross-attention KV projection weights; MolmoAct2 uses shared per-layer context_k_proj/context_v_proj instead.
+Writing model shards:   0%|          | 0/5 [00:00<?, ?it/s]Writing model shards:  20%|██        | 1/5 [00:09<00:38,  9.66s/it]Writing model shards:  40%|████      | 2/5 [00:17<00:26,  8.77s/it]Writing model shards:  60%|██████    | 3/5 [00:26<00:17,  8.58s/it]Writing model shards:  80%|████████  | 4/5 [00:36<00:09,  9.34s/it]Writing model shards: 100%|██████████| 5/5 [00:42<00:00,  8.06s/it]Writing model shards: 100%|██████████| 5/5 [00:42<00:00,  8.49s/it]
+2026-10-31 20:57:45.952	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file configuration_molmoact2.py
+2026-10-31 20:57:46.027	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file modeling_molmoact2.py
+2026-10-31 20:57:46.092	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file inference.py
+2026-10-31 20:57:46.160	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file processing_molmoact2.py
+2026-10-31 20:57:46.220	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file image_processing_molmoact2.py
+2026-10-31 20:57:46.278	4ebf5021d54a:0	__main__:652	INFO	Copy remote-code file video_processing_molmoact2.py
+2026-10-31 20:57:46.343	4ebf5021d54a:0	__main__:672	WARNING	Add AutoModelForImageTextToText to auto_map
+2026-10-31 20:57:46.374	4ebf5021d54a:0	__main__:680	INFO	Save tokenizer and processor to /workspace/eval/hf/step1000.tmp
+2026-10-31 20:57:47.576	4ebf5021d54a:0	__main__:765	INFO	Save generation config to /workspace/eval/hf/step1000.tmp
+converted step1000 -> /workspace/eval/hf/step1000
+21G	/workspace/eval/hf/step1000

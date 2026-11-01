@@ -1,0 +1,180 @@
+{
+  "task": "ib-m-mirror-pick-place-v1",
+  "policy": "pi05",
+  "prompt": "pick up the cube and lift it",
+  "args": {
+    "task": "ib-m-mirror-pick-place-v1",
+    "policy": "pi05",
+    "prompt": "pick up the cube and lift it",
+    "n_episodes": 10,
+    "seed_offset": 0,
+    "max_steps": 400,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 8000,
+    "video_every": 1,
+    "out": "outputs/pi05_eval/ib-m-mirror-pick-place-v1/pi05_task_flipped",
+    "push_metric": false,
+    "push_threshold": 0.03,
+    "undo_task_flip": false
+  },
+  "n_episodes_done": 10,
+  "success_rate": 0.0,
+  "mean_length": 400.0,
+  "mean_min_eef_obj_dist": 0.13348,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.3068,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        0.1390988281503088,
+        -0.03496754435226669,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.4
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.1176,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.08866432508054477,
+        0.11343523091728361,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.5
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.1849,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.06010359789764305,
+        -0.06995181746914,
+        0.8197844891595655
+      ],
+      "wall_time_s": 23.4
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0867,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.1410371367364299,
+        -0.012950032681586676,
+        0.8197844891595656
+      ],
+      "wall_time_s": 23.2
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0245,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        0.13145640691717128,
+        0.2970279603503748,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.3
+    },
+    {
+      "seed": 5,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0231,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.10597035760576484,
+        0.0929804424122336,
+        0.807468203711511
+      ],
+      "wall_time_s": 23.4
+    },
+    {
+      "seed": 6,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.1486,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.018557572167337777,
+        0.07076463190460708,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.1
+    },
+    {
+      "seed": 7,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0373,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        0.06947201141875596,
+        0.17843511733990552,
+        0.823510216355076
+      ],
+      "wall_time_s": 23.1
+    },
+    {
+      "seed": 8,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.2517,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        0.0782686726808787,
+        0.06371237222462739,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.1
+    },
+    {
+      "seed": 9,
+      "success": false,
+      "final_score": 0.0,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.1536,
+      "length": 400,
+      "terminated": false,
+      "object_pos_final": [
+        -0.12478210465039496,
+        -0.046350407984879965,
+        0.8197844891595659
+      ],
+      "wall_time_s": 23.2
+    }
+  ]
+}

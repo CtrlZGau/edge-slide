@@ -1,0 +1,21 @@
+{
+  "cache": "demos_synthetic/dp/cache128",
+  "out": "outputs/dp/multitask_v1",
+  "steps": 200000,
+  "batch": 64,
+  "lr": 0.0001,
+  "warmup": 500,
+  "n_obs": 2,
+  "horizon": 16,
+  "n_action": 8,
+  "crop_ratio": 0.9,
+  "inference_steps": 100,
+  "workers": 12,
+  "save_every": 20000,
+  "log_every": 100,
+  "amp": false,
+  "wandb": false,
+  "wandb_project": "imbench-dp",
+  "resume": false,
+  "seed": 0
+}

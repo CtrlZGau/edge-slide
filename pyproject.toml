@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imbench-edge-slide"
+version = "0.1.0"
+description = "IMBench edge-slide task (ib-p1-edge-slide-v1) with VLA / MolmoAct2 / Diffusion Policy / GPT-6 Astra evaluations"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+    "numpy>=1.24,<2",
+    "pyyaml>=6.0",
+    "mujoco==3.2.6",
+    "robosuite==1.5.1",
+    "scipy>=1.10",
+    "opencv-python>=4.8",
+    "lxml>=4.9",
+    "gymnasium>=0.29",
+]
+
+[project.optional-dependencies]
+vlm = ["openai==3.42.0", "pydantic>=2.14"]
+eval = ["pyzmq", "msgpack", "msgpack-numpy", "pillow", "imageio", "imageio-ffmpeg"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["imbench*", "data_synthetic*"]
+
+[tool.setuptools.package-data]
+imbench = ["vlm_eval/prompts/*", "vlm_eval/rubrics/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"

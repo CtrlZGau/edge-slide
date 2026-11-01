@@ -1,0 +1,17 @@
+# Diffusion Policy training/serving + LeRobot packaging venv ("~/venvs/lerobot", Python 3.12).
+# Install torch first from the CUDA index (Blackwell sm_120 needs cu128+):
+#   uv pip install torch==2.10.0 torchvision==0.25.0 --index-url https://download.pytorch.org/whl/cu128
+lerobot==0.5.0
+numpy==2.2.6
+diffusers==0.35.2
+einops==0.8.2
+av==15.1.0             # torchcodec cannot load without system FFmpeg -> video_backend="pyav"
+datasets==4.8.5
+huggingface-hub==1.33.0
+pandas==3.1.0
+pyarrow==26.0.0
+pillow==13.0.0
+pyzmq==27.2.0
+msgpack==1.2.4
+msgpack-numpy==0.4.8
+wandb==0.24.2          # optional

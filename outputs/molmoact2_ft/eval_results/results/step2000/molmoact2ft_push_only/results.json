@@ -1,0 +1,55 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "molmoact2",
+  "prompt": "push the flat plate to the edge of the table with the gripper",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "molmoact2",
+    "prompt": "push the flat plate to the edge of the table with the gripper",
+    "n_episodes": 6,
+    "seed_offset": 0,
+    "max_steps": 600,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5562,
+    "video_every": 1,
+    "out": "/workspace/eval/results/step2000/molmoact2ft_push_only",
+    "push_metric": true,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 1,
+  "success_rate": 0.0,
+  "mean_length": 600.0,
+  "mean_min_eef_obj_dist": 0.0748,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": -0.026231826531834396,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0748,
+      "length": 600,
+      "terminated": false,
+      "object_pos_final": [
+        0.0753488102507854,
+        0.13176053729907922,
+        0.8149532265513088
+      ],
+      "wall_time_s": 774.8,
+      "infer_ms_mean": 6126.9,
+      "n_queries": 120,
+      "initial_overhang": -0.1307,
+      "final_overhang": -0.0262,
+      "max_overhang": 0.0164,
+      "fell_off": false,
+      "plate_xy_displacement": 0.1634
+    }
+  ],
+  "push_success_def": "final plate overhang >= 0.03 m past the table edge and plate not fallen off",
+  "mean_final_overhang": -0.0262,
+  "fell_off_rate": 0.0
+}

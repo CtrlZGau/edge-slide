@@ -1,0 +1,2 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='push the flat plate to the edge of the table with the gripper' -> /workspace/eval/results/step2000/molmoact2ft_push_only
+[1/6] seed=0 success=False len=600 min_dist=0.075 (774.8s, infer 6126.9 ms)

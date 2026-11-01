@@ -1,0 +1,50 @@
+seed 0 ep 0: complete, skipping
+seed 1 ep 0 [stage2 plan-seed 0] -> runs/gpt-6-astra/edge-slide/stage3/stage2/seed_1/ep_0
+  step  1: OPEN_GRIPPER  {}  ->  reward=0 ticks=35 $0.070
+  step  2: MOVE_EEF      {"position_m": [-0.06, 0.05, 1.08], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 150}  -> conv reward=0 ticks=113 $0.150
+  step  3: CLOSE_GRIPPER {}  ->  reward=0 ticks=147 $0.247
+  step  4: MOVE_EEF      {"position_m": [-0.04, 0.055, 0.96], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 160}  -> conv reward=0 ticks=226 $0.340
+  step  5: MOVE_EEF      {"position_m": [-0.045, 0.012, 0.96], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 130}  -> conv reward=0 ticks=281 $0.442
+  step  6: MOVE_EEF      {"position_m": [-0.06, 0.04, 0.96], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 120}  -> conv reward=0 ticks=331 $0.543
+  step  7: MOVE_EEF      {"position_m": [-0.01, -0.025, 0.96], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 120}  -> conv reward=0 ticks=397 $0.651
+  step  8: MOVE_EEF      {"position_m": [-0.05, 0.045, 0.96], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 120}  -> conv reward=0 ticks=462 $0.778
+  step  9: MOVE_EEF      {"position_m": [-0.06, 0.015, 0.95], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 120}  -> conv reward=0 ticks=513 $0.895
+  step 10: DESCEND       {"target_z_m": 0.816}  -> conv reward=0 ticks=606 $1.018
+  step 11: MOVE_EEF      {"position_m": [-0.064, 0.047, 0.817], "orientation_rpy_deg": null, "max_steps": 100}  -> conv reward=0 ticks=666 $1.137
+  step 12: MOVE_EEF      {"position_m": [-0.064, 0.077, 0.817], "orientation_rpy_deg": null, "max_steps": 100}  -> conv reward=0 ticks=724 $1.264
+  step 13: MOVE_EEF      {"position_m": [-0.064, -0.035, 0.817], "orientation_rpy_deg": null, "max_steps": 130}  -> conv reward=0 ticks=810 $1.397
+  step 14: MOVE_EEF      {"position_m": [-0.063, -0.088, 0.818], "orientation_rpy_deg": null, "max_steps": 100}  -> conv reward=0 ticks=880 $1.532
+  step 15: MOVE_EEF      {"position_m": [-0.062, -0.119, 0.818], "orientation_rpy_deg": null, "max_steps": 100}  -> conv reward=0 ticks=941 $1.660
+  step 16: LIFT          {"dz_m": 0.14}  -> conv reward=0 ticks=1065 $1.788
+  step 17: MOVE_EEF      {"position_m": [0.01, -0.27, 0.96], "orientation_rpy_deg": [-90.0, 0.0, 0.0], "max_steps": 300}  -> conv reward=0 ticks=1298 $1.923
+  step 18: OPEN_GRIPPER  {}  ->  reward=0 ticks=1343 $2.047
+  step 19: MOVE_EEF      {"position_m": [0.011, -0.274, 0.812], "orientation_rpy_deg": [-90.0, 0.0, 0.0], "max_steps": 180}  ->  reward=0 ticks=1523 $2.174
+  step 20: CLOSE_GRIPPER {}  ->  reward=0 ticks=1561 $2.298
+  step 21: LIFT          {"dz_m": 0.03}  -> conv reward=0 ticks=1626 $2.420
+  step 22: LIFT          {"dz_m": 0.16}  -> conv reward=0 ticks=1745 $2.542
+  step 23: OPEN_GRIPPER  {}  ->  reward=0 ticks=1790 $2.668
+  step 24: HOLD          {"n_ticks": 20}  ->  reward=0 ticks=1810 $2.788
+==> seed 1 ep 0: success=False exit=max_steps steps=24 cost=$2.788
+seed 2 ep 0 [stage2 plan-seed 0] -> runs/gpt-6-astra/edge-slide/stage3/stage2/seed_2/ep_0
+  step  1: OPEN_GRIPPER  {}  ->  reward=0 ticks=35 $0.069
+  step  2: MOVE_EEF      {"position_m": [0.0, 0.0, 1.02], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 180}  -> conv reward=0 ticks=92 $0.148
+  step  3: MOVE_EEF      {"position_m": [-0.03, -0.016, 0.94], "orientation_rpy_deg": [180.0, 0.0, -60.0], "max_steps": 240}  -> conv reward=0 ticks=261 $0.241
+  step  4: DESCEND       {"target_z_m": 0.818}  ->  reward=0 ticks=661 $0.349
+  step  5: LIFT          {"dz_m": 0.1}  -> conv reward=0 ticks=754 $0.438
+  step  6: MOVE_EEF      {"position_m": [0.025, -0.038, 0.94], "orientation_rpy_deg": [180.0, 0.0, -60.0], "max_steps": 160}  -> conv reward=0 ticks=811 $0.548
+  step  7: DESCEND       {"target_z_m": 0.822}  ->  reward=0 ticks=1211 $0.660
+  step  8: LIFT          {"dz_m": 0.12}  -> conv reward=0 ticks=1294 $0.763
+  step  9: MOVE_EEF      {"position_m": [-0.006, -0.025, 0.95], "orientation_rpy_deg": [180.0, 0.0, -60.0], "max_steps": 160}  -> conv reward=0 ticks=1350 $0.891
+  step 10: MOVE_EEF      {"position_m": [-0.026, -0.074, 0.95], "orientation_rpy_deg": [180.0, 0.0, -60.0], "max_steps": 160}  -> conv reward=0 ticks=1412 $1.019
+  step 11: MOVE_EEF      {"position_m": [-0.006, 0.075, 0.95], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 240}  -> conv reward=0 ticks=1580 $1.158
+  step 12: MOVE_EEF      {"position_m": [-0.025, -0.022, 0.95], "orientation_rpy_deg": [180.0, 0.0, 30.0], "max_steps": 200}  -> conv reward=0 ticks=1683 $1.292
+  step 13: MOVE_EEF      {"position_m": [-0.01, 0.105, 0.95], "orientation_rpy_deg": [180.0, 0.0, 0.0], "max_steps": 180}  -> conv reward=0 ticks=1784 $1.431
+  step 14: MOVE_EEF      {"position_m": [-0.015, -0.022, 0.95], "orientation_rpy_deg": [180.0, 0.0, -60.0], "max_steps": 240}  -> conv reward=0 ticks=1954 $1.579
+  step 15: DESCEND       {"target_z_m": 0.818}  ->  reward=0 ticks=2354 $1.715
+  step 16: LIFT          {"dz_m": 0.12}  -> conv reward=0 ticks=2447 $1.842
+  step 17: CLOSE_GRIPPER {}  ->  reward=0 ticks=2457 $1.967
+  step 18: LIFT          {"dz_m": 0.06}  ->  reward=1 ticks=2470 $2.091
+==> seed 2 ep 0: success=True exit=success steps=18 cost=$2.091
+
+SUCCESS 1/3 = 33%   TOTAL this run $4.88 (66 calls, budget $10.00)
+=== RUN EXIT 0 ===

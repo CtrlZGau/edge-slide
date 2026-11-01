@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "calls": 2,
+  "input_tokens": 8496,
+  "cached_input_tokens": 0,
+  "output_tokens": 38365,
+  "reasoning_tokens": 32217,
+  "cost_usd": 2.0032,
+  "model_snapshots": [
+    "gpt-6-astra"
+  ],
+  "efforts": [
+    "max"
+  ]
+}

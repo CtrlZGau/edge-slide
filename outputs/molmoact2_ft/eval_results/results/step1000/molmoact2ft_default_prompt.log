@@ -1,0 +1,32 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step1000/molmoact2ft_default_prompt
+Traceback (most recent call last):
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 103, in call
+    msg = self.sock.recv()
+          ^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1218, in zmq.backend.cython._zmq.Socket.recv
+  File "zmq/backend/cython/_zmq.py", line 1253, in zmq.backend.cython._zmq.Socket.recv
+  File "zmq/backend/cython/_zmq.py", line 1413, in zmq.backend.cython._zmq._recv_copy
+  File "zmq/backend/cython/_zmq.py", line 1408, in zmq.backend.cython._zmq._recv_copy
+  File "zmq/backend/cython/_zmq.py", line 186, in zmq.backend.cython._zmq._check_rc
+zmq.error.Again: Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/IMBench/scripts/run_vla_eval.py", line 189, in <module>
+    main()
+  File "/root/IMBench/scripts/run_vla_eval.py", line 134, in main
+    action = policy.act(obs)
+             ^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 186, in act
+    chunk = np.asarray(self._infer(main, wrist, self._state(obs)))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 254, in _infer
+    resp = self.client.call("get_action", {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 107, in call
+    raise TimeoutError(f"policy server at {self.addr} timed out on {endpoint!r}")
+TimeoutError: policy server at tcp://localhost:5561 timed out on 'get_action'
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step1000/molmoact2ft_default_prompt
+[1/1] seed=0 success=False len=600 min_dist=0.082 (54.2s, infer 276.6 ms)
+success_rate=0.00% over 1 episodes -> /workspace/eval/results/step1000/molmoact2ft_default_prompt/results.json

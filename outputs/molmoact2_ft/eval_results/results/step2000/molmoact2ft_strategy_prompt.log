@@ -1,0 +1,2 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='slide the flat plate to the edge of the table, then grasp it and lift it up' -> /workspace/eval/results/step2000/molmoact2ft_strategy_prompt
+[1/20] seed=0 success=False len=600 min_dist=0.098 (781.9s, infer 6054.1 ms)

@@ -1,0 +1,561 @@
+{
+ "id": "resp_04f46d6465e0550c016ae66603e20087d294d2dbe05e835709",
+ "access_programs": null,
+ "created_at": 1793484291.0,
+ "error": null,
+ "incomplete_details": null,
+ "instructions": "You control a single robot arm by calling exactly ONE motor primitive (tool) per turn. After each call the primitive runs to completion in the real environment, and you receive a fresh observation with the primitive's return values. You then choose the next call. Your calls continue until the task is done or the step budget (24 calls) runs out.\n\nTASK\nLift the plate so that it is at least 15 cm above the table surface (plate centre z >= 0.95 m) while you hold it.\n\nROBOT\nSingle Franka Panda 7-DoF arm on a fixed base, with a parallel-jaw gripper: two fingers, maximum opening 0.08 m, no suction. Wrist force/torque sensor and fingertip tactile pads.\n\nROBOT REFERENCE\nCoordinates: world frame, metres. +x = away from the robot base toward the far side of the table (rightward in exo_right_cam, leftward in exo_left_cam). +y = the robot's left, toward exo_left_cam (\u2212y is toward exo_right_cam). +z = up. Table surface z \u2248 0.80 m. Safe transit height \u2248 0.95 m. Grasp/place heights \u2248 0.81\u20130.86 m for the gripper point when touching objects on the table (with the gripper pointing down, below \u22480.808 m the fingertips press into the table). The reported gripper position is the point between the finger pads; with the gripper pointing down, the fingertips reach about 0.008 m below it.\nOrientation is roll/pitch/yaw in degrees, EXTRINSIC X-Y-Z about the fixed world axes (roll about world x, then pitch about world y, then yaw about world z), the same convention as in your observation. The gripper pointing straight down = rpy (180, 0, 0) (roll \u00b1180 are the same). In that pose the jaws open and close along world y, and changing yaw turns the jaw axis about world z. In general the jaws close along the gripper's own y-axis, and the fingers point along its own z-axis.\nHow MOVE_EEF moves: it drives the gripper in a STRAIGHT LINE from the current pose to the target pose, with position and orientation changing together, using a proportional controller that is fast when far and slows near the goal (max \u2248 0.003 m and 0.6\u00b0 of actual motion per control step; 100 control steps = 1 s, so a 10 cm move takes about 70 steps and a 90\u00b0 yaw about 240 steps). It stops when within 5 mm and 5\u00b0 of the target, or when max_steps runs out. If you omit orientation (null), the current orientation is held. It does NOT plan around obstacles and does NOT stop on contact: if the line passes through the table or an object, the gripper presses against it or pushes it.\nUse this deliberately for pushing/sliding: lower the closed fingertips to just above the table surface beside the object and drive the straight line through the object's SIDE face in the direction you want it to move. Pressing down on an object's top face and dragging does NOT slide it here, because the fingertips and the table have the same friction. Avoid this effect otherwise: go up to the safe height first, move, then descend.\nThe gripper keeps its last OPEN/CLOSE state during every move. After each primitive you receive the achieved pose, the remaining error, whether it converged, and the peak contact force. Check these and correct with another move if needed. Near the edge of the reachable workspace, or for unusual orientations, MOVE_EEF can stall (converged=false). If it does, try reaching the pose from a different intermediate position or orientation.\nLIFT/DESCEND: vertical moves that keep x, y and orientation. ATOMIC_ACTION: raw normalised 7D delta [dx,dy,dz,droll,dpitch,dyaw,grip] in [\u22121,1] for n ticks. 1.0 \u2248 0.003 m / 0.6\u00b0 of motion per tick when held (the command is a target offset of up to 0.05 m / 28.6\u00b0 that the arm cannot cover in one tick). Use it only for fine nudges. HOLD waits. Call DONE only when you believe the task goal above is met (the plate held at least the required height above the table).\nCommon failure modes: trying a top-down grasp on the flat plate (fingers can't get under it); losing contact while sliding (the plate stays put); sliding too far (the plate falls off); lifting before the lip overhangs enough for the finger pads.\n\nPLAN\nA PLAN block is given in each observation. Treat it as guidance: follow its sub-goals in order, keep track of which sub-goal is active, and deviate only with a reason stated in your reasoning. Report the active sub-goal id and its status on every call.\n\nEVERY CALL\nCall exactly one tool. Fill in: reasoning (what you see, what the last result tells you, and why this call), description (one line), active_subgoal_id (the plan sub-goal you are working on, or \"none\" if there is no plan), subgoal_status (in_progress | achieved | abandoned), and params (in the units named by each field).\n",
+ "metadata": {},
+ "model": "gpt-6-astra",
+ "object": "response",
+ "output": [
+  {
+   "id": "rs_04f46d6465e0550c016ae666052c5887d2a89a0301dd3a1945",
+   "summary": [],
+   "type": "reasoning",
+   "content": [],
+   "encrypted_content": "gAAAAABq5mYMPPBBVNGZ7yRQiE0vM8P9kJLC2RtO-S7IVwmSlKi9jvuAEoHSTx2ier5CkbrbBqUcdzktjmJDaIoEfGtZ-98Rs59gvN1J3RyYiDDHKAm-zeYxDENybtZrC0-2lwLrpn-hq7z3eEB5mSWmXI4wzNS_R52ZjWBMY701gndI1iYZGCEfjDKqpsZR8PpAuSKP_9uJxcYYoxxGvnLWtsAL_l_PZ3-gbFKRd_xZvCoTCdkJZ0mgA7zndhkCMwNiBagRehPeS8yKWaTEziynYq6De3TpVhy52-hHLZAf0ZSUUePUHYujww76K6_lqg1m3qIsCyNqNyjzVsjjcbiNLuhdagdPrOZHWE_ZyIBq3YVk78gLDpkcbPX8d9vqWGe9aQDc605DqNKnTJQsfhwJXOQwD8ldYRXkpmrYnnESjonOttKMbcqDBzhCVKFgW2u4hSDp9ppzRAg4fH6n7tJC_Pb1JcotgadjStC8gCebew0vB2XKjC69FQjyYmydTpEj9f-iCDLc4huW76cUPKbGDhWsLdXQ6mi3DCSe54byxkp7tg6Us2d2-Tw9XSot_bIImI-8GFccQ0C02f05avqmdeX3g3tiz6DP2wv2olg2mrkCQNtohTmNxOz9zOkdLqRi0hbifprVR7UpRTg6wZZeMsIXvgrYREgIYpVb-uCm0P_jD7eEeQAUjhL2aIXShpoS-SnSsNfBypOfV9PT6NE8DTC1uLdGnUUvK4JDlJWZR5FXKni_KZa4G8-gdQ7Ri39zHuikeYo_T6WhLCFVnhhvDN9chQNWMKkgZwSlpDqsH3PLkL27jprfGp2uJZ5mdHuoCESXNvilDbFHDxIAfHC-K_dvj34n_6LER21F4JxLDMFhwU-tYAZBcQ7jx-6Ui4JVpeXQ2pfJyAr_4MO2jUTAstWYsusRXn0FhT2Fa1f6EPXZKhYZ-6oU6d8ZasHeUZqDkM2p06YaOcQN5K5GAAzLqB9Nsi6SrUU9dDd2SBQHnUCMw5cXMa5_PNj_XUo988XAcY202dgrv-DP6eMjZeXQ_fl9L9sgWRL_mZKTE4h4Qaz4kf6aEDkZgaliMdYoJvs2Pi74b5IdlbRBl5kqjzDhe7g511HCtvjFMl0ilxVVXNsh8_T9cXbclDi1tcsNfpB8uVC-BiKsB0CYSSPVJtMCgVhIV6aJ7N_odhBkSCvTsZogvoFTFgNVAqQiBOcf6uV1FrXE065NGfLYG3obc4L8m01LemAtKEaTaBL2cPRQthK4IJv5SXjxhy3xwNu1kt5OlYN9RqdAvdh-wZ0Cj6zmheeZGivTRnTzf-yeZAUPZzzBu33vIOXBN675sd4b0wZL7nj3JY4oqeVbpYFso76iJZl1KEqq-ivWYHaOoennCraQb0X4W30uDSsiASxHE0tH9EtZUaakyJQ4CcanGkgVa1RR5CXiOZyX8rwCanAwY2A6im8Bn1doYnZt7KEjU63f5OYUyvhKutEVQsnfV997pfMxEMMmbmoEh6jHJtLfSAyaASnmmR77bOb_e2cKzqsHSivSQ913m0RBvYqh8dOJwUH6JEmmcKOiqNyk40qyKQeew9sA3-dKii8cfo8PFmenOcffvduQwb7Xn606YNtrLQRoY9XxZyLQ9aKo1FUeqAFNUp2fLR7--YTEkYatPYF2ws0iiVqHe7I88FvS61X-q8LIN5yhG1Ywn8icrc1xSQRWuPDpSJ6YXVV_BHP8c2tBoV7uP4LQCPOXUnWssQh3eYDbImlJbrEeovuT_eXQhypWKnhLj2Ph_Zc5dEPBlOrzdvtoMyuldjs1a77fwqAsybFg819pgX4NcDE0yQfm6m6Lk9CevNjS3Tq3RfENKbArHMP-4kSNTeJZhhmZgI5JzBRl0Mx5ITzCukcU7eI2PcvCTlaEau4fg5c3UtQK4tr4LlRTHJWqoLPzIktlCkJ10WonGXVEIbvzJ4QCcAU-DIo-FQrVMhDZbEOt17YjbTXYL_fX0wzYmmKh_7rzqitSVy-xEolNX4Ao8hntugB-lnmHRLx1tYvSHVVDM5LbOjF1i5p0PHMYOnWfTKFjrsOSe38MEgnn1gSbC0SwcSXsX-dovbjkiaS3xsX0lFzpQMttQ4oe7t-RsgyYTb7n18yoMVxq_Owe1jyL8st8uwuorNEXl8xkUJyVNl34lz1_KZB1Sp9FF9tDgkGoWgQLOYYYvObDMjFLPKv8RiIxPlqRNMm0XcVHTXwukNj7jptnItsNY0t730Qe_qaiuTEybuhXZAUvDEkKElhMz4sV69l8X42FrExtY0CTsfD3yyWx86BS-qllPOwj0eShwbWZpZY2B4TG1fjekMG7xIgdtIHpmk6blbYRsZnviVgC5We46lY23M0I_v72CNgOlI9YdfPLH6DXMCEv7sVEIvjaMyA8LzQFBlJ1yjLdFe6Q9VkBwg_mfFn6FsfpAMdSM3-T3JqKHTcBtR3-o3IsGZ239-asw_RyPIkn1jNdnhzJ8pBp1u5i80dTPa-EhS6BEjzjLrUwgyv_SadFJdHYYTqHQx60PXd0RHMgTSyhFpw9KhEDOHOs8b3OG_uCa1bb0IK704gNuKTrUT0_otU5t_oV59J_PlI9BQ7PzqVFLd-W0Gfcc8Lr75rda3K0qTCKX3-gtyuCl9GFUeTkzVNRnGPkHHyaPAKwDAEYJVYCWdMQALwZBzb3DELJQya5eGoVDVYQNy3fJbneP3zbRxPFds3kjhGNs7dQ7yML_e1NxoZC8RJbd_ZuTWKRqGHUMzZeTHMmEdH8J2nZVpQGBbCCqOQ8QrvrJoJPvu9w_v49mcaAU71NNiqE3iAz3I66A3cOsFjryw4EB62-5VWgU_GzT8IpeyN5nHcZJLudSfluklYjNdTQmHnLuyM8Clkd2jM0zPhuPIvCcIfGuCyty6_-6Hj5n3Kv3s0IZnaM9ABzKFx-fd0lAuMxqekyWyJUKSuWHqvV34Haqr9RAx8AlbbxZftP_xJhPVaFct6zH4zLvqRGvkzSMgb968xZZDcOEo0yBGImuj39CYvsQC0iPu_KGb_xMDzteWl11VjycRR7oILam5xM3E8_ffkEegNEOF_WeYILHZu1MkuaiTyFqNfy5EFAlcg2D9bd2uUy5oiAdWbWUSNJH20FyH0JamI4AOAC2s8mZsDvEqYeVsJhbbgfPUBIba1PVopB9VbWyxo=",
+   "status": null
+  },
+  {
+   "arguments": "{\"reasoning\":\"The prior free-space motions and jaw checks establish the primitive frame and unloaded reference. The wrist view indicates a roughly 0.12 m plate, wider than the aperture, centered near x=-0.01,y=0.085, with table edge near y=0.20. Use the edge route rather than a top pinch; stage on its negative-y side while keeping clearance. Absolute primitives follow the supplied calibrated interface rather than the older plan's raw-delta assumption.\",\"description\":\"Stage above the inboard side for a controlled edgeward push.\",\"active_subgoal_id\":\"S3\",\"subgoal_status\":\"in_progress\",\"params\":{\"position_m\":[-0.01,-0.025,0.96],\"orientation_rpy_deg\":[180,0,0],\"max_steps\":120}}",
+   "call_id": "call_d2S3QvhRRC07Rgk5VPLmFjjB",
+   "name": "MOVE_EEF",
+   "type": "function_call",
+   "id": "fc_04f46d6465e0550c016ae66609eaa887d2af22bc3f5861d77b",
+   "async_": null,
+   "caller": null,
+   "namespace": null,
+   "status": "completed"
+  }
+ ],
+ "parallel_tool_calls": false,
+ "temperature": 1.0,
+ "tool_choice": "required",
+ "tools": [
+  {
+   "name": "MOVE_EEF",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "position_m",
+       "orientation_rpy_deg",
+       "max_steps"
+      ],
+      "properties": {
+       "position_m": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "description": "target gripper position [x, y, z], metres, world frame"
+       },
+       "orientation_rpy_deg": {
+        "type": [
+         "array",
+         "null"
+        ],
+        "items": {
+         "type": "number"
+        },
+        "description": "target [roll, pitch, yaw] in degrees, extrinsic XYZ about world axes; null = keep the current orientation"
+       },
+       "max_steps": {
+        "type": "integer",
+        "description": "control-step budget (100 steps = 1 s), e.g. 300"
+       }
+      }
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Move the gripper in a straight line to a target pose (position + optional orientation).",
+   "output_schema": null
+  },
+  {
+   "name": "CLOSE_GRIPPER",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Close the parallel jaws (holds the current pose while closing).",
+   "output_schema": null
+  },
+  {
+   "name": "OPEN_GRIPPER",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Open the parallel jaws fully (holds the current pose while opening).",
+   "output_schema": null
+  },
+  {
+   "name": "LIFT",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "dz_m"
+      ],
+      "properties": {
+       "dz_m": {
+        "type": "number",
+        "description": "vertical displacement in metres (+ up)"
+       }
+      }
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Move straight up (or down for negative dz_m), keeping x, y and orientation.",
+   "output_schema": null
+  },
+  {
+   "name": "DESCEND",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "target_z_m"
+      ],
+      "properties": {
+       "target_z_m": {
+        "type": "number",
+        "description": "absolute target gripper z in metres"
+       }
+      }
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Move vertically to an absolute z, keeping x, y and orientation.",
+   "output_schema": null
+  },
+  {
+   "name": "ATOMIC_ACTION",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "action7",
+       "n_ticks"
+      ],
+      "properties": {
+       "action7": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "description": "raw normalised delta [dx, dy, dz, droll, dpitch, dyaw, grip], each in [-1, 1]"
+       },
+       "n_ticks": {
+        "type": "integer",
+        "description": "number of control steps to repeat it (<= 200)"
+       }
+      }
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Send one raw normalised 7-D delta action for n_ticks control steps (fine nudges only).",
+   "output_schema": null
+  },
+  {
+   "name": "HOLD",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "n_ticks"
+      ],
+      "properties": {
+       "n_ticks": {
+        "type": "integer",
+        "description": "control steps to hold the current pose (<= 200)"
+       }
+      }
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Hold the current pose and gripper state.",
+   "output_schema": null
+  },
+  {
+   "name": "DONE",
+   "parameters": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "reasoning",
+     "description",
+     "active_subgoal_id",
+     "subgoal_status",
+     "params"
+    ],
+    "properties": {
+     "reasoning": {
+      "type": "string",
+      "description": "why this primitive and these values, given the observation and the last results"
+     },
+     "description": {
+      "type": "string",
+      "description": "one line: what this call should achieve"
+     },
+     "active_subgoal_id": {
+      "type": "string",
+      "description": "plan sub-goal being worked on, or 'none'"
+     },
+     "subgoal_status": {
+      "type": "string",
+      "enum": [
+       "in_progress",
+       "achieved",
+       "abandoned"
+      ]
+     },
+     "params": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {}
+     }
+    }
+   },
+   "strict": true,
+   "type": "function",
+   "allowed_callers": null,
+   "async_": null,
+   "defer_loading": null,
+   "description": "Declare the task complete. Ends the episode.",
+   "output_schema": null
+  }
+ ],
+ "top_p": 0.98,
+ "background": false,
+ "completed_at": 1793484300.0,
+ "conversation": null,
+ "max_output_tokens": null,
+ "max_tool_calls": null,
+ "moderation": null,
+ "previous_response_id": null,
+ "prompt": null,
+ "prompt_cache_diagnostics": null,
+ "prompt_cache_key": null,
+ "prompt_cache_options": null,
+ "prompt_cache_retention": "24h",
+ "reasoning": {
+  "context": "all_turns",
+  "effort": "low",
+  "generate_summary": null,
+  "mode": "standard",
+  "summary": "detailed"
+ },
+ "safety_identifier": null,
+ "service_tier": "default",
+ "status": "completed",
+ "text": {
+  "format": {
+   "type": "text"
+  },
+  "verbosity": "medium"
+ },
+ "tool_usage": {
+  "image_gen": {
+   "input_tokens": 0,
+   "input_tokens_details": {
+    "image_tokens": 0,
+    "text_tokens": 0
+   },
+   "output_tokens": 0,
+   "total_tokens": 0,
+   "cached_tokens": null,
+   "cached_tokens_details": null,
+   "output_tokens_details": {
+    "image_tokens": 0,
+    "text_tokens": 0
+   }
+  },
+  "web_search": {
+   "num_requests": 0
+  }
+ },
+ "top_logprobs": 0,
+ "truncation": "disabled",
+ "usage": {
+  "input_tokens": 9090,
+  "input_tokens_details": {
+   "cache_write_tokens": 6884,
+   "cached_tokens": 2080
+  },
+  "output_tokens": 343,
+  "output_tokens_details": {
+   "reasoning_tokens": 163
+  },
+  "total_tokens": 9433
+ },
+ "user": null,
+ "billing": {
+  "payer": "developer"
+ },
+ "frequency_penalty": 0.0,
+ "presence_penalty": 0.0,
+ "store": false
+}

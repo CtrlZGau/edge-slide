@@ -1,0 +1,14 @@
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step3000/molmoact2ft_default_prompt
+[1/20] seed=0 success=True len=492 min_dist=0.084 (742.5s, infer 7128.2 ms)
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step3000/molmoact2ft_default_prompt  (resuming: 1 done)
+task=ib-p1-edge-slide-v1 policy=molmoact2 prompt='pick up the flat plate from the table' -> /workspace/eval/results/step3000/molmoact2ft_default_prompt  (resuming: 1 done)
+[2/10] seed=1 success=False len=600 min_dist=0.087 (122.8s, infer 557.4 ms)
+[3/10] seed=2 success=True len=538 min_dist=0.045 (106.3s, infer 549.0 ms)
+[4/10] seed=3 success=True len=436 min_dist=0.083 (84.2s, infer 561.8 ms)
+[5/10] seed=4 success=True len=424 min_dist=0.076 (90.8s, infer 629.5 ms)
+[6/10] seed=5 success=False len=600 min_dist=0.091 (141.8s, infer 742.3 ms)
+[7/10] seed=6 success=False len=600 min_dist=0.037 (121.7s, infer 561.3 ms)
+[8/10] seed=7 success=True len=386 min_dist=0.064 (75.8s, infer 560.1 ms)
+[9/10] seed=8 success=True len=432 min_dist=0.060 (81.2s, infer 538.8 ms)
+[10/10] seed=9 success=False len=234 min_dist=0.073 (37.9s, infer 478.1 ms)
+success_rate=60.00% over 10 episodes -> /workspace/eval/results/step3000/molmoact2ft_default_prompt/results.json

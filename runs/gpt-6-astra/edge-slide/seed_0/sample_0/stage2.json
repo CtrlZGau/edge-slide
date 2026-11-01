@@ -1,0 +1,232 @@
+{
+  "plan": {
+    "simplest_action_analysis": {
+      "simplest_action": "Make a full-width top-down pinch of the plate in its current position, then lift vertically.",
+      "why_it_fails": "The plate appears wider than the hand's 0.08 m maximum opening, so the jaws likely cannot establish opposing side contacts (cam:ego_cam:f0; meta:controller_interface.end_effector). This is a visual inference that must be checked metrically, not a proven dimension. Touching the unfeatured upper face cannot provide a lifting attachment without suction. Substituting an in-place thickness pinch also fails because the fully supported plate leaves no demonstrated space for a lower finger (cam:exo_left_cam:f0).",
+      "violated_constraint_ids": [
+        "C1",
+        "C2"
+      ]
+    },
+    "subgoals": [
+      {
+        "id": "S1",
+        "name": "Unloaded hand in verified free space with calibrated motion and sensing references",
+        "physical_outcome": "The plate remains undisturbed while the hand stays inside a conservatively observed free-space envelope. Stationary observations and joint/pose feedback, followed only by bounded no-contact checks within that envelope, establish the actual motion-frame relationship and jaw response.",
+        "preconditions": [
+          "The plate is flat and fully supported by the table.",
+          "The hand is visibly separated from the plate, nearly open, and has zero fingertip tactile readings; the raw wrist wrench is not treated as plate contact (cam:exo_left_cam:f0; meta:sensor_snapshot.0)."
+        ],
+        "postconditions": [
+          "Base-frame translation and rotation responses are registered to the observed world-frame pose; actual finger motion confirms that -1 opens and +1 closes the hand.",
+          "Actual motion remains within verified clearance. Subsequent movements are feedback-bounded deltas, not absolute poses or assumed displacements: full-scale targets represent 0.05 m and 0.5 rad per update at 100 Hz (meta:controller_interface.controller; meta:controller_interface.action_space.scaling; meta:controller_interface.action_space.gripper; meta:controller_interface.control_frequency_hz).",
+          "An unloaded wrench and tactile reference is recorded for the current orientation and hand configuration, without assuming gravity compensation or zero sensor bias."
+        ],
+        "constraint_ids": [
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S2",
+        "name": "Supported plate and surrounding geometry exposed for metric verification",
+        "physical_outcome": "The hand occupies reachable, collision-free observation poses while the plate remains fully supported. External and wrist RGB views at known hand poses establish conservative metric bounds using measured jaw opening as a scale reference.",
+        "preconditions": [
+          "The hand is unloaded, with the motion-frame relationship established in S1.",
+          "Observation movements remain inside successively verified free-space volumes; no underside access is assumed."
+        ],
+        "postconditions": [
+          "Plate width, visible thickness, sidewall engagement height, fingertip dimensions, and palm envelope are bounded sufficiently to compare candidate pinches against the 0.08 m aperture, including insertion allowance and measurement uncertainty (meta:sensor_snapshot.0.gripper_opening_m; meta:controller_interface.end_effector).",
+          "Table height, perimeter, plate-to-edge distances, and the supported plate footprint are localized from side and wrist views with proprioception. Ambiguous surface locations are refined only by bounded contact observations after a safe approach is established.",
+          "A direct grasp is admissible only if its opposed span and table-clear sidewall engagement are positively verified. Hidden underside shape and actual under-edge clearance remain explicit checks to perform after exposure."
+        ],
+        "constraint_ids": [
+          "C1",
+          "C2",
+          "C4",
+          "C5",
+          "C6",
+          "C8"
+        ]
+      },
+      {
+        "id": "S3",
+        "name": "Reachable grasp staging poses and a safe support-return corridor",
+        "physical_outcome": "The empty hand reaches verified staging poses for a selected grasp route without disturbing the plate. Required hand orientations are checked in genuinely clear space, including the complete arm, palm, and finger swept volumes.",
+        "preconditions": [
+          "The plate remains fully supported and the hand is unloaded.",
+          "S2 provides bounded object, table, and hand geometry; frame registration is established."
+        ],
+        "postconditions": [
+          "Joint/end-effector feedback and camera clearance checks establish a continuous fixed-base route through approach, engagement, near-table lifting, and return to support. Neither the current overhead pose nor an elevated rehearsal alone certifies low edge access.",
+          "If a full-width, table-clear grasp is verified, S4-S6 are omitted and execution continues to S7. Otherwise, a reachable perimeter and supported translation corridor are selected for the smallest potentially useful overhang; actual stability and underside access remain gated by S5-S6.",
+          "Pose-appropriate unloaded wrench references are obtained for the intended contact and grasp orientations. If no feasible route is verified, the plate remains supported rather than being moved toward an unusable edge."
+        ],
+        "constraint_ids": [
+          "C1",
+          "C2",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S4",
+        "name": "Small, controllable plate translations with full table support",
+        "physical_outcome": "For the edge route only, bounded contact trials produce and stop small in-plane plate motions while it remains well inboard. These trials identify a usable same-hand repositioning contact and its local traction, resistance, and rotation response. Upper-face contact is used only for repositioning or stabilization, never as a lifting attachment.",
+        "preconditions": [
+          "The edge route is selected, with a reachable contact pose and clear translation corridor.",
+          "The plate has enough fully supported travel for the bounded trials, and an unloaded reference exists for the contact orientation."
+        ],
+        "postconditions": [
+          "Camera-tracked plate displacement is correlated with corrected wrist wrench and tactile response, distinguishing plate sliding from finger slip, sticking, or table obstruction.",
+          "Small translations can be stopped without uncontrolled rotation or tipping; conservative progression and stopping limits are established rather than assuming friction values.",
+          "The same hand can maintain a suitable stabilizing contact during the forthcoming support reduction. If this cannot be demonstrated, no edgeward progression occurs."
+        ],
+        "constraint_ids": [
+          "C1",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S5",
+        "name": "Minimal candidate overhang stabilized by the table and the same hand",
+        "physical_outcome": "For the edge route only, the plate advances toward the selected perimeter in small, observed increments until a candidate lower-finger access region projects beyond the table. Remaining table contact and the same hand continuously stabilize the plate; the hand is not yet released for reorientation.",
+        "preconditions": [
+          "S4 has demonstrated controllable motion and an available stabilizing contact.",
+          "The intended overhang, contact path, and retreat toward greater table support lie within the verified reachable corridor."
+        ],
+        "postconditions": [
+          "The actual plate pose, remaining supported footprint, and overhang are measured after each increment; progression stops at the least candidate overhang needed for useful finger engagement.",
+          "Corrected contact loads, moments, and visual response during incremental support changes provide local stability evidence. Advancement is allowed only while table support and the same hand retain control; the geometric center is not assumed to be the center of mass.",
+          "The plate remains stabilized, with a route back toward greater support available. Apparent overhang alone is not yet accepted as verified underside clearance or permission to withdraw the hand."
+        ],
+        "constraint_ids": [
+          "C2",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S6",
+        "name": "Self-stable exposed edge with an open hand aligned across its thickness",
+        "physical_outcome": "For the edge route only, the stabilizing hand load is progressively removed without first breaking contact. Only after tabletop-alone stability is demonstrated does the hand withdraw, obtain underside views, and reach an open top/bottom grasp alignment through verified free space.",
+        "preconditions": [
+          "S5 has produced a measured overhang while the table and hand still stabilize the plate.",
+          "The hand can restore greater support if the stability or clearance checks fail."
+        ],
+        "postconditions": [
+          "Bounded unloading and stability checks, using corrected wrench and observed plate response, establish a conservative restoring/support margin before hand withdrawal. Mere lack of visible motion or an assumed centered mass is insufficient; unresolved stability requires restoring support.",
+          "New side and wrist views establish the real underside shape, finger-sized gap, insertion depth, and usable contact thickness. These fit the jaw opening and leave clearance for fingertips, palm, and table sidewall, including uncertainty.",
+          "After clearance-preserving reorientation, the open hand has one finger above and one below the exposed region, without table interference. The plate remains stable without a second hand, and a comparable unloaded wrench reference is available before engagement."
+        ],
+        "constraint_ids": [
+          "C1",
+          "C2",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S7",
+        "name": "Opposed contacts genuinely capture the plate while table support remains",
+        "physical_outcome": "The hand establishes opposed plate contacts without removing tabletop support: opposite sidewalls on the verified direct route, or the top and underside of the exposed edge on the edge route.",
+        "preconditions": [
+          "Either S2-S3 verify an accessible full-width grasp, or S6 supplies a self-stable exposed edge and verified top/bottom access.",
+          "The required span and insertion clearance fit the aperture, and the hand has a collision-free approach and supported-return path."
+        ],
+        "postconditions": [
+          "Both tactile arrays, actual finger positions, and camera views agree that the jaws contact the plate rather than trapping or pressing against the table.",
+          "Contact locations and pad overlap are sufficient candidates for resisting the expected cantilever moment, not merely a shallow corner touch. Closure remains bounded by observed contact response.",
+          "The plate remains supported and geometrically captured, but full load and moment capacity are explicitly not yet assumed."
+        ],
+        "constraint_ids": [
+          "C1",
+          "C2",
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S8",
+        "name": "Full plate load carried in a reversible near-table proof lift",
+        "physical_outcome": "The opposed contacts progressively take the plate's load while the plate stays close to its verified return-to-support position. Only while contact remains stable does this progress to a small whole-plate separation and near-static proof hold.",
+        "preconditions": [
+          "S7 verifies real opposed plate contacts; table support is still available.",
+          "A pose-appropriate unloaded wrench reference and a collision-free, immediate return to the previously stable supported pose are available."
+        ],
+        "postconditions": [
+          "Corrected wrist force and torque, tactile changes, and camera-observed motion establish the supported weight, center-of-mass-related moment, and local slip/rotation behavior during support transfer.",
+          "At the proof hold, the whole plate is off the table and the hand carries its complete load without observed creep or unwanted rotation. Partial unloading or one raised corner is not accepted as full-load evidence.",
+          "The tested contact configuration supports the intended slow lift and hold; no capacity is inferred for untested rotations or accelerations. If engagement or moment capacity is inadequate, the plate is reseated before any relaxation or regrasp."
+        ],
+        "constraint_ids": [
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      },
+      {
+        "id": "S9",
+        "name": "Whole plate stably held above the tabletop",
+        "physical_outcome": "The plate is held in the tested grasp with a positive clearance from the table that exceeds observation uncertainty. Only enough additional elevation to establish an unambiguous, stable lift is used; no numerical lift height is assumed.",
+        "preconditions": [
+          "S8 demonstrates whole-plate load support without slip or unwanted rotation.",
+          "The upward swept volume and return-to-support path remain clear and reachable."
+        ],
+        "postconditions": [
+          "Multiple camera views establish that the entire plate, not merely one corner, has cleared the tabletop and moves with the hand.",
+          "Tactile engagement, actual jaw position, and baseline-corrected wrist load remain consistent with sustained plate retention rather than empty-hand motion or table contact.",
+          "The plate remains stably suspended. Any emerging slip or rotation triggers controlled return to verified table support before the hand is opened."
+        ],
+        "constraint_ids": [
+          "C3",
+          "C4",
+          "C5",
+          "C6",
+          "C7",
+          "C8"
+        ]
+      }
+    ],
+    "self_audit": {
+      "F1_all_prerequisites_included": {
+        "score": 0.92,
+        "reason": "The plan includes frame/sign calibration, metric fit, reachable access, controlled repositioning, single-hand stability during recontact, genuine engagement, moment-capacity testing, and whole-plate lift verification. Success remains conditional on a stable reachable grasp actually existing; the stationary observations cannot guarantee sufficient overhang, support margin, or grip capacity."
+      },
+      "F2_no_invalid_ordering": {
+        "score": 0.98,
+        "reason": "Calibration and geometry precede contact; reachability precedes edgeward displacement; controlled sliding precedes overhang; tabletop-alone stability precedes hand withdrawal; real underside clearance precedes insertion; and load transfer precedes the final hold. The direct branch bypasses only the unnecessary edge-creation steps."
+      },
+      "F3_no_dropped_information_gathering": {
+        "score": 0.94,
+        "reason": "Every listed unknown is addressed at its point of use, including pose-dependent wrench bias, hidden underside geometry, local friction, center-of-mass-related stability, and actual load transfer. RGB occlusion and indirect support-margin estimation may still prevent reliable bounds; those cases require further observation or stopping, not an assumed successful lift."
+      }
+    }
+  },
+  "best_attempt": 1,
+  "audit_mean": 0.9466666666666667,
+  "accepted": true,
+  "attempts": 1
+}

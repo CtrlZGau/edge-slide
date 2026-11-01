@@ -1,0 +1,18 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /root/IMBench/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite INFO] Loading controller configuration from: /root/IMBench/.venv/lib/python3.12/site-packages/robosuite/controllers/config/robots/default_panda.json (composite_controller_factory.py:121)
+task=ib-p1-cube-pick-v1 policy=groot prompt='pick up the cube from the table' -> outputs/vla_eval/sanity/groot_cube_pick_wrist256
+[1/10] seed=0 success=False len=600 min_dist=0.020 (38.1s, infer 192.9 ms)
+[2/10] seed=1 success=False len=600 min_dist=0.136 (38.6s, infer 212.2 ms)
+[3/10] seed=2 success=False len=600 min_dist=0.011 (40.1s, infer 214.0 ms)
+[4/10] seed=3 success=False len=600 min_dist=0.025 (38.8s, infer 187.8 ms)
+[5/10] seed=4 success=False len=600 min_dist=0.039 (35.8s, infer 180.9 ms)
+[6/10] seed=5 success=False len=600 min_dist=0.059 (37.0s, infer 196.5 ms)
+[7/10] seed=6 success=False len=600 min_dist=0.146 (37.6s, infer 202.0 ms)
+[8/10] seed=7 success=False len=600 min_dist=0.021 (37.9s, infer 202.1 ms)
+[9/10] seed=8 success=False len=600 min_dist=0.020 (39.1s, infer 204.3 ms)
+[10/10] seed=9 success=False len=600 min_dist=0.126 (35.8s, infer 187.0 ms)
+success_rate=0.00% over 10 episodes -> outputs/vla_eval/sanity/groot_cube_pick_wrist256/results.json

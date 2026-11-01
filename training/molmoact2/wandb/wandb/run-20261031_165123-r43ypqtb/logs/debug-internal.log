@@ -1,0 +1,13 @@
+{"time":"2026-10-31T16:51:23.724879822Z","level":"INFO","msg":"stream: starting","core version":"0.24.2"}
+{"time":"2026-10-31T16:51:24.11628533Z","level":"INFO","msg":"stream: created new stream","id":"r43ypqtb"}
+{"time":"2026-10-31T16:51:24.11939204Z","level":"INFO","msg":"handler: started","stream_id":"r43ypqtb"}
+{"time":"2026-10-31T16:51:24.126256935Z","level":"INFO","msg":"stream: started","id":"r43ypqtb"}
+{"time":"2026-10-31T16:51:24.126295595Z","level":"INFO","msg":"sender: started","stream_id":"r43ypqtb"}
+{"time":"2026-10-31T16:51:24.126292245Z","level":"INFO","msg":"writer: started","stream_id":"r43ypqtb"}
+{"time":"2026-10-31T18:08:42.888476031Z","level":"INFO","msg":"api: retrying HTTP error","status":503,"url":"https://api.wandb.ai/files/gauthamgb85-bits-pilani/imbench-molmoact2/r43ypqtb/file_stream","body":"upstream connect error or disconnect/reset before headers. reset reason: connection termination"}
+{"time":"2026-11-01T00:55:30.522090958Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-11-01T00:55:30.783349924Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-11-01T00:55:30.79993609Z","level":"INFO","msg":"stream: closing","id":"r43ypqtb"}
+{"time":"2026-11-01T00:55:30.816622088Z","level":"INFO","msg":"handler: closed","stream_id":"r43ypqtb"}
+{"time":"2026-11-01T00:55:30.828579972Z","level":"INFO","msg":"sender: closed","stream_id":"r43ypqtb"}
+{"time":"2026-11-01T00:55:30.831815834Z","level":"INFO","msg":"stream: closed","id":"r43ypqtb"}

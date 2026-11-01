@@ -1,0 +1,424 @@
+[
+ {
+  "type": "function",
+  "name": "MOVE_EEF",
+  "description": "Move the gripper in a straight line to a target pose (position + optional orientation).",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "position_m",
+      "orientation_rpy_deg",
+      "max_steps"
+     ],
+     "properties": {
+      "position_m": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "description": "target gripper position [x, y, z], metres, world frame"
+      },
+      "orientation_rpy_deg": {
+       "type": [
+        "array",
+        "null"
+       ],
+       "items": {
+        "type": "number"
+       },
+       "description": "target [roll, pitch, yaw] in degrees, extrinsic XYZ about world axes; null = keep the current orientation"
+      },
+      "max_steps": {
+       "type": "integer",
+       "description": "control-step budget (100 steps = 1 s), e.g. 300"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "CLOSE_GRIPPER",
+  "description": "Close the parallel jaws (holds the current pose while closing).",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [],
+     "properties": {}
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "OPEN_GRIPPER",
+  "description": "Open the parallel jaws fully (holds the current pose while opening).",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [],
+     "properties": {}
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "LIFT",
+  "description": "Move straight up (or down for negative dz_m), keeping x, y and orientation.",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "dz_m"
+     ],
+     "properties": {
+      "dz_m": {
+       "type": "number",
+       "description": "vertical displacement in metres (+ up)"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "DESCEND",
+  "description": "Move vertically to an absolute z, keeping x, y and orientation.",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "target_z_m"
+     ],
+     "properties": {
+      "target_z_m": {
+       "type": "number",
+       "description": "absolute target gripper z in metres"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "ATOMIC_ACTION",
+  "description": "Send one raw normalised 7-D delta action for n_ticks control steps (fine nudges only).",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "action7",
+      "n_ticks"
+     ],
+     "properties": {
+      "action7": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "description": "raw normalised delta [dx, dy, dz, droll, dpitch, dyaw, grip], each in [-1, 1]"
+      },
+      "n_ticks": {
+       "type": "integer",
+       "description": "number of control steps to repeat it (<= 200)"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "HOLD",
+  "description": "Hold the current pose and gripper state.",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "n_ticks"
+     ],
+     "properties": {
+      "n_ticks": {
+       "type": "integer",
+       "description": "control steps to hold the current pose (<= 200)"
+      }
+     }
+    }
+   }
+  }
+ },
+ {
+  "type": "function",
+  "name": "DONE",
+  "description": "Declare the task complete. Ends the episode.",
+  "strict": true,
+  "parameters": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "reasoning",
+    "description",
+    "active_subgoal_id",
+    "subgoal_status",
+    "params"
+   ],
+   "properties": {
+    "reasoning": {
+     "type": "string",
+     "description": "why this primitive and these values, given the observation and the last results"
+    },
+    "description": {
+     "type": "string",
+     "description": "one line: what this call should achieve"
+    },
+    "active_subgoal_id": {
+     "type": "string",
+     "description": "plan sub-goal being worked on, or 'none'"
+    },
+    "subgoal_status": {
+     "type": "string",
+     "enum": [
+      "in_progress",
+      "achieved",
+      "abandoned"
+     ]
+    },
+    "params": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [],
+     "properties": {}
+    }
+   }
+  }
+ }
+]

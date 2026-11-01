@@ -1,0 +1,42 @@
+W: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+  __logo__ = """
+  """
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+  File "/root/IMBench/imbench/registry.py", line 168, in make
+    return TASK_REGISTRY[task_id](**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/tasks/prehensile/edge_slide_v1.py", line 44, in __init__
+    super().__init__(**kwargs)
+  File "/root/IMBench/imbench/tasks/base_task.py", line 207, in __init__
+    self._env = self._build_env(**kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/tasks/prehensile/edge_slide_v1.py", line 190, in _build_env
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    return env_cls(**kwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/envs/edge_slide_env.py", line 65, in __init__
+    super().__init__(**kwargs)
+    super().__init__(
+    super().__init__(
+    super().__init__(
+    self._reset_internal()
+    super()._reset_internal()
+    super()._reset_internal()
+    render_context = MjRenderContextOffscreen(self.sim, device_id=self.render_gpu_device_id)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    super().__init__(sim, offscreen=True, device_id=device_id, max_width=max_width, max_height=max_height)
+    self.gl_ctx = GLContext(max_width=max_width, max_height=max_height, device_id=self.device_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    EGL_DISPLAY = create_initialized_egl_device_display(device_id=device_id)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    device_inds = [int(x) for x in selected_device.split(",")]
+                   ^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+Exception ignored in: <function MjRenderContext.__del__ at 0x7ad1ddb55d00>
+Traceback (most recent call last):
+    self.con.free()
+    ^^^^^^^^
+AttributeError: 'MjRenderContextOffscreen' object has no attribute 'con'
+overlay          50G   24G   27G  47% /
+SETUP_DONE

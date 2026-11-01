@@ -1,0 +1,16 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/gb/IMBench/.venv/lib/python3.12/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly, otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+[robosuite INFO] Loading controller configuration from: /home/gb/IMBench/.venv/lib/python3.12/site-packages/robosuite/controllers/config/robots/default_panda.json (composite_controller_factory.py:121)
+{"seed": 0, "mode": "cube", "success": false, "c_steps": 500, "object_pos_final": [0.0208, -0.0192, 0.828], "infer_s_mean": 0.521, "wall_s": 47.5}
+{"seed": 1, "mode": "cube", "success": true, "c_steps": 157, "object_pos_final": [-0.024, -0.074, 0.9531], "infer_s_mean": 0.515, "wall_s": 15.2}
+{"seed": 2, "mode": "cube", "success": true, "c_steps": 126, "object_pos_final": [-0.01, -0.0044, 0.9529], "infer_s_mean": 0.515, "wall_s": 12.6}
+{"seed": 3, "mode": "cube", "success": false, "c_steps": 500, "object_pos_final": [0.0143, 0.0928, 0.8264], "infer_s_mean": 0.517, "wall_s": 48.0}
+{"seed": 4, "mode": "cube", "success": false, "c_steps": 500, "object_pos_final": [0.0613, 0.0451, 0.8285], "infer_s_mean": 0.517, "wall_s": 47.8}
+{"seed": 5, "mode": "cube", "success": false, "c_steps": 500, "object_pos_final": [0.1164, -0.0194, 0.8243], "infer_s_mean": 0.514, "wall_s": 47.4}
+{"seed": 6, "mode": "cube", "success": true, "c_steps": 160, "object_pos_final": [-0.1074, -0.0892, 0.9541], "infer_s_mean": 0.515, "wall_s": 15.2}
+{"seed": 7, "mode": "cube", "success": true, "c_steps": 139, "object_pos_final": [0.0525, 0.1191, 0.9527], "infer_s_mean": 0.515, "wall_s": 13.7}
+{"seed": 8, "mode": "cube", "success": false, "c_steps": 500, "object_pos_final": [0.0194, -0.0639, 0.8275], "infer_s_mean": 0.515, "wall_s": 47.3}
+{"seed": 9, "mode": "cube", "success": true, "c_steps": 137, "object_pos_final": [-0.0648, -0.0944, 0.9502], "infer_s_mean": 0.515, "wall_s": 13.6}

@@ -1,0 +1,31 @@
+diff --git a/experiments/launch_scripts/data_mixtures.py b/experiments/launch_scripts/data_mixtures.py
+index bb1fd2f..19f5f55 100644
+--- a/experiments/launch_scripts/data_mixtures.py
++++ b/experiments/launch_scripts/data_mixtures.py
+@@ -397,3 +397,26 @@ MOLMOACT2_LEROBOT_MIXTURES: Dict[str, MixtureBuilder] = {
+     "yam": build_molmoact2_yam,
+     "so100_so101": build_molmoact2_so100_so101,
+ }
++
++
++# ── IMBench edge-slide (local LeRobot v3.0 dataset, eval-identical conventions) ──
++def build_molmoact2_imbench_edge_slide():
++    return build_single_lerobot_mixture(
++        name="imbench_edge_slide",
++        tag="imbench_edge_slide",
++        repo_ids=["imbench/edge_slide_teleop_20hz"],
++        action_key="action",
++        state_keys=["observation.state"],
++        camera_keys=[
++            "observation.images.image",
++            "observation.images.wrist_image",
++        ],
++        normalize_gripper=False,
++        setup_type="single franka robotic arm on a table in imbench",
++        control_mode="delta end-effector pose",
++        action_horizon=10,
++        n_action_steps=10,
++    )
++
++
++MOLMOACT2_LEROBOT_MIXTURES["imbench_edge_slide"] = build_molmoact2_imbench_edge_slide

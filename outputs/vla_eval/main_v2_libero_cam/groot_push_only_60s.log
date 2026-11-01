@@ -1,0 +1,7 @@
+task=ib-p1-edge-slide-v1 policy=groot prompt='push the flat plate to the edge of the table with the gripper' -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam/groot_push_only_60s
+[1/5] seed=0 success=False len=1200 min_dist=0.185 (67.2s, infer 157.0 ms)
+[2/5] seed=1 success=False len=1200 min_dist=0.139 (67.1s, infer 158.2 ms)
+[3/5] seed=2 success=False len=1200 min_dist=0.109 (66.8s, infer 156.5 ms)
+[4/5] seed=3 success=False len=1200 min_dist=0.140 (65.7s, infer 153.5 ms)
+[5/5] seed=4 success=False len=1200 min_dist=0.201 (66.2s, infer 155.2 ms)
+success_rate=0.00% over 5 episodes -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam/groot_push_only_60s/results.json

@@ -1,0 +1,51 @@
+task=ib-p1-edge-slide-v1 policy=groot prompt='slide the flat plate to the edge of the table, then grasp it and lift it up' -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam_rerun_20261101/groot_strategy_prompt
+[1/20] seed=0 success=False len=600 min_dist=0.195 (33.2s, infer 156.9 ms)
+[2/20] seed=1 success=False len=600 min_dist=0.129 (33.0s, infer 155.5 ms)
+[3/20] seed=2 success=False len=600 min_dist=0.098 (33.8s, infer 159.1 ms)
+[4/20] seed=3 success=False len=600 min_dist=0.167 (32.8s, infer 154.8 ms)
+[5/20] seed=4 success=False len=600 min_dist=0.194 (32.6s, infer 153.8 ms)
+[6/20] seed=5 success=False len=600 min_dist=0.127 (32.4s, infer 152.1 ms)
+[7/20] seed=6 success=False len=600 min_dist=0.168 (34.1s, infer 151.1 ms)
+[8/20] seed=7 success=False len=600 min_dist=0.126 (32.5s, infer 152.2 ms)
+[9/20] seed=8 success=False len=600 min_dist=0.134 (32.3s, infer 146.5 ms)
+[10/20] seed=9 success=False len=600 min_dist=0.113 (34.2s, infer 147.2 ms)
+[11/20] seed=10 success=False len=600 min_dist=0.170 (31.9s, infer 148.9 ms)
+[12/20] seed=11 success=False len=600 min_dist=0.088 (35.0s, infer 147.6 ms)
+[13/20] seed=12 success=False len=600 min_dist=0.108 (31.8s, infer 147.2 ms)
+[14/20] seed=13 success=False len=600 min_dist=0.167 (32.1s, infer 150.5 ms)
+[15/20] seed=14 success=False len=600 min_dist=0.030 (37.2s, infer 155.3 ms)
+[16/20] seed=15 success=False len=600 min_dist=0.085 (32.5s, infer 151.7 ms)
+[17/20] seed=16 success=False len=600 min_dist=0.032 (37.9s, infer 149.8 ms)
+[18/20] seed=17 success=False len=600 min_dist=0.230 (63.1s, infer 317.8 ms)
+Traceback (most recent call last):
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 103, in call
+    msg = self.sock.recv()
+          ^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1218, in zmq.backend.cython._zmq.Socket.recv
+  File "zmq/backend/cython/_zmq.py", line 1253, in zmq.backend.cython._zmq.Socket.recv
+  File "zmq/backend/cython/_zmq.py", line 1413, in zmq.backend.cython._zmq._recv_copy
+  File "zmq/backend/cython/_zmq.py", line 1408, in zmq.backend.cython._zmq._recv_copy
+  File "zmq/backend/cython/_zmq.py", line 186, in zmq.backend.cython._zmq._check_rc
+zmq.error.Again: Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/IMBench/scripts/run_vla_eval.py", line 189, in <module>
+    
+  File "/root/IMBench/scripts/run_vla_eval.py", line 134, in main
+    traj = {"action": [], "eef_pos": [], "object_pos": []}
+                 ^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 186, in act
+    chunk = np.asarray(self._infer(main, wrist, self._state(obs)))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 222, in _infer
+    action, _info = self.client.call("get_action", {"observation": obs, "options": None})
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/IMBench/imbench/policy/vla_clients.py", line 107, in call
+    raise TimeoutError(f"policy server at {self.addr} timed out on {endpoint!r}")
+TimeoutError: policy server at tcp://localhost:5555 timed out on 'get_action'
+task=ib-p1-edge-slide-v1 policy=groot prompt='slide the flat plate to the edge of the table, then grasp it and lift it up' -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam_rerun_20261101/groot_strategy_prompt  (resuming: 18 done)
+[19/20] seed=18 success=False len=600 min_dist=0.143 (40.8s, infer 195.1 ms)
+[20/20] seed=19 success=False len=600 min_dist=0.092 (42.1s, infer 218.5 ms)
+success_rate=0.00% over 20 episodes -> /root/IMBench/outputs/vla_eval/main_v2_libero_cam_rerun_20261101/groot_strategy_prompt/results.json

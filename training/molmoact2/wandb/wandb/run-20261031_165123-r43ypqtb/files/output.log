@@ -1,0 +1,1366 @@
+wandb: Detected [openai] in use.
+wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip install weave` then add `import weave` to the top of your script.
+wandb: For more information, check out the docs at: https://weave-docs.wandb.ai/
+wandb: WARNING The get_url method is deprecated and will be removed in a future release. Please use `run.url` instead.
+2026-10-31 16:51:26.802	4ebf5021d54a:0	train:678	INFO	Loading model-only checkpoint from allenai/MolmoAct2-LIBERO with checkpoint_load_strategy=rank0_broadcast
+2026-10-31 16:51:26.823	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=begin rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO filename=allenai/MolmoAct2-LIBERO checkpoint_size_bytes=None
+2026-10-31 16:51:26.826	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=rank0.torch_load.begin rank=0 world_size=1 filename=allenai/MolmoAct2-LIBERO checkpoint_size_bytes=None
+Fetching 12 files: 100%|██████████| 12/12 [00:00<00:00, 191.13it/s]
+2026-10-31 16:51:33.679	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=rank0.torch_load.end rank=0 world_size=1 filename=allenai/MolmoAct2-LIBERO checkpoint_size_bytes=21768955912 elapsed_s=6.852 tensor_keys=1294
+2026-10-31 16:51:33.682	4ebf5021d54a:0	olmo.train.checkpoint_loading:726	INFO	Source checkpoint token layout: config=TokenLayout(base_tokens=151669, added_tokens=2313, padding_tokens=642, total_tokens=154624) resolved=TokenLayout(base_tokens=151669, added_tokens=2313, padding_tokens=642, total_tokens=154624) wte_rows=154624
+2026-10-31 16:51:33.883	4ebf5021d54a:0	olmo.train.checkpoint_loading:762	INFO	Prepared action expert checkpoint state with 74 synthesized keys.
+2026-10-31 16:51:46.414	4ebf5021d54a:0	olmo.train.checkpoint_loading:446	INFO	Adjusted transformer.wte.embedding rows from 154624 to 155648 (copied=154624, reinit=1024, mean_avg=-0.000052, std_avg=0.019358, target_layout=TokenLayout(base_tokens=151669, added_tokens=2444, padding_tokens=1535, total_tokens=155648), source_layout=TokenLayout(base_tokens=151669, added_tokens=2313, padding_tokens=642, total_tokens=154624))
+2026-10-31 16:51:57.328	4ebf5021d54a:0	olmo.train.checkpoint_loading:446	INFO	Adjusted transformer.ff_out.weight rows from 154624 to 155648 (copied=154624, reinit=1024, mean_avg=-0.000052, std_avg=0.019358, target_layout=TokenLayout(base_tokens=151669, added_tokens=2444, padding_tokens=1535, total_tokens=155648), source_layout=TokenLayout(base_tokens=151669, added_tokens=2313, padding_tokens=642, total_tokens=154624))
+2026-10-31 16:51:57.333	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=rank0.preprocess.end rank=0 world_size=1 elapsed_s=23.446 has_action_expert=True has_action_expert_depth_gate=False strict_restore=True state_keys=1368
+2026-10-31 16:51:57.380	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=broadcast.has_action_expert.begin rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO
+2026-10-31 16:51:57.384	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=broadcast.has_action_expert.end rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO has_action_expert=True
+2026-10-31 16:51:57.385	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=broadcast.has_action_expert_depth_gate.begin rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO
+2026-10-31 16:51:57.388	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=broadcast.has_action_expert_depth_gate.end rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO has_action_expert_depth_gate=False
+2026-10-31 16:51:57.390	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=pre_model_state_restore.barrier.begin rank=0 world_size=1
+2026-10-31 16:51:57.394	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=pre_model_state_restore.barrier.end rank=0 world_size=1
+2026-10-31 16:51:57.396	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=set_model_state_dict.begin rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO has_action_expert=True has_action_expert_depth_gate=False strict_restore=True state_keys=1368
+2026-10-31 16:52:39.272	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=set_model_state_dict.end rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO elapsed_s=41.874 missing_keys=0 unexpected_keys=0
+2026-10-31 16:52:39.285	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=post_model_state_restore.barrier.begin rank=0 world_size=1
+2026-10-31 16:52:39.289	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=post_model_state_restore.barrier.end rank=0 world_size=1
+2026-10-31 16:52:40.346	4ebf5021d54a:0	olmo.train.checkpoint_loading:63	INFO	checkpoint_load stage=end rank=0 world_size=1 checkpoint=allenai/MolmoAct2-LIBERO has_action_expert=True has_action_expert_depth_gate=False strict_restore=True
+2026-10-31 16:52:40.349	4ebf5021d54a:0	train:708	INFO	Checkpoint successfully loaded in 73.5 seconds
+2026-10-31 16:52:40.351	4ebf5021d54a:0	train:713	INFO	Injecting LoRA adapters after checkpoint restore (base checkpoint/no checkpoint).
+2026-10-31 16:52:40.491	4ebf5021d54a:0	train:425	INFO	LoRA transformer target modules: ['attn_out', 'ff_out', 'att_proj', 'ff_proj']
+2026-10-31 16:52:40.498	4ebf5021d54a:0	train:409	INFO	Applying PEFT 0.18.1 FSDP2 LoRA linear shape compatibility patch during post-shard adapter injection.
+2026-10-31 16:52:41.462	4ebf5021d54a:0	train:440	INFO	LoRA vision target modules: ['wq', 'wk', 'wv', 'wo', 'w1', 'w2', 'w3', 'patch_embedding']
+2026-10-31 16:52:41.723	4ebf5021d54a:0	train:716	INFO	Initializing LoRA parameters (no LoRA weights found in checkpoint).
+2026-10-31 16:52:41.788	4ebf5021d54a:0	olmo.train.optim:203	INFO	Constructing optimizer with 4 param groups
+2026-10-31 16:52:41.795	4ebf5021d54a:0	train:57	INFO	Model:
+2026-10-31 16:52:41.798	4ebf5021d54a:0	train:58	INFO	FSDPMolmoAct2(
+  (transformer): PeftModel(
+    (base_model): LoraModel(
+      (model): Llm(
+        (blocks): ModuleList(
+          (0-35): 36 x FSDPCheckpointWrapper(
+            (_checkpoint_wrapped_module): OLMoSequentialBlock(
+              (dropout): Dropout(p=0.1, inplace=False)
+              (k_norm): RMSLayerNorm()
+              (q_norm): RMSLayerNorm()
+              (act): SwiGLU()
+              (attn_out): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=2560, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=2560, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (ff_out): lora.Linear(
+                (base_layer): Linear(in_features=9728, out_features=2560, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=9728, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=2560, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (rotary_emb): RotaryEmbedding()
+              (attn_norm): RMSLayerNorm()
+              (ff_norm): RMSLayerNorm()
+              (att_proj): lora.Linear(
+                (base_layer): Linear(in_features=2560, out_features=6144, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=6144, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (ff_proj): lora.Linear(
+                (base_layer): Linear(in_features=2560, out_features=19456, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2560, out_features=64, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=64, out_features=19456, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+            )
+          )
+        )
+        (ln_f): FSDPRMSLayerNorm()
+        (emb_drop): Dropout(p=0.0, inplace=False)
+        (wte): FSDPEmbedding()
+        (ff_out): lora.Linear(
+          (base_layer): FSDPLinear(in_features=2560, out_features=155648, bias=False)
+          (lora_dropout): ModuleDict(
+            (default): Dropout(p=0.05, inplace=False)
+          )
+          (lora_A): ModuleDict(
+            (default): Linear(in_features=2560, out_features=64, bias=False)
+          )
+          (lora_B): ModuleDict(
+            (default): Linear(in_features=64, out_features=155648, bias=False)
+          )
+          (lora_embedding_A): ParameterDict()
+          (lora_embedding_B): ParameterDict()
+          (lora_magnitude_vector): ModuleDict()
+        )
+      )
+    )
+  )
+  (vision_backbone): PeftModel(
+    (base_model): LoraModel(
+      (model): FSDPMolmoVisionBackbone(
+        (image_pooling_2d): FSDPCheckpointWrapper(
+          (_checkpoint_wrapped_module): ViTMultiHeadDotProductAttention(
+            (wq): lora.Linear(
+              (base_layer): Linear(in_features=2304, out_features=1152, bias=True)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=2304, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=1152, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (wk): lora.Linear(
+              (base_layer): Linear(in_features=2304, out_features=1152, bias=True)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=2304, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=1152, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (wv): lora.Linear(
+              (base_layer): Linear(in_features=2304, out_features=1152, bias=True)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=2304, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=1152, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (wo): lora.Linear(
+              (base_layer): Linear(in_features=1152, out_features=1152, bias=True)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=1152, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=1152, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (residual_dropout): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (image_projector): FSDPCheckpointWrapper(
+          (_checkpoint_wrapped_module): ImageProjectorMLP(
+            (w1): lora.Linear(
+              (base_layer): Linear(in_features=1152, out_features=9728, bias=False)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=1152, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=9728, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (w2): lora.Linear(
+              (base_layer): Linear(in_features=9728, out_features=2560, bias=False)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=9728, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=2560, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (w3): lora.Linear(
+              (base_layer): Linear(in_features=1152, out_features=9728, bias=False)
+              (lora_dropout): ModuleDict(
+                (default): Dropout(p=0.05, inplace=False)
+              )
+              (lora_A): ModuleDict(
+                (default): Linear(in_features=1152, out_features=64, bias=False)
+              )
+              (lora_B): ModuleDict(
+                (default): Linear(in_features=64, out_features=9728, bias=False)
+              )
+              (lora_embedding_A): ParameterDict()
+              (lora_embedding_B): ParameterDict()
+              (lora_magnitude_vector): ModuleDict()
+            )
+            (act): LlamaSwiGLU()
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+        )
+        (image_feature_dropout): Dropout(p=0.0, inplace=False)
+        (image_vit): FSDPSiglipVisionTransformer(
+          (patch_embedding): lora.Linear(
+            (base_layer): Linear(in_features=588, out_features=1152, bias=True)
+            (lora_dropout): ModuleDict(
+              (default): Dropout(p=0.05, inplace=False)
+            )
+            (lora_A): ModuleDict(
+              (default): Linear(in_features=588, out_features=64, bias=False)
+            )
+            (lora_B): ModuleDict(
+              (default): Linear(in_features=64, out_features=1152, bias=False)
+            )
+            (lora_embedding_A): ParameterDict()
+            (lora_embedding_B): ParameterDict()
+            (lora_magnitude_vector): ModuleDict()
+          )
+          (transformer): BlockCollection(
+            (resblocks): ModuleList(
+              (0-24): 25 x FSDPCheckpointWrapper(
+                (_checkpoint_wrapped_module): ResidualAttentionBlock(
+                  (attention): ViTMultiHeadDotProductAttention(
+                    (wq): lora.Linear(
+                      (base_layer): Linear(in_features=1152, out_features=1152, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=1152, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=1152, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                    (wk): lora.Linear(
+                      (base_layer): Linear(in_features=1152, out_features=1152, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=1152, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=1152, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                    (wv): lora.Linear(
+                      (base_layer): Linear(in_features=1152, out_features=1152, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=1152, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=1152, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                    (wo): lora.Linear(
+                      (base_layer): Linear(in_features=1152, out_features=1152, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=1152, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=1152, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                    (residual_dropout): Dropout(p=0.0, inplace=False)
+                  )
+                  (feed_forward): ViTMLP(
+                    (w1): lora.Linear(
+                      (base_layer): Linear(in_features=1152, out_features=4304, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=1152, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=4304, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                    (act): GELUTanh()
+                    (w2): lora.Linear(
+                      (base_layer): Linear(in_features=4304, out_features=1152, bias=True)
+                      (lora_dropout): ModuleDict(
+                        (default): Dropout(p=0.05, inplace=False)
+                      )
+                      (lora_A): ModuleDict(
+                        (default): Linear(in_features=4304, out_features=64, bias=False)
+                      )
+                      (lora_B): ModuleDict(
+                        (default): Linear(in_features=64, out_features=1152, bias=False)
+                      )
+                      (lora_embedding_A): ParameterDict()
+                      (lora_embedding_B): ParameterDict()
+                      (lora_magnitude_vector): ModuleDict()
+                    )
+                  )
+                  (attention_norm): LayerNorm((1152,), eps=1e-06, elementwise_affine=True)
+                  (ffn_norm): LayerNorm((1152,), eps=1e-06, elementwise_affine=True)
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+  (action_expert): FSDPActionExpert(
+    (time_embed): Sequential(
+      (0): SinusoidalTimeEmbedding()
+      (1): Linear(in_features=256, out_features=768, bias=True)
+      (2): SiLU()
+      (3): Linear(in_features=768, out_features=768, bias=True)
+    )
+    (action_embed): Linear(in_features=32, out_features=768, bias=True)
+    (state_encoder): Linear(in_features=768, out_features=768, bias=True)
+    (state_norm): ActionExpertRMSNorm()
+    (context_k_proj): Linear(in_features=1024, out_features=768, bias=False)
+    (context_v_proj): Linear(in_features=1024, out_features=768, bias=False)
+    (context_norm): ActionExpertRMSNorm()
+    (blocks): ModuleList(
+      (0-35): 36 x CheckpointWrapper(
+        (_checkpoint_wrapped_module): ActionExpertBlock(
+          (self_norm): ActionExpertRMSNorm()
+          (cross_norm): ActionExpertRMSNorm()
+          (ff_norm): ActionExpertRMSNorm()
+          (self_attn): ActionExpertSelfAttention(
+            (q_norm): ActionExpertRMSNorm()
+            (k_norm): ActionExpertRMSNorm()
+            (rope): ActionExpertRotaryEmbedding()
+            (qkv): Linear(in_features=768, out_features=2304, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_drop): Dropout(p=0.0, inplace=False)
+          )
+          (cross_attn): ActionExpertCrossAttention(
+            (q_norm): ActionExpertRMSNorm()
+            (k_norm): ActionExpertRMSNorm()
+            (q_proj): Linear(in_features=768, out_features=768, bias=True)
+            (kv_proj): Linear(in_features=768, out_features=1536, bias=True)
+            (out_proj): Linear(in_features=768, out_features=768, bias=True)
+            (out_drop): Dropout(p=0.0, inplace=False)
+          )
+          (mlp): ActionExpertMLP(
+            (up_proj): Linear(in_features=768, out_features=3072, bias=True)
+            (gate_proj): Linear(in_features=768, out_features=3072, bias=True)
+            (down_proj): Linear(in_features=3072, out_features=768, bias=True)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+          (modulation): ActionExpertModulation(
+            (act): SiLU()
+            (linear): Linear(in_features=768, out_features=6912, bias=True)
+          )
+        )
+      )
+    )
+    (final_layer): ActionExpertFinalLayer(
+      (norm): ActionExpertRMSNorm()
+      (modulation): ActionExpertModulation(
+        (act): SiLU()
+        (linear): Linear(in_features=768, out_features=1536, bias=True)
+      )
+      (linear): Linear(in_features=768, out_features=32, bias=True)
+    )
+  )
+)
+2026-10-31 16:52:41.833	4ebf5021d54a:0	train:59	INFO	Total number of parameters: 5,650,409,712
+2026-10-31 16:52:41.844	4ebf5021d54a:0	train:60	INFO	Number of non-embedding parameters: 5,251,623,152
+2026-10-31 16:52:41.857	4ebf5021d54a:0	train:61	INFO	VLM number of parameters: 5,029,732,048
+2026-10-31 16:52:41.871	4ebf5021d54a:0	train:62	INFO	Action expert number of parameters: 620,677,664
+2026-10-31 16:52:41.885	4ebf5021d54a:0	train:83	INFO	Number of trainable parameters: 737,421,856
+2026-10-31 16:52:41.890	4ebf5021d54a:0	train:66	INFO	Peak GPU Memory (MB) after FSDP: 23622
+2026-10-31 16:52:43.993	4ebf5021d54a:0	train:734	INFO	Starting training...
+2026-10-31 16:52:44.023	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	Pre-train system metrics
+    System/Peak GPU Memory (MB)=25,469
+2026-10-31 16:52:44.028	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	LeRobot tag sampling rates (actual)
+    sampling_rate/lerobot_tag/imbench_edge_slide=100.00
+2026-10-31 16:58:09.912	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=20/3000, eta=8 hours, 3 minutes]
+    train/action_flow_loss=0.8779
+    throughput/total_tokens=313,600
+    throughput/device/tokens_per_second=1,642
+    throughput/device/batches_per_second=0.1047
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:01:21.323	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=40/3000, eta=7 hours, 56 minutes]
+    train/action_flow_loss=0.4448
+    throughput/total_tokens=627,200
+    throughput/device/tokens_per_second=1,638
+    throughput/device/batches_per_second=0.1045
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:04:32.240	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=60/3000, eta=7 hours, 51 minutes]
+    train/action_flow_loss=0.1632
+    throughput/total_tokens=940,800
+    throughput/device/tokens_per_second=1,642
+    throughput/device/batches_per_second=0.1048
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:07:43.817	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=80/3000, eta=7 hours, 48 minutes]
+    train/action_flow_loss=0.1750
+    throughput/total_tokens=1,254,400
+    throughput/device/tokens_per_second=1,637
+    throughput/device/batches_per_second=0.1044
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:10:55.244	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=100/3000, eta=7 hours, 44 minutes]
+    train/action_flow_loss=0.1524
+    throughput/total_tokens=1,568,000
+    throughput/device/tokens_per_second=1,638
+    throughput/device/batches_per_second=0.1045
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:14:06.431	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=120/3000, eta=7 hours, 41 minutes]
+    train/action_flow_loss=0.1630
+    throughput/total_tokens=1,881,600
+    throughput/device/tokens_per_second=1,640
+    throughput/device/batches_per_second=0.1046
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:17:18.278	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=140/3000, eta=7 hours, 38 minutes]
+    train/action_flow_loss=0.1246
+    throughput/total_tokens=2,195,200
+    throughput/device/tokens_per_second=1,634
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:20:29.958	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=160/3000, eta=7 hours, 34 minutes]
+    train/action_flow_loss=0.1623
+    throughput/total_tokens=2,508,800
+    throughput/device/tokens_per_second=1,636
+    throughput/device/batches_per_second=0.1044
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:23:42.242	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=180/3000, eta=7 hours, 31 minutes]
+    train/action_flow_loss=0.1265
+    throughput/total_tokens=2,822,400
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:26:53.977	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=200/3000, eta=7 hours, 28 minutes]
+    train/action_flow_loss=0.1732
+    throughput/total_tokens=3,136,000
+    throughput/device/tokens_per_second=1,635
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:30:05.675	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=220/3000, eta=7 hours, 25 minutes]
+    train/action_flow_loss=0.1734
+    throughput/total_tokens=3,449,600
+    throughput/device/tokens_per_second=1,636
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:33:17.757	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=240/3000, eta=7 hours, 22 minutes]
+    train/action_flow_loss=0.1469
+    throughput/total_tokens=3,763,200
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:36:30.280	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=260/3000, eta=7 hours, 19 minutes]
+    train/action_flow_loss=0.1448
+    throughput/total_tokens=4,076,800
+    throughput/device/tokens_per_second=1,629
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:39:42.058	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=280/3000, eta=7 hours, 15 minutes]
+    train/action_flow_loss=0.1057
+    throughput/total_tokens=4,390,400
+    throughput/device/tokens_per_second=1,635
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:42:54.055	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=300/3000, eta=7 hours, 12 minutes]
+    train/action_flow_loss=0.1825
+    throughput/total_tokens=4,704,000
+    throughput/device/tokens_per_second=1,633
+    throughput/device/batches_per_second=0.1042
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:46:06.142	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=320/3000, eta=7 hours, 9 minutes]
+    train/action_flow_loss=0.1975
+    throughput/total_tokens=5,017,600
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:49:18.368	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=340/3000, eta=7 hours, 6 minutes]
+    train/action_flow_loss=0.1242
+    throughput/total_tokens=5,331,200
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:52:30.567	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=360/3000, eta=7 hours, 3 minutes]
+    train/action_flow_loss=0.1461
+    throughput/total_tokens=5,644,800
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:55:38.842	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=380/3000, eta=6 hours, 59 minutes]
+    train/action_flow_loss=0.1752
+    throughput/total_tokens=5,958,400
+    throughput/device/tokens_per_second=1,665
+    throughput/device/batches_per_second=0.1062
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 17:58:51.093	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=400/3000, eta=6 hours, 56 minutes]
+    train/action_flow_loss=0.1332
+    throughput/total_tokens=6,272,000
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:02:03.395	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=420/3000, eta=6 hours, 53 minutes]
+    train/action_flow_loss=0.1330
+    throughput/total_tokens=6,585,600
+    throughput/device/tokens_per_second=1,630
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:05:16.457	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=440/3000, eta=6 hours, 50 minutes]
+    train/action_flow_loss=0.1041
+    throughput/total_tokens=6,899,200
+    throughput/device/tokens_per_second=1,624
+    throughput/device/batches_per_second=0.1036
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:08:29.099	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=460/3000, eta=6 hours, 47 minutes]
+    train/action_flow_loss=0.1347
+    throughput/total_tokens=7,212,800
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:11:42.060	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=480/3000, eta=6 hours, 44 minutes]
+    train/action_flow_loss=0.0963
+    throughput/total_tokens=7,526,400
+    throughput/device/tokens_per_second=1,625
+    throughput/device/batches_per_second=0.1037
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:14:54.677	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=500/3000, eta=6 hours, 40 minutes]
+    train/action_flow_loss=0.1035
+    throughput/total_tokens=7,840,000
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:18:07.783	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=520/3000, eta=6 hours, 37 minutes]
+    train/action_flow_loss=0.0726
+    throughput/total_tokens=8,153,600
+    throughput/device/tokens_per_second=1,624
+    throughput/device/batches_per_second=0.1036
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:21:20.447	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=540/3000, eta=6 hours, 34 minutes]
+    train/action_flow_loss=0.1630
+    throughput/total_tokens=8,467,200
+    throughput/device/tokens_per_second=1,627
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:24:32.591	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=560/3000, eta=6 hours, 31 minutes]
+    train/action_flow_loss=0.1058
+    throughput/total_tokens=8,780,800
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:27:44.876	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=580/3000, eta=6 hours, 28 minutes]
+    train/action_flow_loss=0.0978
+    throughput/total_tokens=9,094,400
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:30:57.059	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=600/3000, eta=6 hours, 25 minutes]
+    train/action_flow_loss=0.1034
+    throughput/total_tokens=9,408,000
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:34:09.200	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=620/3000, eta=6 hours, 21 minutes]
+    train/action_flow_loss=0.1629
+    throughput/total_tokens=9,721,600
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:37:21.968	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=640/3000, eta=6 hours, 18 minutes]
+    train/action_flow_loss=0.1594
+    throughput/total_tokens=10,035,200
+    throughput/device/tokens_per_second=1,627
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:40:33.919	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=660/3000, eta=6 hours, 15 minutes]
+    train/action_flow_loss=0.0902
+    throughput/total_tokens=10,348,800
+    throughput/device/tokens_per_second=1,633
+    throughput/device/batches_per_second=0.1042
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:43:46.462	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=680/3000, eta=6 hours, 12 minutes]
+    train/action_flow_loss=0.1607
+    throughput/total_tokens=10,662,400
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:46:59.349	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=700/3000, eta=6 hours, 9 minutes]
+    train/action_flow_loss=0.1241
+    throughput/total_tokens=10,976,000
+    throughput/device/tokens_per_second=1,625
+    throughput/device/batches_per_second=0.1037
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:50:11.639	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=720/3000, eta=6 hours, 6 minutes]
+    train/action_flow_loss=0.1555
+    throughput/total_tokens=11,289,600
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:53:24.533	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=740/3000, eta=6 hours, 2 minutes]
+    train/action_flow_loss=0.0977
+    throughput/total_tokens=11,603,200
+    throughput/device/tokens_per_second=1,625
+    throughput/device/batches_per_second=0.1037
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:56:37.071	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=760/3000, eta=5 hours, 59 minutes]
+    train/action_flow_loss=0.1177
+    throughput/total_tokens=11,916,800
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 18:59:49.214	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=780/3000, eta=5 hours, 56 minutes]
+    train/action_flow_loss=0.0984
+    throughput/total_tokens=12,230,400
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:03:01.857	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=800/3000, eta=5 hours, 53 minutes]
+    train/action_flow_loss=0.1075
+    throughput/total_tokens=12,544,000
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:06:14.291	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=820/3000, eta=5 hours, 50 minutes]
+    train/action_flow_loss=0.1564
+    throughput/total_tokens=12,857,600
+    throughput/device/tokens_per_second=1,629
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:09:27.016	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=840/3000, eta=5 hours, 46 minutes]
+    train/action_flow_loss=0.1247
+    throughput/total_tokens=13,171,200
+    throughput/device/tokens_per_second=1,627
+    throughput/device/batches_per_second=0.1038
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:12:39.361	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=860/3000, eta=5 hours, 43 minutes]
+    train/action_flow_loss=0.1215
+    throughput/total_tokens=13,484,800
+    throughput/device/tokens_per_second=1,630
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:15:51.918	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=880/3000, eta=5 hours, 40 minutes]
+    train/action_flow_loss=0.1115
+    throughput/total_tokens=13,798,400
+    throughput/device/tokens_per_second=1,628
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:19:04.409	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=900/3000, eta=5 hours, 37 minutes]
+    train/action_flow_loss=0.1142
+    throughput/total_tokens=14,112,000
+    throughput/device/tokens_per_second=1,629
+    throughput/device/batches_per_second=0.1039
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:22:16.660	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=920/3000, eta=5 hours, 34 minutes]
+    train/action_flow_loss=0.1193
+    throughput/total_tokens=14,425,600
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:25:28.947	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=940/3000, eta=5 hours, 30 minutes]
+    train/action_flow_loss=0.0890
+    throughput/total_tokens=14,739,200
+    throughput/device/tokens_per_second=1,631
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:28:41.063	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=960/3000, eta=5 hours, 27 minutes]
+    train/action_flow_loss=0.1506
+    throughput/total_tokens=15,052,800
+    throughput/device/tokens_per_second=1,632
+    throughput/device/batches_per_second=0.1041
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:31:53.439	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=980/3000, eta=5 hours, 24 minutes]
+    train/action_flow_loss=0.1381
+    throughput/total_tokens=15,366,400
+    throughput/device/tokens_per_second=1,630
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:35:05.244	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1000/3000, eta=5 hours, 21 minutes]
+    train/action_flow_loss=0.1099
+    throughput/total_tokens=15,680,000
+    throughput/device/tokens_per_second=1,635
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,913
+2026-10-31 19:35:05.254	4ebf5021d54a:0	olmo.train.trainer:2550	INFO	Saving checkpoint...
+2026-10-31 19:35:23.983	4ebf5021d54a:0	olmo.train.trainer:2555	INFO	Checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step1000
+2026-10-31 19:35:23.987	4ebf5021d54a:0	olmo.train.trainer:2558	INFO	Saving LoRA checkpoint...
+2026-10-31 19:35:38.045	4ebf5021d54a:0	olmo.train.trainer:1352	INFO	Saving merged LoRA checkpoint...
+2026-10-31 19:36:55.715	4ebf5021d54a:0	olmo.train.trainer:2560	INFO	LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step1000-lora-*
+2026-10-31 19:36:55.726	4ebf5021d54a:0	olmo.train.trainer:2563	INFO	Merged LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step1000-lora-merged
+2026-10-31 19:40:06.708	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1020/3000, eta=5 hours, 21 minutes]
+    train/action_flow_loss=0.1426
+    throughput/total_tokens=15,993,600
+    throughput/device/tokens_per_second=1,642
+    throughput/device/batches_per_second=0.1047
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:43:18.539	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1040/3000, eta=5 hours, 18 minutes]
+    train/action_flow_loss=0.1298
+    throughput/total_tokens=16,307,200
+    throughput/device/tokens_per_second=1,635
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:46:30.898	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1060/3000, eta=5 hours, 15 minutes]
+    train/action_flow_loss=0.1014
+    throughput/total_tokens=16,620,800
+    throughput/device/tokens_per_second=1,630
+    throughput/device/batches_per_second=0.1040
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:49:39.143	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1080/3000, eta=5 hours, 11 minutes]
+    train/action_flow_loss=0.1199
+    throughput/total_tokens=16,934,400
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:52:46.323	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1100/3000, eta=5 hours, 8 minutes]
+    train/action_flow_loss=0.1531
+    throughput/total_tokens=17,248,000
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:55:53.948	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1120/3000, eta=5 hours, 4 minutes]
+    train/action_flow_loss=0.1100
+    throughput/total_tokens=17,561,600
+    throughput/device/tokens_per_second=1,671
+    throughput/device/batches_per_second=0.1066
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 19:59:00.932	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1140/3000, eta=5 hours, 1 minute]
+    train/action_flow_loss=0.1152
+    throughput/total_tokens=17,875,200
+    throughput/device/tokens_per_second=1,677
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:02:07.979	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1160/3000, eta=4 hours, 57 minutes]
+    train/action_flow_loss=0.1472
+    throughput/total_tokens=18,188,800
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:05:15.213	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1180/3000, eta=4 hours, 54 minutes]
+    train/action_flow_loss=0.1322
+    throughput/total_tokens=18,502,400
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:08:22.479	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1200/3000, eta=4 hours, 51 minutes]
+    train/action_flow_loss=0.1089
+    throughput/total_tokens=18,816,000
+    throughput/device/tokens_per_second=1,674
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:11:29.173	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1220/3000, eta=4 hours, 47 minutes]
+    train/action_flow_loss=0.0971
+    throughput/total_tokens=19,129,600
+    throughput/device/tokens_per_second=1,679
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:14:36.015	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1240/3000, eta=4 hours, 44 minutes]
+    train/action_flow_loss=0.0939
+    throughput/total_tokens=19,443,200
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:17:42.370	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1260/3000, eta=4 hours, 41 minutes]
+    train/action_flow_loss=0.0899
+    throughput/total_tokens=19,756,800
+    throughput/device/tokens_per_second=1,683
+    throughput/device/batches_per_second=0.1073
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:20:48.509	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1280/3000, eta=4 hours, 37 minutes]
+    train/action_flow_loss=0.1121
+    throughput/total_tokens=20,070,400
+    throughput/device/tokens_per_second=1,684
+    throughput/device/batches_per_second=0.1075
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:23:54.997	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1300/3000, eta=4 hours, 34 minutes]
+    train/action_flow_loss=0.1509
+    throughput/total_tokens=20,384,000
+    throughput/device/tokens_per_second=1,681
+    throughput/device/batches_per_second=0.1073
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:27:01.392	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1320/3000, eta=4 hours, 30 minutes]
+    train/action_flow_loss=0.0931
+    throughput/total_tokens=20,697,600
+    throughput/device/tokens_per_second=1,682
+    throughput/device/batches_per_second=0.1073
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:30:08.257	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1340/3000, eta=4 hours, 27 minutes]
+    train/action_flow_loss=0.1367
+    throughput/total_tokens=21,011,200
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:33:15.394	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1360/3000, eta=4 hours, 24 minutes]
+    train/action_flow_loss=0.0614
+    throughput/total_tokens=21,324,800
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:36:22.367	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1380/3000, eta=4 hours, 20 minutes]
+    train/action_flow_loss=0.1109
+    throughput/total_tokens=21,638,400
+    throughput/device/tokens_per_second=1,677
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:39:29.453	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1400/3000, eta=4 hours, 17 minutes]
+    train/action_flow_loss=0.1092
+    throughput/total_tokens=21,952,000
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:42:36.481	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1420/3000, eta=4 hours, 14 minutes]
+    train/action_flow_loss=0.1236
+    throughput/total_tokens=22,265,600
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:45:43.107	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1440/3000, eta=4 hours, 11 minutes]
+    train/action_flow_loss=0.0937
+    throughput/total_tokens=22,579,200
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:48:50.172	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1460/3000, eta=4 hours, 7 minutes]
+    train/action_flow_loss=0.1331
+    throughput/total_tokens=22,892,800
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:51:57.398	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1480/3000, eta=4 hours, 4 minutes]
+    train/action_flow_loss=0.0952
+    throughput/total_tokens=23,206,400
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:55:04.003	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1500/3000, eta=4 hours, 1 minute]
+    train/action_flow_loss=0.1049
+    throughput/total_tokens=23,520,000
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 20:58:22.853	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1520/3000, eta=3 hours, 58 minutes]
+    train/action_flow_loss=0.1640
+    throughput/total_tokens=23,833,600
+    throughput/device/tokens_per_second=1,577
+    throughput/device/batches_per_second=0.1006
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:01:31.933	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1540/3000, eta=3 hours, 54 minutes]
+    train/action_flow_loss=0.0970
+    throughput/total_tokens=24,147,200
+    throughput/device/tokens_per_second=1,658
+    throughput/device/batches_per_second=0.1058
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:04:41.149	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1560/3000, eta=3 hours, 51 minutes]
+    train/action_flow_loss=0.1104
+    throughput/total_tokens=24,460,800
+    throughput/device/tokens_per_second=1,657
+    throughput/device/batches_per_second=0.1057
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:07:55.898	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1580/3000, eta=3 hours, 48 minutes]
+    train/action_flow_loss=0.1062
+    throughput/total_tokens=24,774,400
+    throughput/device/tokens_per_second=1,610
+    throughput/device/batches_per_second=0.1027
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:11:09.870	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1600/3000, eta=3 hours, 45 minutes]
+    train/action_flow_loss=0.1062
+    throughput/total_tokens=25,088,000
+    throughput/device/tokens_per_second=1,617
+    throughput/device/batches_per_second=0.1031
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:14:17.423	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1620/3000, eta=3 hours, 41 minutes]
+    train/action_flow_loss=0.1274
+    throughput/total_tokens=25,401,600
+    throughput/device/tokens_per_second=1,672
+    throughput/device/batches_per_second=0.1066
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:17:25.741	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1640/3000, eta=3 hours, 38 minutes]
+    train/action_flow_loss=0.1631
+    throughput/total_tokens=25,715,200
+    throughput/device/tokens_per_second=1,665
+    throughput/device/batches_per_second=0.1062
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:20:33.549	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1660/3000, eta=3 hours, 35 minutes]
+    train/action_flow_loss=0.1213
+    throughput/total_tokens=26,028,800
+    throughput/device/tokens_per_second=1,669
+    throughput/device/batches_per_second=0.1065
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:23:40.444	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1680/3000, eta=3 hours, 32 minutes]
+    train/action_flow_loss=0.1238
+    throughput/total_tokens=26,342,400
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:26:47.242	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1700/3000, eta=3 hours, 28 minutes]
+    train/action_flow_loss=0.1363
+    throughput/total_tokens=26,656,000
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:29:54.588	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1720/3000, eta=3 hours, 25 minutes]
+    train/action_flow_loss=0.0939
+    throughput/total_tokens=26,969,600
+    throughput/device/tokens_per_second=1,674
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:33:02.891	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1740/3000, eta=3 hours, 22 minutes]
+    train/action_flow_loss=0.1132
+    throughput/total_tokens=27,283,200
+    throughput/device/tokens_per_second=1,665
+    throughput/device/batches_per_second=0.1062
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:36:12.337	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1760/3000, eta=3 hours, 19 minutes]
+    train/action_flow_loss=0.0865
+    throughput/total_tokens=27,596,800
+    throughput/device/tokens_per_second=1,655
+    throughput/device/batches_per_second=0.1056
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:39:20.429	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1780/3000, eta=3 hours, 15 minutes]
+    train/action_flow_loss=0.1631
+    throughput/total_tokens=27,910,400
+    throughput/device/tokens_per_second=1,667
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:42:28.604	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1800/3000, eta=3 hours, 12 minutes]
+    train/action_flow_loss=0.1110
+    throughput/total_tokens=28,224,000
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:45:36.873	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1820/3000, eta=3 hours, 9 minutes]
+    train/action_flow_loss=0.1393
+    throughput/total_tokens=28,537,600
+    throughput/device/tokens_per_second=1,665
+    throughput/device/batches_per_second=0.1062
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:48:44.908	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1840/3000, eta=3 hours, 6 minutes]
+    train/action_flow_loss=0.0996
+    throughput/total_tokens=28,851,200
+    throughput/device/tokens_per_second=1,667
+    throughput/device/batches_per_second=0.1064
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:51:52.981	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1860/3000, eta=3 hours, 3 minutes]
+    train/action_flow_loss=0.0994
+    throughput/total_tokens=29,164,800
+    throughput/device/tokens_per_second=1,667
+    throughput/device/batches_per_second=0.1064
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:55:01.129	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1880/3000, eta=2 hours, 59 minutes]
+    train/action_flow_loss=0.1094
+    throughput/total_tokens=29,478,400
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 21:58:09.894	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1900/3000, eta=2 hours, 56 minutes]
+    train/action_flow_loss=0.1382
+    throughput/total_tokens=29,792,000
+    throughput/device/tokens_per_second=1,661
+    throughput/device/batches_per_second=0.1060
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:01:17.885	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1920/3000, eta=2 hours, 53 minutes]
+    train/action_flow_loss=0.0969
+    throughput/total_tokens=30,105,600
+    throughput/device/tokens_per_second=1,668
+    throughput/device/batches_per_second=0.1064
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:04:26.084	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1940/3000, eta=2 hours, 50 minutes]
+    train/action_flow_loss=0.1223
+    throughput/total_tokens=30,419,200
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:07:34.156	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1960/3000, eta=2 hours, 46 minutes]
+    train/action_flow_loss=0.0972
+    throughput/total_tokens=30,732,800
+    throughput/device/tokens_per_second=1,667
+    throughput/device/batches_per_second=0.1064
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:10:42.408	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=1980/3000, eta=2 hours, 43 minutes]
+    train/action_flow_loss=0.1370
+    throughput/total_tokens=31,046,400
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:13:51.347	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2000/3000, eta=2 hours, 40 minutes]
+    train/action_flow_loss=0.1017
+    throughput/total_tokens=31,360,000
+    throughput/device/tokens_per_second=1,660
+    throughput/device/batches_per_second=0.1059
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:13:51.354	4ebf5021d54a:0	olmo.train.trainer:2550	INFO	Saving checkpoint...
+2026-10-31 22:14:10.840	4ebf5021d54a:0	olmo.train.trainer:2555	INFO	Checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step2000
+2026-10-31 22:14:10.842	4ebf5021d54a:0	olmo.train.trainer:2558	INFO	Saving LoRA checkpoint...
+2026-10-31 22:14:27.353	4ebf5021d54a:0	olmo.train.trainer:1352	INFO	Saving merged LoRA checkpoint...
+2026-10-31 22:16:12.782	4ebf5021d54a:0	olmo.train.trainer:2560	INFO	LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step2000-lora-*
+2026-10-31 22:16:12.795	4ebf5021d54a:0	olmo.train.trainer:2563	INFO	Merged LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step2000-lora-merged
+2026-10-31 22:19:39.753	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2020/3000, eta=2 hours, 38 minutes]
+    train/action_flow_loss=0.1347
+    throughput/total_tokens=31,673,600
+    throughput/device/tokens_per_second=1,515
+    throughput/device/batches_per_second=0.0967
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:22:47.547	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2040/3000, eta=2 hours, 35 minutes]
+    train/action_flow_loss=0.1226
+    throughput/total_tokens=31,987,200
+    throughput/device/tokens_per_second=1,670
+    throughput/device/batches_per_second=0.1065
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:25:55.798	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2060/3000, eta=2 hours, 32 minutes]
+    train/action_flow_loss=0.0923
+    throughput/total_tokens=32,300,800
+    throughput/device/tokens_per_second=1,666
+    throughput/device/batches_per_second=0.1063
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:29:03.014	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2080/3000, eta=2 hours, 28 minutes]
+    train/action_flow_loss=0.1531
+    throughput/total_tokens=32,614,400
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:32:13.111	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2100/3000, eta=2 hours, 25 minutes]
+    train/action_flow_loss=0.0965
+    throughput/total_tokens=32,928,000
+    throughput/device/tokens_per_second=1,649
+    throughput/device/batches_per_second=0.1052
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:35:24.175	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2120/3000, eta=2 hours, 22 minutes]
+    train/action_flow_loss=0.1192
+    throughput/total_tokens=33,241,600
+    throughput/device/tokens_per_second=1,641
+    throughput/device/batches_per_second=0.1047
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:38:34.943	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2140/3000, eta=2 hours, 19 minutes]
+    train/action_flow_loss=0.0625
+    throughput/total_tokens=33,555,200
+    throughput/device/tokens_per_second=1,644
+    throughput/device/batches_per_second=0.1048
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:41:46.131	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2160/3000, eta=2 hours, 15 minutes]
+    train/action_flow_loss=0.1177
+    throughput/total_tokens=33,868,800
+    throughput/device/tokens_per_second=1,640
+    throughput/device/batches_per_second=0.1046
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:44:57.001	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2180/3000, eta=2 hours, 12 minutes]
+    train/action_flow_loss=0.1197
+    throughput/total_tokens=34,182,400
+    throughput/device/tokens_per_second=1,643
+    throughput/device/batches_per_second=0.1048
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:48:08.862	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2200/3000, eta=2 hours, 9 minutes]
+    train/action_flow_loss=0.1358
+    throughput/total_tokens=34,496,000
+    throughput/device/tokens_per_second=1,634
+    throughput/device/batches_per_second=0.1043
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:51:18.652	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2220/3000, eta=2 hours, 6 minutes]
+    train/action_flow_loss=0.1447
+    throughput/total_tokens=34,809,600
+    throughput/device/tokens_per_second=1,652
+    throughput/device/batches_per_second=0.1054
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:54:28.954	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2240/3000, eta=2 hours, 2 minutes]
+    train/action_flow_loss=0.1432
+    throughput/total_tokens=35,123,200
+    throughput/device/tokens_per_second=1,648
+    throughput/device/batches_per_second=0.1051
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 22:57:39.582	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2260/3000, eta=1 hour, 59 minutes]
+    train/action_flow_loss=0.1491
+    throughput/total_tokens=35,436,800
+    throughput/device/tokens_per_second=1,645
+    throughput/device/batches_per_second=0.1049
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:00:49.781	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2280/3000, eta=1 hour, 56 minutes]
+    train/action_flow_loss=0.1052
+    throughput/total_tokens=35,750,400
+    throughput/device/tokens_per_second=1,648
+    throughput/device/batches_per_second=0.1052
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:04:00.499	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2300/3000, eta=1 hour, 53 minutes]
+    train/action_flow_loss=0.0702
+    throughput/total_tokens=36,064,000
+    throughput/device/tokens_per_second=1,644
+    throughput/device/batches_per_second=0.1049
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:07:10.658	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2320/3000, eta=1 hour, 50 minutes]
+    train/action_flow_loss=0.1900
+    throughput/total_tokens=36,377,600
+    throughput/device/tokens_per_second=1,649
+    throughput/device/batches_per_second=0.1052
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:10:20.778	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2340/3000, eta=1 hour, 46 minutes]
+    train/action_flow_loss=0.0984
+    throughput/total_tokens=36,691,200
+    throughput/device/tokens_per_second=1,649
+    throughput/device/batches_per_second=0.1052
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:13:29.891	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2360/3000, eta=1 hour, 43 minutes]
+    train/action_flow_loss=0.0560
+    throughput/total_tokens=37,004,800
+    throughput/device/tokens_per_second=1,658
+    throughput/device/batches_per_second=0.1058
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:16:40.222	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2380/3000, eta=1 hour, 40 minutes]
+    train/action_flow_loss=0.1358
+    throughput/total_tokens=37,318,400
+    throughput/device/tokens_per_second=1,647
+    throughput/device/batches_per_second=0.1051
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:19:49.210	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2400/3000, eta=1 hour, 37 minutes]
+    train/action_flow_loss=0.0671
+    throughput/total_tokens=37,632,000
+    throughput/device/tokens_per_second=1,659
+    throughput/device/batches_per_second=0.1058
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:22:58.719	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2420/3000, eta=1 hour, 34 minutes]
+    train/action_flow_loss=0.0734
+    throughput/total_tokens=37,945,600
+    throughput/device/tokens_per_second=1,654
+    throughput/device/batches_per_second=0.1055
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:26:07.637	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2440/3000, eta=1 hour, 30 minutes]
+    train/action_flow_loss=0.1255
+    throughput/total_tokens=38,259,200
+    throughput/device/tokens_per_second=1,660
+    throughput/device/batches_per_second=0.1059
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:29:15.922	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2460/3000, eta=1 hour, 27 minutes]
+    train/action_flow_loss=0.0756
+    throughput/total_tokens=38,572,800
+    throughput/device/tokens_per_second=1,665
+    throughput/device/batches_per_second=0.1062
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:32:22.274	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2480/3000, eta=1 hour, 24 minutes]
+    train/action_flow_loss=0.1274
+    throughput/total_tokens=38,886,400
+    throughput/device/tokens_per_second=1,682
+    throughput/device/batches_per_second=0.1073
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:35:29.543	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2500/3000, eta=1 hour, 21 minutes]
+    train/action_flow_loss=0.0898
+    throughput/total_tokens=39,200,000
+    throughput/device/tokens_per_second=1,674
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:38:36.154	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2520/3000, eta=1 hour, 17 minutes]
+    train/action_flow_loss=0.1150
+    throughput/total_tokens=39,513,600
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:41:43.569	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2540/3000, eta=1 hour, 14 minutes]
+    train/action_flow_loss=0.0913
+    throughput/total_tokens=39,827,200
+    throughput/device/tokens_per_second=1,673
+    throughput/device/batches_per_second=0.1067
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:44:50.405	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2560/3000, eta=1 hour, 11 minutes]
+    train/action_flow_loss=0.0606
+    throughput/total_tokens=40,140,800
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:47:57.106	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2580/3000, eta=1 hour, 8 minutes]
+    train/action_flow_loss=0.1289
+    throughput/total_tokens=40,454,400
+    throughput/device/tokens_per_second=1,679
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:51:03.102	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2600/3000, eta=1 hour, 5 minutes]
+    train/action_flow_loss=0.1370
+    throughput/total_tokens=40,768,000
+    throughput/device/tokens_per_second=1,686
+    throughput/device/batches_per_second=0.1075
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:54:09.785	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2620/3000, eta=1 hour, 1 minute]
+    train/action_flow_loss=0.1153
+    throughput/total_tokens=41,081,600
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-10-31 23:57:15.595	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2640/3000, eta=58 minutes]
+    train/action_flow_loss=0.0776
+    throughput/total_tokens=41,395,200
+    throughput/device/tokens_per_second=1,687
+    throughput/device/batches_per_second=0.1076
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:00:22.375	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2660/3000, eta=55 minutes]
+    train/action_flow_loss=0.1639
+    throughput/total_tokens=41,708,800
+    throughput/device/tokens_per_second=1,679
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:03:29.173	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2680/3000, eta=52 minutes]
+    train/action_flow_loss=0.0984
+    throughput/total_tokens=42,022,400
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:06:36.758	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2700/3000, eta=48 minutes]
+    train/action_flow_loss=0.1302
+    throughput/total_tokens=42,336,000
+    throughput/device/tokens_per_second=1,671
+    throughput/device/batches_per_second=0.1066
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:09:43.883	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2720/3000, eta=45 minutes]
+    train/action_flow_loss=0.1231
+    throughput/total_tokens=42,649,600
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:12:50.512	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2740/3000, eta=42 minutes]
+    train/action_flow_loss=0.0916
+    throughput/total_tokens=42,963,200
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:15:57.526	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2760/3000, eta=39 minutes]
+    train/action_flow_loss=0.0526
+    throughput/total_tokens=43,276,800
+    throughput/device/tokens_per_second=1,677
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:19:04.147	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2780/3000, eta=36 minutes]
+    train/action_flow_loss=0.1235
+    throughput/total_tokens=43,590,400
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:22:10.772	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2800/3000, eta=32 minutes]
+    train/action_flow_loss=0.1050
+    throughput/total_tokens=43,904,000
+    throughput/device/tokens_per_second=1,680
+    throughput/device/batches_per_second=0.1072
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:25:17.524	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2820/3000, eta=29 minutes]
+    train/action_flow_loss=0.1240
+    throughput/total_tokens=44,217,600
+    throughput/device/tokens_per_second=1,679
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:28:24.488	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2840/3000, eta=26 minutes]
+    train/action_flow_loss=0.1359
+    throughput/total_tokens=44,531,200
+    throughput/device/tokens_per_second=1,677
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:31:31.728	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2860/3000, eta=23 minutes]
+    train/action_flow_loss=0.0705
+    throughput/total_tokens=44,844,800
+    throughput/device/tokens_per_second=1,674
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:34:38.544	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2880/3000, eta=20 minutes]
+    train/action_flow_loss=0.0934
+    throughput/total_tokens=45,158,400
+    throughput/device/tokens_per_second=1,678
+    throughput/device/batches_per_second=0.1071
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:37:45.628	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2900/3000, eta=16 minutes]
+    train/action_flow_loss=0.1124
+    throughput/total_tokens=45,472,000
+    throughput/device/tokens_per_second=1,676
+    throughput/device/batches_per_second=0.1069
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:40:52.847	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2920/3000, eta=13 minutes]
+    train/action_flow_loss=0.1007
+    throughput/total_tokens=45,785,600
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:43:59.861	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2940/3000, eta=10 minutes]
+    train/action_flow_loss=0.0919
+    throughput/total_tokens=46,099,200
+    throughput/device/tokens_per_second=1,677
+    throughput/device/batches_per_second=0.1070
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:47:07.474	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2960/3000, eta=7 minutes]
+    train/action_flow_loss=0.1108
+    throughput/total_tokens=46,412,800
+    throughput/device/tokens_per_second=1,671
+    throughput/device/batches_per_second=0.1066
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:50:14.711	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=2980/3000, eta=4 minutes]
+    train/action_flow_loss=0.1074
+    throughput/total_tokens=46,726,400
+    throughput/device/tokens_per_second=1,675
+    throughput/device/batches_per_second=0.1068
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:53:22.383	4ebf5021d54a:0	olmo.train.trainer:2170	INFO	[step=3000/3000, eta=1 minute]
+    train/action_flow_loss=0.0887
+    throughput/total_tokens=47,040,000
+    throughput/device/tokens_per_second=1,671
+    throughput/device/batches_per_second=0.1066
+    System/Peak GPU Memory (MB)=38,925
+2026-11-01 00:53:22.392	4ebf5021d54a:0	olmo.train.trainer:2550	INFO	Saving checkpoint...
+2026-11-01 00:53:42.814	4ebf5021d54a:0	olmo.train.trainer:2555	INFO	Checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step3000
+2026-11-01 00:53:42.819	4ebf5021d54a:0	olmo.train.trainer:2558	INFO	Saving LoRA checkpoint...
+2026-11-01 00:53:57.226	4ebf5021d54a:0	olmo.train.trainer:1352	INFO	Saving merged LoRA checkpoint...
+2026-11-01 00:55:28.676	4ebf5021d54a:0	olmo.train.trainer:2560	INFO	LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step3000-lora-*
+2026-11-01 00:55:28.682	4ebf5021d54a:0	olmo.train.trainer:2563	INFO	Merged LoRA checkpoint saved to /workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/step3000-lora-merged
+2026-11-01 00:55:28.714	4ebf5021d54a:0	train:736	INFO	Training complete
+wandb: WARNING The `quiet` argument to `wandb.run.finish()` is deprecated, use `wandb.Settings(quiet=...)` to set this instead.

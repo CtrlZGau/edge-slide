@@ -1,0 +1,143 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "molmoact2",
+  "prompt": "push the flat plate to the edge of the table with the gripper",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "molmoact2",
+    "prompt": "push the flat plate to the edge of the table with the gripper",
+    "n_episodes": 5,
+    "seed_offset": 0,
+    "max_steps": 1200,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 5556,
+    "video_every": 1,
+    "out": "/root/IMBench/outputs/vla_eval/main_v2_libero_cam/molmoact2_push_only_60s",
+    "push_metric": true,
+    "push_threshold": 0.03,
+    "no_resume": false
+  },
+  "n_episodes_done": 5,
+  "success_rate": 0.0,
+  "mean_length": 1200.0,
+  "mean_min_eef_obj_dist": 0.0471,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": -0.08016604564884183,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0366,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        -0.03977410781003845,
+        0.0706704662434472,
+        0.8135284771948499
+      ],
+      "wall_time_s": 72.1,
+      "infer_ms_mean": 175.4,
+      "n_queries": 240,
+      "initial_overhang": -0.1307,
+      "final_overhang": -0.0802,
+      "max_overhang": -0.0802,
+      "fell_off": false,
+      "plate_xy_displacement": 0.1023
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": -0.018055790632803104,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0266,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.07725475422102601,
+        0.14385971535374903,
+        0.8142774193437173
+      ],
+      "wall_time_s": 72.8,
+      "infer_ms_mean": 178.6,
+      "n_queries": 240,
+      "initial_overhang": -0.0718,
+      "final_overhang": -0.0181,
+      "max_overhang": -0.018,
+      "fell_off": false,
+      "plate_xy_displacement": 0.2604
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": -0.11453494870985056,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.043,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        -0.050651253648460993,
+        -0.05749785522522362,
+        0.8149514559625446
+      ],
+      "wall_time_s": 73.6,
+      "infer_ms_mean": 180.5,
+      "n_queries": 240,
+      "initial_overhang": -0.1483,
+      "final_overhang": -0.1145,
+      "max_overhang": -0.1145,
+      "fell_off": false,
+      "plate_xy_displacement": 0.052
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": -0.057422986342835936,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0666,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.0030323918571030367,
+        0.094038907338792,
+        0.8149514559625446
+      ],
+      "wall_time_s": 72.8,
+      "infer_ms_mean": 181.4,
+      "n_queries": 240,
+      "initial_overhang": -0.0572,
+      "final_overhang": -0.0574,
+      "max_overhang": -0.0549,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0005
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": -0.09069516486189216,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0627,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.05325367897483165,
+        0.05074013949323266,
+        0.8149514559625446
+      ],
+      "wall_time_s": 72.6,
+      "infer_ms_mean": 179.3,
+      "n_queries": 240,
+      "initial_overhang": -0.0939,
+      "final_overhang": -0.0907,
+      "max_overhang": -0.0904,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0037
+    }
+  ],
+  "push_success_def": "final plate overhang >= 0.03 m past the table edge and plate not fallen off",
+  "mean_final_overhang": -0.07218,
+  "fell_off_rate": 0.0
+}

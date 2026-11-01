@@ -1,0 +1,132 @@
+{
+  "task": "ib-p1-edge-slide-v1",
+  "policy": "pi05",
+  "prompt": "push the flat plate to the edge of the table with the gripper",
+  "args": {
+    "task": "ib-p1-edge-slide-v1",
+    "policy": "pi05",
+    "prompt": "push the flat plate to the edge of the table with the gripper",
+    "n_episodes": 5,
+    "seed_offset": 0,
+    "max_steps": 1200,
+    "control_freq": 20,
+    "main_cam": "libero_cam",
+    "no_mirror": false,
+    "replan_steps": 5,
+    "host": "localhost",
+    "port": 8000,
+    "video_every": 1,
+    "out": "outputs/pi05_eval/main_v2_libero_cam/pi05_push_only_60s",
+    "push_metric": true,
+    "push_threshold": 0.03
+  },
+  "n_episodes_done": 5,
+  "success_rate": 0.0,
+  "mean_length": 1200.0,
+  "mean_min_eef_obj_dist": 0.06848000000000001,
+  "episodes": [
+    {
+      "seed": 0,
+      "success": false,
+      "final_score": -0.1320700497865338,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0555,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.012247803061532028,
+        -0.01690292005873993,
+        0.8149514559625444
+      ],
+      "wall_time_s": 70.6,
+      "initial_overhang": -0.1307,
+      "final_overhang": -0.1321,
+      "max_overhang": -0.1307,
+      "fell_off": false,
+      "plate_xy_displacement": 0.002
+    },
+    {
+      "seed": 1,
+      "success": false,
+      "final_score": -0.07184220507972985,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.108,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        -0.047440182568358455,
+        -0.08477858620389286,
+        0.8149514559625446
+      ],
+      "wall_time_s": 70.7,
+      "initial_overhang": -0.0718,
+      "final_overhang": -0.0718,
+      "max_overhang": -0.0718,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0
+    },
+    {
+      "seed": 2,
+      "success": false,
+      "final_score": -0.16411547995498918,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.062,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        -0.0498484911989205,
+        0.05777079491011014,
+        0.8717512010696266
+      ],
+      "wall_time_s": 71.2,
+      "initial_overhang": -0.1483,
+      "final_overhang": -0.1641,
+      "max_overhang": -0.1483,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0842
+    },
+    {
+      "seed": 3,
+      "success": false,
+      "final_score": -0.057138843461687655,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.057,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.002617903970081589,
+        0.09432243883942867,
+        0.8149514559625446
+      ],
+      "wall_time_s": 70.5,
+      "initial_overhang": -0.0572,
+      "final_overhang": -0.0571,
+      "max_overhang": -0.0571,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0
+    },
+    {
+      "seed": 4,
+      "success": false,
+      "final_score": -0.0963430772600479,
+      "max_score": 0.0,
+      "min_eef_obj_dist": 0.0599,
+      "length": 1200,
+      "terminated": false,
+      "object_pos_final": [
+        0.0015905735046453167,
+        0.04012018483898488,
+        0.8149514559625449
+      ],
+      "wall_time_s": 71.0,
+      "initial_overhang": -0.0939,
+      "final_overhang": -0.0963,
+      "max_overhang": -0.0873,
+      "fell_off": false,
+      "plate_xy_displacement": 0.0505
+    }
+  ],
+  "push_success_def": "final plate overhang >= 0.03 m past the table edge and plate not fallen off",
+  "mean_final_overhang": -0.10428,
+  "fell_off_rate": 0.0
+}

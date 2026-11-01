@@ -1,0 +1,68 @@
+{
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-10-31T16:51:23.142873Z",
+  "args": [
+    "allenai/MolmoAct2-LIBERO",
+    "imbench_edge_slide",
+    "--wandb.name=molmoact2-imbench-edge-slide-lora-r64",
+    "--wandb.entity=gauthamgb85-bits-pilani",
+    "--wandb.project=imbench-molmoact2",
+    "--max_duration=3000",
+    "--device_batch_size=8",
+    "--global_batch_size=32",
+    "--log_interval=20",
+    "--num_workers=8",
+    "--pin_memory=true",
+    "--data.timeout=900",
+    "--save_interval=1000",
+    "--save_num_checkpoints_to_keep=1",
+    "--save_folder=/workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64",
+    "--packing=false",
+    "--dynamic_seq_len=true",
+    "--ft_vlm=true",
+    "--ft_action_expert=true",
+    "--ft_embedding=lm_head",
+    "--lora_enable=true",
+    "--lora_rank=64",
+    "--llm_learning_rate=5e-5",
+    "--vit_learning_rate=5e-5",
+    "--connector_learning_rate=5e-5",
+    "--action_expert_learning_rate=5e-5"
+  ],
+  "program": "/workspace/molmoact2/experiments/launch_scripts/train_lerobot.py",
+  "codePath": "experiments/launch_scripts/train_lerobot.py",
+  "codePathLocal": "launch_scripts/train_lerobot.py",
+  "git": {
+    "remote": "https://github.com/allenai/molmoact2.git",
+    "commit": "6070080a20321b4f498ab30f28e1d09ac465edb7"
+  },
+  "email": "gauthamgb85@gmail.com",
+  "root": "/workspace/checkpoints/finetune/molmoact2-imbench-edge-slide-lora-r64/wandb",
+  "host": "4ebf5021d54a",
+  "executable": "/root/venvs/molmoact2/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "53687091200",
+      "used": "21883871232"
+    }
+  },
+  "memory": {
+    "total": "1082011545600"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-83f28210-9164-ea6c-f374-9de5ef2ec508"
+    }
+  ],
+  "cudaVersion": "13.2",
+  "writerId": "9nscc3lig9ygq2718loa0haky32xo3h9"
+}

@@ -1,0 +1,4360 @@
+[
+ {
+  "seed": 0,
+  "success": true,
+  "overhang_cm": 3.27,
+  "lip_samples": 27,
+  "plate_z": 0.951,
+  "ticks": 2252,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.01077196391925525,
+      0.10426039848242416,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      -178.8465,
+      -8.2401,
+      -0.0954
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 127,
+     "final_position_m": [
+      0.0098,
+      0.1087,
+      0.8805
+     ],
+     "final_rpy_deg": [
+      -179.12,
+      -8.37,
+      -0.5
+     ],
+     "position_error_mm": 4.53,
+     "orientation_error_deg": 0.53,
+     "peak_force_N": 3.14,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.01,
+     "ticks": 37,
+     "object_between_fingers": false,
+     "tactile_max": 0.0852
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 59,
+     "final_position_m": [
+      0.0086,
+      0.1073,
+      0.8171
+     ],
+     "final_rpy_deg": [
+      -178.87,
+      -8.8,
+      -0.35
+     ],
+     "position_error_mm": 4.43,
+     "orientation_error_deg": 0.45,
+     "peak_force_N": 13.46,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.01077196391925525,
+      -0.06039189517420901,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -178.8465,
+      -8.2401,
+      -0.0954
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 423,
+     "final_position_m": [
+      0.0139,
+      -0.057,
+      0.8148
+     ],
+     "final_rpy_deg": [
+      -178.87,
+      -8.17,
+      -0.12
+     ],
+     "position_error_mm": 4.99,
+     "orientation_error_deg": 0.08,
+     "peak_force_N": 63.98,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 75,
+     "final_position_m": [
+      0.016,
+      -0.0571,
+      0.8936
+     ],
+     "final_rpy_deg": [
+      -178.86,
+      -7.81,
+      -0.15
+     ],
+     "position_error_mm": 2.36,
+     "orientation_error_deg": 0.36,
+     "peak_force_N": 10.13,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05636714396884923
+    },
+    "result": {
+     "converged": true,
+     "steps": 70,
+     "final_position_m": [
+      0.0174,
+      -0.0596,
+      0.9493
+     ],
+     "final_rpy_deg": [
+      -178.71,
+      -7.51,
+      -0.01
+     ],
+     "position_error_mm": 2.9,
+     "orientation_error_deg": 0.37,
+     "peak_force_N": 2.23,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -178.8465,
+      -8.2401,
+      -0.0954
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 154,
+     "final_position_m": [
+      0.0509,
+      -0.3991,
+      0.9519
+     ],
+     "final_rpy_deg": [
+      -178.39,
+      -7.98,
+      -0.02
+     ],
+     "position_error_mm": 2.29,
+     "orientation_error_deg": 0.54,
+     "peak_force_N": 3.76,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0398,
+      -0.3838,
+      0.9558
+     ],
+     "final_rpy_deg": [
+      -93.98,
+      -0.62,
+      -4.09
+     ],
+     "position_error_mm": 20.02,
+     "orientation_error_deg": 5.75,
+     "peak_force_N": 6.53,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.02688637494729231,
+      -0.4,
+      0.8149606164599841
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      0.0108,
+      -0.3659,
+      0.8276
+     ],
+     "final_rpy_deg": [
+      -99.56,
+      -1.44,
+      -6.71
+     ],
+     "position_error_mm": 39.72,
+     "orientation_error_deg": 11.84,
+     "peak_force_N": 3.86,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.02688637494729231,
+      -0.27,
+      0.8149606164599841
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 82,
+     "final_position_m": [
+      0.0271,
+      -0.2732,
+      0.8147
+     ],
+     "final_rpy_deg": [
+      -90.11,
+      0.04,
+      -0.07
+     ],
+     "position_error_mm": 3.26,
+     "orientation_error_deg": 0.14,
+     "peak_force_N": 5.48,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 29,
+     "object_between_fingers": true,
+     "tactile_max": 0.6236
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 51,
+     "final_position_m": [
+      0.036,
+      -0.2896,
+      0.9488
+     ],
+     "final_rpy_deg": [
+      -87.88,
+      0.26,
+      1.2
+     ],
+     "position_error_mm": 119.29,
+     "orientation_error_deg": 3.16,
+     "peak_force_N": 6.69,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 1,
+  "success": true,
+  "overhang_cm": 3.45,
+  "lip_samples": 39,
+  "plate_z": 0.95,
+  "ticks": 1988,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.047440182568358455,
+      0.01819150737168107,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      -179.6582,
+      -4.1155,
+      -1.6662
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 80,
+     "final_position_m": [
+      -0.0522,
+      0.0174,
+      0.8808
+     ],
+     "final_rpy_deg": [
+      -179.57,
+      -5.35,
+      -1.64
+     ],
+     "position_error_mm": 4.9,
+     "orientation_error_deg": 1.23,
+     "peak_force_N": 2.65,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0099,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0952
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 63,
+     "final_position_m": [
+      -0.0562,
+      0.018,
+      0.8151
+     ],
+     "final_rpy_deg": [
+      -179.54,
+      -6.01,
+      -1.63
+     ],
+     "position_error_mm": 4.52,
+     "orientation_error_deg": 0.65,
+     "peak_force_N": 24.5,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.047440182568358455,
+      -0.0876506977080488,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6582,
+      -4.1155,
+      -1.6662
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 131,
+     "final_position_m": [
+      -0.045,
+      -0.0913,
+      0.8141
+     ],
+     "final_rpy_deg": [
+      -179.32,
+      -3.74,
+      -1.43
+     ],
+     "position_error_mm": 4.51,
+     "orientation_error_deg": 0.57,
+     "peak_force_N": 30.73,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 88,
+     "final_position_m": [
+      -0.0428,
+      -0.0927,
+      0.8941
+     ],
+     "final_rpy_deg": [
+      -179.24,
+      -3.38,
+      -1.4
+     ],
+     "position_error_mm": 2.57,
+     "orientation_error_deg": 0.37,
+     "peak_force_N": 2.57,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05591399373028916
+    },
+    "result": {
+     "converged": true,
+     "steps": 76,
+     "final_position_m": [
+      -0.041,
+      -0.0969,
+      0.9506
+     ],
+     "final_rpy_deg": [
+      -178.95,
+      -2.95,
+      -1.1
+     ],
+     "position_error_mm": 4.63,
+     "orientation_error_deg": 0.6,
+     "peak_force_N": 2.2,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -179.6582,
+      -4.1155,
+      -1.6662
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 134,
+     "final_position_m": [
+      0.0507,
+      -0.3991,
+      0.9524
+     ],
+     "final_rpy_deg": [
+      -179.05,
+      -3.68,
+      -1.61
+     ],
+     "position_error_mm": 2.68,
+     "orientation_error_deg": 0.75,
+     "peak_force_N": 4.7,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0398,
+      -0.3838,
+      0.9558
+     ],
+     "final_rpy_deg": [
+      -93.99,
+      -0.63,
+      -4.08
+     ],
+     "position_error_mm": 20.03,
+     "orientation_error_deg": 5.76,
+     "peak_force_N": 3.18,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.047567071801404966,
+      -0.4,
+      0.8149608550628845
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.0574,
+      -0.3794,
+      0.8254
+     ],
+     "final_rpy_deg": [
+      -96.16,
+      -0.72,
+      -3.36
+     ],
+     "position_error_mm": 25.13,
+     "orientation_error_deg": 7.07,
+     "peak_force_N": 4.91,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.047567071801404966,
+      -0.27,
+      0.8149608550628845
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 159,
+     "final_position_m": [
+      -0.0489,
+      -0.2664,
+      0.8175
+     ],
+     "final_rpy_deg": [
+      -91.11,
+      -0.15,
+      -0.3
+     ],
+     "position_error_mm": 4.62,
+     "orientation_error_deg": 1.16,
+     "peak_force_N": 4.5,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 28,
+     "object_between_fingers": true,
+     "tactile_max": 0.7255
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 50,
+     "final_position_m": [
+      -0.0453,
+      -0.2793,
+      0.9507
+     ],
+     "final_rpy_deg": [
+      -88.94,
+      -0.01,
+      0.32
+     ],
+     "position_error_mm": 116.11,
+     "orientation_error_deg": 1.72,
+     "peak_force_N": 6.0,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 2,
+  "success": true,
+  "overhang_cm": 3.11,
+  "lip_samples": 46,
+  "plate_z": 0.952,
+  "ticks": 2525,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.015522625771613549,
+      0.08791781936827604,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 152,
+     "final_position_m": [
+      -0.0157,
+      0.0882,
+      0.8803
+     ],
+     "final_rpy_deg": [
+      178.81,
+      -8.27,
+      -1.43
+     ],
+     "position_error_mm": 0.44,
+     "orientation_error_deg": 0.12,
+     "peak_force_N": 3.68,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.01,
+     "ticks": 37,
+     "object_between_fingers": false,
+     "tactile_max": 0.0848
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 60,
+     "final_position_m": [
+      -0.0175,
+      0.0869,
+      0.8169
+     ],
+     "final_rpy_deg": [
+      179.1,
+      -8.85,
+      -1.26
+     ],
+     "position_error_mm": 4.27,
+     "orientation_error_deg": 0.52,
+     "peak_force_N": 14.55,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.015522625771613549,
+      -0.09434209495999031,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 470,
+     "final_position_m": [
+      -0.0123,
+      -0.0909,
+      0.8146
+     ],
+     "final_rpy_deg": [
+      178.86,
+      -8.2,
+      -1.33
+     ],
+     "position_error_mm": 4.98,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 74.04,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.012305259225401833,
+      -0.09914732472851029,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 99,
+     "final_position_m": [
+      -0.0118,
+      -0.0943,
+      0.8139
+     ],
+     "final_rpy_deg": [
+      178.84,
+      -8.28,
+      -1.37
+     ],
+     "position_error_mm": 4.97,
+     "orientation_error_deg": 0.05,
+     "peak_force_N": 7.21,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011793770263106566,
+      -0.09991421450604394,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 42,
+     "final_position_m": [
+      -0.0117,
+      -0.095,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.29,
+      -1.39
+     ],
+     "position_error_mm": 4.97,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.89,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011660819447644058,
+      -0.09987694545548273,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0117,
+      -0.095,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.29,
+      -1.39
+     ],
+     "position_error_mm": 4.9,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.17,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011657203096284147,
+      -0.0998714874212533,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0117,
+      -0.0951,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.29,
+      -1.39
+     ],
+     "position_error_mm": 4.87,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.04,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011652543075826081,
+      -0.09986581569689644,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0951,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.84,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.05,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011648015900971954,
+      -0.09985993616848186,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0951,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.81,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.05,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011643808440261567,
+      -0.09985373281565811,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0951,
+      0.8138
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.78,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.2,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011639313246889136,
+      -0.09984711053635037,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0952,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.75,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 0.06,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011634763240526636,
+      -0.09984187824850875,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0952,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.72,
+     "orientation_error_deg": 0.08,
+     "peak_force_N": 0.03,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011630644905715424,
+      -0.09983734086986162,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0952,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.69,
+     "orientation_error_deg": 0.08,
+     "peak_force_N": 0.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011626791351988058,
+      -0.09983276009532152,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0952,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.66,
+     "orientation_error_deg": 0.08,
+     "peak_force_N": 0.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.011623147748309148,
+      -0.09982774190274979,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.0116,
+      -0.0952,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      178.83,
+      -8.3,
+      -1.39
+     ],
+     "position_error_mm": 4.64,
+     "orientation_error_deg": 0.08,
+     "peak_force_N": 0.03,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 73,
+     "final_position_m": [
+      -0.0093,
+      -0.095,
+      0.8924
+     ],
+     "final_rpy_deg": [
+      178.81,
+      -7.88,
+      -1.48
+     ],
+     "position_error_mm": 2.66,
+     "orientation_error_deg": 0.43,
+     "peak_force_N": 12.13,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.0575587609722672
+    },
+    "result": {
+     "converged": true,
+     "steps": 75,
+     "final_position_m": [
+      -0.0077,
+      -0.0963,
+      0.9496
+     ],
+     "final_rpy_deg": [
+      178.9,
+      -7.58,
+      -1.43
+     ],
+     "position_error_mm": 2.08,
+     "orientation_error_deg": 0.31,
+     "peak_force_N": 2.29,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      178.8661,
+      -8.2616,
+      -1.3358
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 148,
+     "final_position_m": [
+      0.0502,
+      -0.3991,
+      0.9515
+     ],
+     "final_rpy_deg": [
+      179.24,
+      -8.07,
+      -1.26
+     ],
+     "position_error_mm": 1.8,
+     "orientation_error_deg": 0.43,
+     "peak_force_N": 3.69,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0398,
+      -0.3837,
+      0.9558
+     ],
+     "final_rpy_deg": [
+      -93.99,
+      -0.63,
+      -4.09
+     ],
+     "position_error_mm": 20.03,
+     "orientation_error_deg": 5.76,
+     "peak_force_N": 4.48,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.01977406501511712,
+      -0.4,
+      0.8149752927243523
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.0322,
+      -0.3742,
+      0.8268
+     ],
+     "final_rpy_deg": [
+      -97.26,
+      -0.92,
+      -4.39
+     ],
+     "position_error_mm": 31.0,
+     "orientation_error_deg": 8.56,
+     "peak_force_N": 4.42,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.01977406501511712,
+      -0.27,
+      0.8149752927243523
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 122,
+     "final_position_m": [
+      -0.0216,
+      -0.2666,
+      0.818
+     ],
+     "final_rpy_deg": [
+      -91.11,
+      -0.14,
+      -0.42
+     ],
+     "position_error_mm": 4.87,
+     "orientation_error_deg": 1.2,
+     "peak_force_N": 4.88,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0398,
+     "ticks": 32,
+     "object_between_fingers": true,
+     "tactile_max": 0.683
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 50,
+     "final_position_m": [
+      -0.0186,
+      -0.2769,
+      0.9544
+     ],
+     "final_rpy_deg": [
+      -89.99,
+      -0.09,
+      -0.03
+     ],
+     "position_error_mm": 115.85,
+     "orientation_error_deg": 1.81,
+     "peak_force_N": 6.33,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 3,
+  "success": true,
+  "overhang_cm": 3.26,
+  "lip_samples": 27,
+  "plate_z": 0.952,
+  "ticks": 1900,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.002598625247439118,
+      -0.01217238774864629,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.925,
+      -4.2485,
+      2.5915
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 79,
+     "final_position_m": [
+      -0.0013,
+      -0.0136,
+      0.8812
+     ],
+     "final_rpy_deg": [
+      179.99,
+      -5.0,
+      2.78
+     ],
+     "position_error_mm": 4.34,
+     "orientation_error_deg": 0.78,
+     "peak_force_N": 2.93,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0099,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0951
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 63,
+     "final_position_m": [
+      -0.0039,
+      -0.0144,
+      0.8152
+     ],
+     "final_rpy_deg": [
+      -179.98,
+      -5.41,
+      2.88
+     ],
+     "position_error_mm": 3.56,
+     "orientation_error_deg": 0.44,
+     "peak_force_N": 4.04,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.002598625247439118,
+      0.0789836999786619,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.925,
+      -4.2485,
+      2.5915
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 110,
+     "final_position_m": [
+      0.0037,
+      0.0834,
+      0.814
+     ],
+     "final_rpy_deg": [
+      179.5,
+      -4.04,
+      2.25
+     ],
+     "position_error_mm": 4.69,
+     "orientation_error_deg": 0.6,
+     "peak_force_N": 32.63,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 74,
+     "final_position_m": [
+      0.0053,
+      0.084,
+      0.8924
+     ],
+     "final_rpy_deg": [
+      179.46,
+      -3.75,
+      2.26
+     ],
+     "position_error_mm": 2.32,
+     "orientation_error_deg": 0.29,
+     "peak_force_N": 2.35,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.057569386242850795
+    },
+    "result": {
+     "converged": true,
+     "steps": 62,
+     "final_position_m": [
+      0.006,
+      0.0858,
+      0.9477
+     ],
+     "final_rpy_deg": [
+      179.33,
+      -3.57,
+      2.14
+     ],
+     "position_error_mm": 3.04,
+     "orientation_error_deg": 0.26,
+     "peak_force_N": 2.12,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.925,
+      -4.2485,
+      2.5915
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 137,
+     "final_position_m": [
+      0.0502,
+      0.3988,
+      0.9517
+     ],
+     "final_rpy_deg": [
+      179.37,
+      -3.96,
+      2.47
+     ],
+     "position_error_mm": 2.1,
+     "orientation_error_deg": 0.64,
+     "peak_force_N": 4.27,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0399,
+      0.3837,
+      0.9557
+     ],
+     "final_rpy_deg": [
+      93.96,
+      -0.62,
+      4.09
+     ],
+     "position_error_mm": 20.0,
+     "orientation_error_deg": 5.75,
+     "peak_force_N": 5.62,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.0002761045064631055,
+      0.4,
+      0.8149606877162694
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.0146,
+      0.3701,
+      0.8276
+     ],
+     "final_rpy_deg": [
+      98.01,
+      -1.07,
+      5.19
+     ],
+     "position_error_mm": 35.43,
+     "orientation_error_deg": 9.64,
+     "peak_force_N": 4.15,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.0002761045064631055,
+      0.27,
+      0.8149606877162694
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 117,
+     "final_position_m": [
+      -0.0014,
+      0.2688,
+      0.8165
+     ],
+     "final_rpy_deg": [
+      90.56,
+      -0.05,
+      0.25
+     ],
+     "position_error_mm": 2.25,
+     "orientation_error_deg": 0.61,
+     "peak_force_N": 5.18,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0398,
+     "ticks": 29,
+     "object_between_fingers": true,
+     "tactile_max": 0.6834
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 50,
+     "final_position_m": [
+      0.0026,
+      0.2796,
+      0.9525
+     ],
+     "final_rpy_deg": [
+      89.38,
+      0.01,
+      -0.24
+     ],
+     "position_error_mm": 116.82,
+     "orientation_error_deg": 2.05,
+     "peak_force_N": 6.46,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 4,
+  "success": true,
+  "overhang_cm": 4.4,
+  "lip_samples": 114,
+  "plate_z": 0.952,
+  "ticks": 2247,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05155583848184753,
+      -0.07817203273410034,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.5316,
+      -5.6909,
+      0.2073
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 117,
+     "final_position_m": [
+      0.0485,
+      -0.0816,
+      0.8794
+     ],
+     "final_rpy_deg": [
+      179.7,
+      -6.07,
+      0.52
+     ],
+     "position_error_mm": 4.61,
+     "orientation_error_deg": 0.53,
+     "peak_force_N": 3.51,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0098,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0958
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 60,
+     "final_position_m": [
+      0.0476,
+      -0.08,
+      0.8161
+     ],
+     "final_rpy_deg": [
+      179.57,
+      -6.27,
+      0.43
+     ],
+     "position_error_mm": 3.66,
+     "orientation_error_deg": 0.32,
+     "peak_force_N": 7.92,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05155583848184753,
+      0.04973718639080614,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.5316,
+      -5.6909,
+      0.2073
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 125,
+     "final_position_m": [
+      0.052,
+      0.0543,
+      0.8137
+     ],
+     "final_rpy_deg": [
+      179.11,
+      -5.6,
+      -0.16
+     ],
+     "position_error_mm": 4.59,
+     "orientation_error_deg": 0.59,
+     "peak_force_N": 35.41,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 71,
+     "final_position_m": [
+      0.0534,
+      0.0542,
+      0.8915
+     ],
+     "final_rpy_deg": [
+      179.1,
+      -5.36,
+      -0.12
+     ],
+     "position_error_mm": 2.53,
+     "orientation_error_deg": 0.24,
+     "peak_force_N": 2.22,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05846266973082792
+    },
+    "result": {
+     "converged": true,
+     "steps": 62,
+     "final_position_m": [
+      0.0539,
+      0.0552,
+      0.9474
+     ],
+     "final_rpy_deg": [
+      179.02,
+      -5.24,
+      -0.18
+     ],
+     "position_error_mm": 2.85,
+     "orientation_error_deg": 0.16,
+     "peak_force_N": 2.06,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.5316,
+      -5.6909,
+      0.2073
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 148,
+     "final_position_m": [
+      0.05,
+      0.3986,
+      0.9511
+     ],
+     "final_rpy_deg": [
+      179.04,
+      -5.56,
+      0.07
+     ],
+     "position_error_mm": 1.82,
+     "orientation_error_deg": 0.54,
+     "peak_force_N": 4.06,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0399,
+      0.3837,
+      0.9557
+     ],
+     "final_rpy_deg": [
+      93.97,
+      -0.62,
+      4.09
+     ],
+     "position_error_mm": 20.0,
+     "orientation_error_deg": 5.75,
+     "peak_force_N": 5.01,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.06846470660799424,
+      0.4,
+      0.8149751602517037
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      0.0516,
+      0.3615,
+      0.8259
+     ],
+     "final_rpy_deg": [
+      102.53,
+      -2.29,
+      9.95
+     ],
+     "position_error_mm": 43.42,
+     "orientation_error_deg": 16.31,
+     "peak_force_N": 3.76,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.06846470660799424,
+      0.27,
+      0.8149751602517037
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": false,
+     "steps": 400,
+     "final_position_m": [
+      0.0651,
+      0.2652,
+      0.8187
+     ],
+     "final_rpy_deg": [
+      91.49,
+      -0.17,
+      1.06
+     ],
+     "position_error_mm": 6.91,
+     "orientation_error_deg": 1.84,
+     "peak_force_N": 5.8,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0398,
+     "ticks": 32,
+     "object_between_fingers": true,
+     "tactile_max": 0.7153
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 53,
+     "final_position_m": [
+      0.0875,
+      0.2936,
+      0.9497
+     ],
+     "final_rpy_deg": [
+      87.09,
+      0.26,
+      -2.88
+     ],
+     "position_error_mm": 124.5,
+     "orientation_error_deg": 5.91,
+     "peak_force_N": 6.65,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 5,
+  "success": true,
+  "overhang_cm": 3.16,
+  "lip_samples": 27,
+  "plate_z": 0.953,
+  "ticks": 2502,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10046661790510117,
+      0.11452675632373235,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 141,
+     "final_position_m": [
+      0.0995,
+      0.115,
+      0.8798
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.35,
+      4.03
+     ],
+     "position_error_mm": 1.1,
+     "orientation_error_deg": 0.16,
+     "peak_force_N": 4.02,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.01,
+     "ticks": 37,
+     "object_between_fingers": false,
+     "tactile_max": 0.0847
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 62,
+     "final_position_m": [
+      0.1001,
+      0.1152,
+      0.8172
+     ],
+     "final_rpy_deg": [
+      -179.53,
+      -9.48,
+      4.13
+     ],
+     "position_error_mm": 4.65,
+     "orientation_error_deg": 0.22,
+     "peak_force_N": 16.91,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10046661790510117,
+      -0.07342511708523104,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 131,
+     "final_position_m": [
+      0.1037,
+      -0.0739,
+      0.8167
+     ],
+     "final_rpy_deg": [
+      -178.95,
+      -9.2,
+      4.63
+     ],
+     "position_error_mm": 4.92,
+     "orientation_error_deg": 0.89,
+     "peak_force_N": 66.97,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10372772432159966,
+      -0.07892676033638117,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": false,
+     "steps": 200,
+     "final_position_m": [
+      0.1049,
+      -0.0737,
+      0.8146
+     ],
+     "final_rpy_deg": [
+      -179.65,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 5.59,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 10.28,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10487853735801624,
+      -0.07793566154661581,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.1049,
+      -0.0737,
+      0.8145
+     ],
+     "final_rpy_deg": [
+      -179.65,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.53,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 2.25,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10488583683734795,
+      -0.0779207503901507,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.1049,
+      -0.0737,
+      0.8145
+     ],
+     "final_rpy_deg": [
+      -179.65,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.52,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.17,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10489885322870414,
+      -0.07789916887777835,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.1049,
+      -0.0736,
+      0.8145
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.51,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.16,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10491272016282828,
+      -0.07788161621434166,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.1049,
+      -0.0736,
+      0.8145
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.49,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.13,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10492619363855325,
+      -0.07786578683740517,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.1049,
+      -0.0736,
+      0.8144
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.48,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.1,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10493903679279806,
+      -0.07785059776980925,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8144
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.47,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.07,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10495127181575317,
+      -0.07783582637608191,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8144
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.45,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.05,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.1049629682361421,
+      -0.077821374351574,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8144
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.44,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.03,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.1049741983096849,
+      -0.07780718301942338,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8144
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.08
+     ],
+     "position_error_mm": 4.43,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10498502720101006,
+      -0.07779321357490374,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8143
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.09
+     ],
+     "position_error_mm": 4.42,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.10499551122184043,
+      -0.07777943700734426,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      0.105,
+      -0.0736,
+      0.8143
+     ],
+     "final_rpy_deg": [
+      -179.64,
+      -9.24,
+      4.09
+     ],
+     "position_error_mm": 4.41,
+     "orientation_error_deg": 0.06,
+     "peak_force_N": 0.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 69,
+     "final_position_m": [
+      0.1061,
+      -0.074,
+      0.8918
+     ],
+     "final_rpy_deg": [
+      -179.58,
+      -9.05,
+      4.08
+     ],
+     "position_error_mm": 2.75,
+     "orientation_error_deg": 0.2,
+     "peak_force_N": 14.71,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05816150467458425
+    },
+    "result": {
+     "converged": true,
+     "steps": 62,
+     "final_position_m": [
+      0.1065,
+      -0.0748,
+      0.9473
+     ],
+     "final_rpy_deg": [
+      -179.5,
+      -8.96,
+      4.11
+     ],
+     "position_error_mm": 2.83,
+     "orientation_error_deg": 0.13,
+     "peak_force_N": 2.03,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -179.6004,
+      -9.2145,
+      4.1147
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 148,
+     "final_position_m": [
+      0.0495,
+      -0.3985,
+      0.9503
+     ],
+     "final_rpy_deg": [
+      -179.28,
+      -9.28,
+      4.26
+     ],
+     "position_error_mm": 1.62,
+     "orientation_error_deg": 0.38,
+     "peak_force_N": 3.63,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0399,
+      -0.3837,
+      0.9557
+     ],
+     "final_rpy_deg": [
+      -93.95,
+      -0.61,
+      -4.1
+     ],
+     "position_error_mm": 19.99,
+     "orientation_error_deg": 5.74,
+     "peak_force_N": 6.02,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.08887578387742302,
+      -0.4,
+      0.8149604033642021
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      0.0718,
+      -0.3592,
+      0.825
+     ],
+     "final_rpy_deg": [
+      -103.96,
+      -2.79,
+      -11.72
+     ],
+     "position_error_mm": 45.34,
+     "orientation_error_deg": 18.63,
+     "peak_force_N": 3.78,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.08887578387742302,
+      -0.27,
+      0.8149604033642021
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": false,
+     "steps": 400,
+     "final_position_m": [
+      0.0826,
+      -0.261,
+      0.8213
+     ],
+     "final_rpy_deg": [
+      -92.65,
+      -0.3,
+      -2.02
+     ],
+     "position_error_mm": 12.69,
+     "orientation_error_deg": 3.35,
+     "peak_force_N": 5.96,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0398,
+     "ticks": 33,
+     "object_between_fingers": true,
+     "tactile_max": 0.7469
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 52,
+     "final_position_m": [
+      0.1051,
+      -0.2895,
+      0.9521
+     ],
+     "final_rpy_deg": [
+      -88.47,
+      0.18,
+      2.01
+     ],
+     "position_error_mm": 124.79,
+     "orientation_error_deg": 5.81,
+     "peak_force_N": 7.0,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 6,
+  "success": true,
+  "overhang_cm": 3.26,
+  "lip_samples": 29,
+  "plate_z": 0.95,
+  "ticks": 2025,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.10999280982594002,
+      -0.006737070993421149,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 127,
+     "final_position_m": [
+      -0.1143,
+      -0.0066,
+      0.8786
+     ],
+     "final_rpy_deg": [
+      179.33,
+      -7.41,
+      1.4
+     ],
+     "position_error_mm": 4.53,
+     "orientation_error_deg": 0.95,
+     "peak_force_N": 3.02,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.01,
+     "ticks": 37,
+     "object_between_fingers": false,
+     "tactile_max": 0.0853
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 60,
+     "final_position_m": [
+      -0.1134,
+      -0.0056,
+      0.8173
+     ],
+     "final_rpy_deg": [
+      179.4,
+      -6.74,
+      1.41
+     ],
+     "position_error_mm": 4.66,
+     "orientation_error_deg": 0.33,
+     "peak_force_N": 70.96,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.10999280982594002,
+      -0.10066798789770218,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 85,
+     "final_position_m": [
+      -0.1091,
+      -0.1028,
+      0.8141
+     ],
+     "final_rpy_deg": [
+      -179.97,
+      -6.39,
+      1.88
+     ],
+     "position_error_mm": 2.58,
+     "orientation_error_deg": 0.84,
+     "peak_force_N": 67.45,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.10913297094311981,
+      -0.10949370905643659,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 14,
+     "final_position_m": [
+      -0.1085,
+      -0.106,
+      0.814
+     ],
+     "final_rpy_deg": [
+      179.82,
+      -6.32,
+      1.71
+     ],
+     "position_error_mm": 3.73,
+     "orientation_error_deg": 0.58,
+     "peak_force_N": 5.3,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.10848693521201483,
+      -0.1094397556886604,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.1084,
+      -0.1063,
+      0.814
+     ],
+     "final_rpy_deg": [
+      179.8,
+      -6.32,
+      1.7
+     ],
+     "position_error_mm": 3.32,
+     "orientation_error_deg": 0.55,
+     "peak_force_N": 5.32,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.10843874373474752,
+      -0.10946087115519572,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 2,
+     "final_position_m": [
+      -0.1084,
+      -0.1065,
+      0.8139
+     ],
+     "final_rpy_deg": [
+      179.78,
+      -6.33,
+      1.68
+     ],
+     "position_error_mm": 3.09,
+     "orientation_error_deg": 0.53,
+     "peak_force_N": 3.76,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 77,
+     "final_position_m": [
+      -0.1044,
+      -0.1067,
+      0.8938
+     ],
+     "final_rpy_deg": [
+      179.81,
+      -5.57,
+      1.6
+     ],
+     "position_error_mm": 4.01,
+     "orientation_error_deg": 0.76,
+     "peak_force_N": 9.65,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05617129673277099
+    },
+    "result": {
+     "converged": true,
+     "steps": 67,
+     "final_position_m": [
+      -0.1062,
+      -0.1036,
+      0.9472
+     ],
+     "final_rpy_deg": [
+      179.55,
+      -5.64,
+      1.38
+     ],
+     "position_error_mm": 4.61,
+     "orientation_error_deg": 0.36,
+     "peak_force_N": 2.55,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.363,
+      -6.4696,
+      1.4302
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 174,
+     "final_position_m": [
+      0.0506,
+      -0.4008,
+      0.9529
+     ],
+     "final_rpy_deg": [
+      179.96,
+      -6.15,
+      1.51
+     ],
+     "position_error_mm": 3.09,
+     "orientation_error_deg": 0.69,
+     "peak_force_N": 4.32,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0399,
+      -0.3837,
+      0.9557
+     ],
+     "final_rpy_deg": [
+      -93.96,
+      -0.62,
+      -4.1
+     ],
+     "position_error_mm": 20.0,
+     "orientation_error_deg": 5.74,
+     "peak_force_N": 3.32,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.1467186882083962,
+      -0.4,
+      0.8149607647837042
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.1493,
+      -0.3939,
+      0.8193
+     ],
+     "final_rpy_deg": [
+      -92.21,
+      -0.2,
+      -0.76
+     ],
+     "position_error_mm": 7.87,
+     "orientation_error_deg": 2.35,
+     "peak_force_N": 5.28,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.1467186882083962,
+      -0.27,
+      0.8149607647837042
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 157,
+     "final_position_m": [
+      -0.1471,
+      -0.2685,
+      0.816
+     ],
+     "final_rpy_deg": [
+      -90.49,
+      -0.07,
+      -0.02
+     ],
+     "position_error_mm": 1.83,
+     "orientation_error_deg": 0.5,
+     "peak_force_N": 3.49,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 29,
+     "object_between_fingers": true,
+     "tactile_max": 0.5749
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 49,
+     "final_position_m": [
+      -0.1466,
+      -0.2782,
+      0.9502
+     ],
+     "final_rpy_deg": [
+      -88.85,
+      -0.05,
+      0.07
+     ],
+     "position_error_mm": 115.19,
+     "orientation_error_deg": 1.17,
+     "peak_force_N": 6.29,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 7,
+  "success": true,
+  "overhang_cm": 3.78,
+  "lip_samples": 139,
+  "plate_z": 0.951,
+  "ticks": 1844,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.053631642679425884,
+      0.020402580193220055,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.6941,
+      -8.2917,
+      2.8981
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 82,
+     "final_position_m": [
+      0.0498,
+      0.0207,
+      0.8818
+     ],
+     "final_rpy_deg": [
+      179.67,
+      -8.97,
+      2.88
+     ],
+     "position_error_mm": 4.28,
+     "orientation_error_deg": 0.68,
+     "peak_force_N": 2.88,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0099,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0952
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 72,
+     "final_position_m": [
+      0.0514,
+      0.0184,
+      0.8168
+     ],
+     "final_rpy_deg": [
+      179.66,
+      -9.18,
+      2.83
+     ],
+     "position_error_mm": 4.8,
+     "orientation_error_deg": 0.25,
+     "peak_force_N": 23.6,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.053631642679425884,
+      0.11145680556063767,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.6941,
+      -8.2917,
+      2.8981
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 92,
+     "final_position_m": [
+      0.0553,
+      0.1132,
+      0.8154
+     ],
+     "final_rpy_deg": [
+      179.14,
+      -8.15,
+      2.55
+     ],
+     "position_error_mm": 3.42,
+     "orientation_error_deg": 0.71,
+     "peak_force_N": 56.56,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 71,
+     "final_position_m": [
+      0.0567,
+      0.1144,
+      0.8935
+     ],
+     "final_rpy_deg": [
+      179.04,
+      -7.89,
+      2.51
+     ],
+     "position_error_mm": 2.66,
+     "orientation_error_deg": 0.29,
+     "peak_force_N": 12.91,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.05645414314629371
+    },
+    "result": {
+     "converged": true,
+     "steps": 61,
+     "final_position_m": [
+      0.0567,
+      0.1164,
+      0.9473
+     ],
+     "final_rpy_deg": [
+      178.9,
+      -7.79,
+      2.4
+     ],
+     "position_error_mm": 3.3,
+     "orientation_error_deg": 0.21,
+     "peak_force_N": 2.11,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.6941,
+      -8.2917,
+      2.8981
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 132,
+     "final_position_m": [
+      0.0493,
+      0.3984,
+      0.9505
+     ],
+     "final_rpy_deg": [
+      179.34,
+      -8.26,
+      2.74
+     ],
+     "position_error_mm": 1.79,
+     "orientation_error_deg": 0.41,
+     "peak_force_N": 4.33,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0399,
+      0.3837,
+      0.9557
+     ],
+     "final_rpy_deg": [
+      93.96,
+      -0.62,
+      4.09
+     ],
+     "position_error_mm": 20.0,
+     "orientation_error_deg": 5.75,
+     "peak_force_N": 3.0,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.06475618613336892,
+      0.4,
+      0.8149743861979323
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      0.048,
+      0.3619,
+      0.8261
+     ],
+     "final_rpy_deg": [
+      102.26,
+      -2.2,
+      9.64
+     ],
+     "position_error_mm": 43.1,
+     "orientation_error_deg": 15.89,
+     "peak_force_N": 3.75,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.06475618613336892,
+      0.27,
+      0.8149743861979323
+     ],
+     "orientation_rpy_deg": [
+      90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 73,
+     "final_position_m": [
+      0.0614,
+      0.2684,
+      0.8179
+     ],
+     "final_rpy_deg": [
+      92.02,
+      -0.19,
+      1.45
+     ],
+     "position_error_mm": 4.74,
+     "orientation_error_deg": 2.49,
+     "peak_force_N": 5.78,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 29,
+     "object_between_fingers": true,
+     "tactile_max": 1.0266
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 53,
+     "final_position_m": [
+      0.0809,
+      0.2951,
+      0.9501
+     ],
+     "final_rpy_deg": [
+      87.91,
+      0.31,
+      -1.92
+     ],
+     "position_error_mm": 122.48,
+     "orientation_error_deg": 5.34,
+     "peak_force_N": 6.41,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 8,
+  "success": true,
+  "overhang_cm": 4.02,
+  "lip_samples": 309,
+  "plate_z": 0.953,
+  "ticks": 1983,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.007405365973343764,
+      0.03494366155362333,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.0332,
+      -7.2206,
+      -1.3577
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 112,
+     "final_position_m": [
+      0.0052,
+      0.0391,
+      0.8798
+     ],
+     "final_rpy_deg": [
+      178.8,
+      -7.58,
+      -1.75
+     ],
+     "position_error_mm": 4.65,
+     "orientation_error_deg": 0.6,
+     "peak_force_N": 3.01,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0098,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0958
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 63,
+     "final_position_m": [
+      0.003,
+      0.037,
+      0.815
+     ],
+     "final_rpy_deg": [
+      178.96,
+      -7.94,
+      -1.65
+     ],
+     "position_error_mm": 3.5,
+     "orientation_error_deg": 0.45,
+     "peak_force_N": 4.02,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.007405365973343764,
+      -0.1044985751319085,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.0332,
+      -7.2206,
+      -1.3577
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 162,
+     "final_position_m": [
+      0.0083,
+      -0.1054,
+      0.8135
+     ],
+     "final_rpy_deg": [
+      179.16,
+      -7.06,
+      -1.3
+     ],
+     "position_error_mm": 1.39,
+     "orientation_error_deg": 0.21,
+     "peak_force_N": 32.96,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 82,
+     "final_position_m": [
+      0.0097,
+      -0.1058,
+      0.8927
+     ],
+     "final_rpy_deg": [
+      179.17,
+      -6.81,
+      -1.33
+     ],
+     "position_error_mm": 1.67,
+     "orientation_error_deg": 0.26,
+     "peak_force_N": 2.41,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.057251054564789516
+    },
+    "result": {
+     "converged": true,
+     "steps": 68,
+     "final_position_m": [
+      0.0111,
+      -0.1084,
+      0.9491
+     ],
+     "final_rpy_deg": [
+      179.35,
+      -6.52,
+      -1.2
+     ],
+     "position_error_mm": 3.04,
+     "orientation_error_deg": 0.37,
+     "peak_force_N": 2.19,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.0332,
+      -7.2206,
+      -1.3577
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 138,
+     "final_position_m": [
+      0.0499,
+      -0.3989,
+      0.9513
+     ],
+     "final_rpy_deg": [
+      179.43,
+      -7.05,
+      -1.25
+     ],
+     "position_error_mm": 1.7,
+     "orientation_error_deg": 0.46,
+     "peak_force_N": 3.97,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0398,
+      -0.3837,
+      0.9558
+     ],
+     "final_rpy_deg": [
+      -93.98,
+      -0.63,
+      -4.09
+     ],
+     "position_error_mm": 20.03,
+     "orientation_error_deg": 5.76,
+     "peak_force_N": 5.33,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.011110700687092169,
+      -0.4,
+      0.8149730593240342
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.0044,
+      -0.3677,
+      0.8281
+     ],
+     "final_rpy_deg": [
+      -98.46,
+      -1.18,
+      -5.66
+     ],
+     "position_error_mm": 38.12,
+     "orientation_error_deg": 10.3,
+     "peak_force_N": 4.01,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.011110700687092169,
+      -0.27,
+      0.8149730593240342
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 100,
+     "final_position_m": [
+      0.0112,
+      -0.2717,
+      0.8149
+     ],
+     "final_rpy_deg": [
+      -89.95,
+      0.04,
+      0.03
+     ],
+     "position_error_mm": 1.71,
+     "orientation_error_deg": 0.07,
+     "peak_force_N": 5.35,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 28,
+     "object_between_fingers": true,
+     "tactile_max": 0.5583
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 51,
+     "final_position_m": [
+      0.016,
+      -0.283,
+      0.9534
+     ],
+     "final_rpy_deg": [
+      -88.69,
+      0.13,
+      0.62
+     ],
+     "position_error_mm": 114.65,
+     "orientation_error_deg": 2.28,
+     "peak_force_N": 6.61,
+     "contact": true
+    }
+   }
+  ]
+ },
+ {
+  "seed": 9,
+  "success": true,
+  "overhang_cm": 4.93,
+  "lip_samples": 339,
+  "plate_z": 0.951,
+  "ticks": 2164,
+  "terminated": true,
+  "object_between": true,
+  "sequence": [
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.08788091304977362,
+      -0.009372555040102065,
+      0.8799999999999999
+     ],
+     "orientation_rpy_deg": [
+      179.3947,
+      -7.0415,
+      0.9832
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 118,
+     "final_position_m": [
+      -0.0922,
+      -0.0092,
+      0.8787
+     ],
+     "final_rpy_deg": [
+      179.35,
+      -8.01,
+      1.0
+     ],
+     "position_error_mm": 4.5,
+     "orientation_error_deg": 0.97,
+     "peak_force_N": 3.35,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0098,
+     "ticks": 34,
+     "object_between_fingers": false,
+     "tactile_max": 0.0958
+    }
+   },
+   {
+    "primitive": "DESCEND",
+    "params": {
+     "target_z_m": 0.8130000000000001,
+     "max_steps": 200
+    },
+    "result": {
+     "converged": true,
+     "steps": 62,
+     "final_position_m": [
+      -0.0921,
+      -0.0074,
+      0.8164
+     ],
+     "final_rpy_deg": [
+      179.34,
+      -8.57,
+      1.08
+     ],
+     "position_error_mm": 4.26,
+     "orientation_error_deg": 0.87,
+     "peak_force_N": 24.11,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.08788091304977362,
+      -0.1466447373994623,
+      0.8130000000000001
+     ],
+     "orientation_rpy_deg": [
+      179.3947,
+      -7.0415,
+      0.9832
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": true,
+     "steps": 155,
+     "final_position_m": [
+      -0.0854,
+      -0.1502,
+      0.8142
+     ],
+     "final_rpy_deg": [
+      179.79,
+      -6.66,
+      1.13
+     ],
+     "position_error_mm": 4.5,
+     "orientation_error_deg": 0.58,
+     "peak_force_N": 59.2,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.08
+    },
+    "result": {
+     "converged": true,
+     "steps": 92,
+     "final_position_m": [
+      -0.0838,
+      -0.1505,
+      0.8941
+     ],
+     "final_rpy_deg": [
+      179.8,
+      -6.36,
+      1.09
+     ],
+     "position_error_mm": 1.64,
+     "orientation_error_deg": 0.31,
+     "peak_force_N": 2.8,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.0558795045504491
+    },
+    "result": {
+     "converged": true,
+     "steps": 205,
+     "final_position_m": [
+      -0.0827,
+      -0.1513,
+      0.9507
+     ],
+     "final_rpy_deg": [
+      179.92,
+      -6.17,
+      1.13
+     ],
+     "position_error_mm": 1.47,
+     "orientation_error_deg": 0.23,
+     "peak_force_N": 2.43,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      179.3947,
+      -7.0415,
+      0.9832
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 121,
+     "final_position_m": [
+      0.0499,
+      -0.3989,
+      0.9524
+     ],
+     "final_rpy_deg": [
+      179.95,
+      -6.69,
+      1.04
+     ],
+     "position_error_mm": 2.63,
+     "orientation_error_deg": 0.67,
+     "peak_force_N": 4.74,
+     "contact": true
+    }
+   },
+   {
+    "primitive": "OPEN_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0771,
+     "ticks": 45,
+     "object_between_fingers": false,
+     "tactile_max": 0.0
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      0.05,
+      -0.4,
+      0.95
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 600
+    },
+    "result": {
+     "converged": false,
+     "steps": 600,
+     "final_position_m": [
+      0.0398,
+      -0.3837,
+      0.9558
+     ],
+     "final_rpy_deg": [
+      -93.98,
+      -0.63,
+      -4.09
+     ],
+     "position_error_mm": 20.03,
+     "orientation_error_deg": 5.76,
+     "peak_force_N": 3.09,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.08003466741087158,
+      -0.4,
+      0.8149700705989718
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 500,
+     "final_position_m": [
+      -0.0871,
+      -0.3848,
+      0.8236
+     ],
+     "final_rpy_deg": [
+      -94.86,
+      -0.51,
+      -2.33
+     ],
+     "position_error_mm": 18.85,
+     "orientation_error_deg": 5.42,
+     "peak_force_N": 5.56,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "MOVE_EEF",
+    "params": {
+     "position_m": [
+      -0.08003466741087158,
+      -0.27,
+      0.8149700705989718
+     ],
+     "orientation_rpy_deg": [
+      -90.0,
+      0.0,
+      0.0
+     ],
+     "max_steps": 400
+    },
+    "result": {
+     "converged": true,
+     "steps": 154,
+     "final_position_m": [
+      -0.0811,
+      -0.2665,
+      0.8175
+     ],
+     "final_rpy_deg": [
+      -91.07,
+      -0.14,
+      -0.21
+     ],
+     "position_error_mm": 4.43,
+     "orientation_error_deg": 1.1,
+     "peak_force_N": 4.12,
+     "contact": false
+    }
+   },
+   {
+    "primitive": "CLOSE_GRIPPER",
+    "params": {},
+    "result": {
+     "finger_width_m": 0.0399,
+     "ticks": 28,
+     "object_between_fingers": true,
+     "tactile_max": 0.7256
+    }
+   },
+   {
+    "primitive": "LIFT",
+    "params": {
+     "dz_m": 0.25,
+     "max_steps": 500
+    },
+    "result": {
+     "converged": false,
+     "steps": 50,
+     "final_position_m": [
+      -0.0789,
+      -0.278,
+      0.9524
+     ],
+     "final_rpy_deg": [
+      -89.08,
+      -0.08,
+      0.19
+     ],
+     "position_error_mm": 114.1,
+     "orientation_error_deg": 1.44,
+     "peak_force_N": 5.58,
+     "contact": true
+    }
+   }
+  ]
+ }
+]

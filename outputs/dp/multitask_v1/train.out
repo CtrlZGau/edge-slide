@@ -1,0 +1,105 @@
+[dp] 639336 samples from 3453 episodes; params 278.1 M; steps 200000 batch 64 (~20.0 epochs)
+[dp] step 1000 loss 0.0512 lr 1.00e-04 0.256s/step eta 14.2h
+[dp] step 2000 loss 0.0394 lr 1.00e-04 0.260s/step eta 14.3h
+[dp] step 3000 loss 0.0362 lr 1.00e-04 0.259s/step eta 14.2h
+[dp] step 4000 loss 0.0344 lr 9.99e-05 0.259s/step eta 14.1h
+[dp] step 5000 loss 0.0348 lr 9.99e-05 0.257s/step eta 13.9h
+[dp] step 6000 loss 0.0318 lr 9.98e-05 0.258s/step eta 13.9h
+[dp] step 7000 loss 0.0316 lr 9.97e-05 0.258s/step eta 13.8h
+[dp] step 8000 loss 0.0316 lr 9.97e-05 0.258s/step eta 13.8h
+[dp] step 9000 loss 0.0308 lr 9.96e-05 0.258s/step eta 13.7h
+[dp] step 10000 loss 0.0319 lr 9.94e-05 0.259s/step eta 13.7h
+[dp] step 11000 loss 0.0294 lr 9.93e-05 0.258s/step eta 13.5h
+[dp] step 12000 loss 0.0303 lr 9.92e-05 0.257s/step eta 13.4h
+[dp] step 13000 loss 0.0289 lr 9.90e-05 0.257s/step eta 13.3h
+[dp] step 14000 loss 0.0299 lr 9.89e-05 0.257s/step eta 13.3h
+[dp] step 15000 loss 0.0299 lr 9.87e-05 0.258s/step eta 13.2h
+[dp] step 16000 loss 0.0288 lr 9.85e-05 0.259s/step eta 13.2h
+[dp] step 17000 loss 0.0289 lr 9.83e-05 0.260s/step eta 13.2h
+[dp] step 18000 loss 0.0278 lr 9.81e-05 0.259s/step eta 13.1h
+[dp] step 19000 loss 0.0259 lr 9.79e-05 0.257s/step eta 12.9h
+[dp] step 20000 loss 0.0263 lr 9.77e-05 0.257s/step eta 12.8h
+[dp] saved step 20000
+[dp] step 21000 loss 0.0277 lr 9.74e-05 0.482s/step eta 24.0h
+[dp] step 22000 loss 0.0265 lr 9.72e-05 0.261s/step eta 12.9h
+[dp] step 23000 loss 0.0263 lr 9.69e-05 0.260s/step eta 12.8h
+[dp] step 24000 loss 0.0259 lr 9.66e-05 0.260s/step eta 12.7h
+[dp] step 25000 loss 0.0265 lr 9.63e-05 0.258s/step eta 12.5h
+[dp] step 26000 loss 0.0248 lr 9.60e-05 0.258s/step eta 12.5h
+[dp] step 27000 loss 0.0260 lr 9.57e-05 0.258s/step eta 12.4h
+[dp] step 28000 loss 0.0266 lr 9.54e-05 0.270s/step eta 12.9h
+[dp] step 29000 loss 0.0259 lr 9.50e-05 0.290s/step eta 13.8h
+[dp] step 30000 loss 0.0265 lr 9.47e-05 0.259s/step eta 12.2h
+[dp] step 31000 loss 0.0253 lr 9.43e-05 0.259s/step eta 12.2h
+[dp] step 32000 loss 0.0243 lr 9.40e-05 0.258s/step eta 12.0h
+[dp] step 33000 loss 0.0251 lr 9.36e-05 0.258s/step eta 12.0h
+[dp] step 34000 loss 0.0255 lr 9.32e-05 0.259s/step eta 11.9h
+[dp] step 35000 loss 0.0249 lr 9.28e-05 0.260s/step eta 11.9h
+[dp] step 36000 loss 0.0257 lr 9.24e-05 0.260s/step eta 11.8h
+[dp] step 37000 loss 0.0256 lr 9.20e-05 0.259s/step eta 11.7h
+[dp] step 38000 loss 0.0239 lr 9.15e-05 0.259s/step eta 11.7h
+[dp] step 39000 loss 0.0260 lr 9.11e-05 0.258s/step eta 11.5h
+[dp] step 40000 loss 0.0251 lr 9.06e-05 0.258s/step eta 11.5h
+[dp] saved step 40000
+[dp] step 41000 loss 0.0256 lr 9.02e-05 0.393s/step eta 17.4h
+[dp] step 42000 loss 0.0246 lr 8.97e-05 0.393s/step eta 17.3h
+[dp] step 43000 loss 0.0251 lr 8.92e-05 0.261s/step eta 11.4h
+[dp] step 44000 loss 0.0252 lr 8.87e-05 0.260s/step eta 11.3h
+[dp] step 45000 loss 0.0252 lr 8.82e-05 0.290s/step eta 12.5h
+[dp] step 46000 loss 0.0254 lr 8.77e-05 0.260s/step eta 11.1h
+[dp] step 47000 loss 0.0233 lr 8.72e-05 0.259s/step eta 11.0h
+[dp] step 48000 loss 0.0238 lr 8.67e-05 0.261s/step eta 11.0h
+[dp] step 49000 loss 0.0246 lr 8.61e-05 0.260s/step eta 10.9h
+[dp] step 50000 loss 0.0237 lr 8.56e-05 0.258s/step eta 10.7h
+[dp] step 51000 loss 0.0244 lr 8.50e-05 0.260s/step eta 10.8h
+[dp] step 52000 loss 0.0253 lr 8.44e-05 0.258s/step eta 10.6h
+[dp] step 53000 loss 0.0232 lr 8.39e-05 0.259s/step eta 10.6h
+[dp] step 54000 loss 0.0254 lr 8.33e-05 0.260s/step eta 10.6h
+[dp] step 55000 loss 0.0229 lr 8.27e-05 0.260s/step eta 10.5h
+[dp] step 56000 loss 0.0221 lr 8.21e-05 0.260s/step eta 10.4h
+[dp] step 57000 loss 0.0240 lr 8.15e-05 0.261s/step eta 10.4h
+[dp] step 58000 loss 0.0243 lr 8.09e-05 0.260s/step eta 10.3h
+[dp] step 59000 loss 0.0244 lr 8.02e-05 0.259s/step eta 10.1h
+[dp] step 60000 loss 0.0230 lr 7.96e-05 0.260s/step eta 10.1h
+[dp] saved step 60000
+[dp] step 61000 loss 0.0225 lr 7.90e-05 0.400s/step eta 15.4h
+[dp] step 62000 loss 0.0237 lr 7.83e-05 0.388s/step eta 14.9h
+[dp] step 63000 loss 0.0239 lr 7.77e-05 0.262s/step eta 10.0h
+[dp] step 64000 loss 0.0233 lr 7.70e-05 0.259s/step eta 9.8h
+[dp] step 65000 loss 0.0239 lr 7.64e-05 0.259s/step eta 9.7h
+[dp] step 66000 loss 0.0224 lr 7.57e-05 0.259s/step eta 9.7h
+[dp] step 67000 loss 0.0238 lr 7.50e-05 0.260s/step eta 9.6h
+[dp] step 68000 loss 0.0240 lr 7.43e-05 0.260s/step eta 9.5h
+[dp] step 69000 loss 0.0246 lr 7.36e-05 0.260s/step eta 9.5h
+[dp] step 70000 loss 0.0240 lr 7.29e-05 0.257s/step eta 9.3h
+[dp] step 71000 loss 0.0245 lr 7.22e-05 0.261s/step eta 9.3h
+[dp] step 72000 loss 0.0243 lr 7.15e-05 0.260s/step eta 9.3h
+[dp] step 73000 loss 0.0234 lr 7.08e-05 0.260s/step eta 9.2h
+[dp] step 74000 loss 0.0243 lr 7.01e-05 0.259s/step eta 9.1h
+[dp] step 75000 loss 0.0242 lr 6.94e-05 0.261s/step eta 9.1h
+[dp] step 76000 loss 0.0231 lr 6.86e-05 0.260s/step eta 9.0h
+[dp] step 77000 loss 0.0241 lr 6.79e-05 0.261s/step eta 8.9h
+[dp] step 78000 loss 0.0233 lr 6.72e-05 0.262s/step eta 8.9h
+[dp] step 79000 loss 0.0234 lr 6.64e-05 0.260s/step eta 8.8h
+[dp] step 80000 loss 0.0222 lr 6.57e-05 0.260s/step eta 8.7h
+[dp] saved step 80000
+[dp] step 81000 loss 0.0248 lr 6.49e-05 0.398s/step eta 13.2h
+[dp] step 82000 loss 0.0236 lr 6.42e-05 0.396s/step eta 13.0h
+[dp] step 83000 loss 0.0219 lr 6.34e-05 0.487s/step eta 15.8h
+[dp] step 84000 loss 0.0227 lr 6.27e-05 0.258s/step eta 8.3h
+[dp] step 85000 loss 0.0228 lr 6.19e-05 0.259s/step eta 8.3h
+[dp] step 86000 loss 0.0238 lr 6.11e-05 0.259s/step eta 8.2h
+[dp] step 87000 loss 0.0239 lr 6.04e-05 0.260s/step eta 8.2h
+[dp] step 88000 loss 0.0234 lr 5.96e-05 0.261s/step eta 8.1h
+[dp] step 89000 loss 0.0236 lr 5.88e-05 0.260s/step eta 8.0h
+[dp] step 90000 loss 0.0231 lr 5.80e-05 0.265s/step eta 8.1h
+[dp] step 91000 loss 0.0240 lr 5.73e-05 0.261s/step eta 7.9h
+[dp] step 92000 loss 0.0227 lr 5.65e-05 0.260s/step eta 7.8h
+[dp] step 93000 loss 0.0240 lr 5.57e-05 0.289s/step eta 8.6h
+[dp] step 94000 loss 0.0224 lr 5.49e-05 0.259s/step eta 7.6h
+[dp] step 95000 loss 0.0228 lr 5.41e-05 0.269s/step eta 7.8h
+[dp] 639336 samples from 3453 episodes; params 278.1 M; steps 200000 batch 64 (~20.0 epochs)
+[dp] resumed at step 80000
+[dp] 639336 samples from 3453 episodes; params 278.1 M; steps 200000 batch 64 (~20.0 epochs)
+[dp] resumed at step 80000
+/home/gb/venvs/lerobot/bin/python terminated by signal TERM.
