@@ -17,7 +17,7 @@ Both repos are **private** Hugging Face repos under `Ctrlgb`, so log in first wi
 
 | Model | Link | Download |
 |---|---|---|
-| Diffusion Policy, multi-task, step 80k (EMA weights, 1.1 GB): the Part 4 results | [Ctrlgb/dp-imbench-edge-slide-multitask-step80k](https://huggingface.co/Ctrlgb/dp-imbench-edge-slide-multitask-step80k) | `hf download Ctrlgb/dp-imbench-edge-slide-multitask-step80k --local-dir outputs/dp/multitask_v1/checkpoints/step0080000` |
+| Diffusion Policy, multi-task, step 80k (EMA weights, 1.1 GB): the Part 4 results | [Ctrlgb/dp-imbench-edge-slide-multitask-step80k](https://huggingface.co/Ctrlgb/120k_steps_dp) | `hf download Ctrlgb/dp-imbench-edge-slide-multitask-step80k --local-dir outputs/dp/multitask_v1/checkpoints/step0080000` |
 | MolmoAct2 LoRA fine-tune, step 3000: the Part 2 results | [Ctrlgb/molmoact2-imbench-edge-slide-step3000](https://huggingface.co/Ctrlgb/molmoact2-imbench-edge-slide-step3000) | `hf download Ctrlgb/molmoact2-imbench-edge-slide-step3000 --exclude "training_state/*" --local-dir checkpoints/molmoact2_step3000` |
 
 The datasets and the other DP checkpoints are not in git. `ARTIFACTS.md` says where they are and how to rebuild them.
